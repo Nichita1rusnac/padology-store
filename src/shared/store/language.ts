@@ -32,7 +32,7 @@ const translations: Record<Language, Translations> = {
     book: 'Записаться',
     salonBuiucani: 'Студия Буюкань',
     salonCenter: 'Студия Центр',
-    heroTitle: 'Студия падологии',
+    heroTitle: 'Студия подологии',
     heroSubtitle:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     langLabel: 'Русский',
