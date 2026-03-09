@@ -5,7 +5,7 @@ export const HeroSection = () => {
 
   return (
     <section className="pt-28 pb-16 px-4">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-9xl">
         {/* Hero card */}
         <div className="bg-card rounded-3xl p-8 md:p-12 lg:p-16 mb-6 flex">
           <div className="flex-1">

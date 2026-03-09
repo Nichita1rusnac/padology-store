@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Send, Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguageStore, Language } from '@/shared/store/language';
 import { BookingDrawer } from '@/widgets/BookingDrawer/BookingDrawer';
@@ -12,17 +13,17 @@ export const Header = () => {
   const [langOpen, setLangOpen] = useState(false);
 
   const navItems = [
-    { label: t.about, href: '#about' },
-    { label: t.services, href: '#services' },
-    { label: t.specialists, href: '#specialists' },
-    { label: t.pricing, href: '#pricing' },
-    { label: t.contacts, href: '#contacts' },
+    { label: t.about, path: '/about' },
+    { label: t.services, path: '/services' },
+    { label: t.specialists, path: '/specialists' },
+    { label: t.pricing, path: '/pricing' },
+    { label: t.contacts, path: '/contacts' },
   ];
 
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <div className="mx-auto max-w-9xl px-2 py-3 flex items-center justify-between">
           {/* Logo + Nav */}
           <div className="flex items-center gap-0 bg-nav rounded-full px-2 py-2">
             {/* Logo placeholder */}
@@ -33,13 +34,13 @@ export const Header = () => {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1 ml-2">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className="px-4 py-2 text-nav-foreground text-sm font-body font-medium rounded-full transition-colors hover:bg-primary/20"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
 
               {/* Language dropdown */}
@@ -109,14 +110,14 @@ export const Header = () => {
           <div className="lg:hidden bg-nav mx-4 rounded-2xl p-4 mt-1">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   onClick={() => setMobileOpen(false)}
                   className="px-4 py-3 text-nav-foreground text-sm font-body rounded-xl hover:bg-primary/20 transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
             <div className="flex gap-2 mt-3 pt-3 border-t border-primary/20">

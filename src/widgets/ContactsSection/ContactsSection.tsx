@@ -6,7 +6,7 @@ export const ContactsSection = () => {
 
   return (
     <section id="contacts" className="py-16 px-4">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-9xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-8">
           {t.contactsTitle}
         </h2>
