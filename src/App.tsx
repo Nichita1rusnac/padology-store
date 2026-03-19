@@ -10,6 +10,7 @@ import Specialists from './pages/Specialists';
 import Pricing from './pages/Pricing';
 import Contacts from './pages/Contacts';
 import NotFound from './pages/NotFound';
+import { LanguageLayout, RootRedirect } from '@/components/LanguageRoutes';
 
 const queryClient = new QueryClient();
 
@@ -20,13 +21,18 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/specialists" element={<Specialists />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<RootRedirect />} />
+          <Route path="/:lang" element={<LanguageLayout />}>
+            <Route index element={<Index />} />
+            <Route path="about" element={<About />} />
+            <Route path="services" element={<Services />} />
+            <Route path="specialists" element={<Specialists />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+          {/* Catch-all for non-matching URLs */}
+          <Route path="*" element={<RootRedirect />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

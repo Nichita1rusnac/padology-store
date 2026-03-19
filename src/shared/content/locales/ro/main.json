@@ -1,0 +1,43 @@
+{
+    "hero": {
+        "title": "Expert în podologie",
+        "subtitle": "Redobândește ușurința mersului: rezolvăm problemele picioarelor acolo unde alții dau greș.",
+        "image": "placeholder for image url",
+        "employes": {
+            "quantity": "10+",
+            "description": "Specialiști"
+        },
+        "locations": {
+            "quantity": "2",
+            "items": "locații",
+            "description": "Chișinău"
+        },
+        "rating": {
+            "value": "5.0",
+            "description": "Rating nostru pe baza recenziilor"
+        }
+    },
+    "about": {
+        "title": "Podologie și ortopedie în Chișinău",
+        "subtitle": "Tratăm cauza, nu doar simptomele",
+        "intro": "Suntem două studiouri specializate unde nu facem doar pedichiură, ci restabilim biomecanica piciorului.",
+        "difference": {
+            "heading": "În ce constă diferența noastră?",
+            "items": [
+                {
+                    "title": "Abordare ortopedică",
+                    "description": "90% dintre probleme revin dacă nu se corectează distribuția greutății la mers. Noi combinăm podologia cu ortopedia."
+                },
+                {
+                    "title": "Tipare proprii ale Evgeniei",
+                    "description": "Talentele noastre au o secțiune frontală extinsă. Spre deosebire de cele de serie înguste, acestea nu comprimă degetele, ci distribuie corect greutatea și îmbunătățesc circulația sângelui."
+                }
+            ]
+        },
+        "result": {
+            "heading": "Rezultatul:",
+            "description": "Eliminăm durerea pentru totdeauna, prevenim recidivele și vă redăm lejeritatea fiecărui pas."
+        },
+        "image": "placeholder for image url"
+    }
+}

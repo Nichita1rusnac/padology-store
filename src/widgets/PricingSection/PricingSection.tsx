@@ -1,4 +1,4 @@
-import { useLanguageStore } from '@/shared/store/language';
+import { useTranslation } from 'react-i18next';
 
 const priceItems = [
   { service: 'Lorem ipsum dolor', price: '500 MDL' },
@@ -12,13 +12,13 @@ const priceItems = [
 ];
 
 export const PricingSection = () => {
-  const { t } = useLanguageStore();
+  const { t } = useTranslation('common');
 
   return (
     <section id="pricing" className="py-16 px-4">
       <div className="mx-auto max-w-9xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-8">
-          {t.pricingTitle}
+          {t('titles.pricing')}
         </h2>
         <div className="bg-card rounded-3xl overflow-hidden">
           {priceItems.map((item, i) => (

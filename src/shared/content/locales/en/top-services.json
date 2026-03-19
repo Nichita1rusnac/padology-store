@@ -1,0 +1,40 @@
+{
+    "top_services": [
+        {
+            "id": "medical_pedicure",
+            "title": "Medical Pedicure",
+            "description": "Comprehensive treatment for foot and nail conditions, ensuring optimal hygiene and health.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "ingrown_nail_treatment",
+            "title": "Ingrown Toenail Treatment",
+            "description": "Painless and effective correction of ingrown toenails to prevent infection and discomfort.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "custom_orthotics",
+            "title": "Custom Orthotic Insoles",
+            "description": "Personalized insoles designed to correct walking mechanics and relieve foot and joint pain.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "corn_callus_removal",
+            "title": "Corn and Callus Removal",
+            "description": "Gentle removal of hardened skin to restore comfort and prevent further complications.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "fungal_nail_therapy",
+            "title": "Fungal Nail Therapy",
+            "description": "Advanced treatments to eliminate fungal infections and restore healthy nails.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "diabetic_foot_care",
+            "title": "Diabetic Foot Care",
+            "description": "Specialized care for diabetic patients to prevent ulcers and maintain foot health.",
+            "image": "placeholder for image url"
+        }
+    ]
+}

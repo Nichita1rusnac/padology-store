@@ -1,0 +1,43 @@
+{
+    "hero": {
+        "title": "Expert Podiatry",
+        "subtitle": "Walk with ease again: solving foot problems where others can’t.",
+        "image": "placeholder for image url",
+        "employes": {
+            "quantity": "10+",
+            "description": "Experts"
+        },
+        "locations": {
+            "quantity": "2",
+            "items": "locations",
+            "description": "Chișinău"
+        },
+        "rating": {
+            "value": "5.0",
+            "description": "Our rating based on reviews"
+        }
+    },
+    "about": {
+        "title": "Podiatry & Orthopedics in Chisinau",
+        "subtitle": "Treating the Cause, Not Just the Symptom",
+        "intro": "At our two specialized studios, we offer more than just a pedicure—we focus on restoring your foot's natural biomechanics.",
+        "difference": {
+            "heading": "What Sets Us Apart?",
+            "items": [
+                {
+                    "title": "An Orthopedic Approach",
+                    "description": "90% of foot issues recur if walking mechanics aren't corrected. We bridge the gap between podiatry and orthopedics to ensure long-term health."
+                },
+                {
+                    "title": "Evgenia’s Signature Designs",
+                    "description": "Our custom orthotics (insoles) feature a wider 'toe box' design. Unlike narrow, mass-produced versions, they don’t crowd your toes; they distribute weight evenly and improve circulation."
+                }
+            ]
+        },
+        "result": {
+            "heading": "The Result:",
+            "description": "Permanent pain relief, prevention of future issues, and an effortless stride with every step."
+        },
+        "image": "placeholder for image url"
+    }
+}

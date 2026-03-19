@@ -1,0 +1,51 @@
+{
+    "hero": {
+        "title": "Produse",
+        "subtitle": "asdasdas",
+        "description": "asdasdas",
+        "items": [
+            {
+                "id": "good_1",
+                "title": "Produs 1",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            },
+            {
+                "id": "good_2",
+                "title": "Produs 2",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            },
+            {
+                "id": "good_3",
+                "title": "Produs 3",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            },
+            {
+                "id": "good_4",
+                "title": "Produs 4",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            },
+            {
+                "id": "good_5",
+                "title": "Produs 5",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            },
+            {
+                "id": "good_6",
+                "title": "Produs 6",
+                "description": "asdasdas",
+                "price": "asdasdas",
+                "image": "asdasdas"
+            }
+        ]
+    }
+}

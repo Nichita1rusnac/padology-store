@@ -1,0 +1,71 @@
+{
+    "hero": {
+        "title": "Contactează-ne"
+    },
+    "contacts": [
+        {
+            "category": "Padologie Chișinău",
+            "name": "Evasstore",
+            "contact": [
+                {
+                    "id": "address",
+                    "label": "Adresa",
+                    "value": "Strada Ioana Radu 27/4, Chișinău, Moldova"
+                },
+                {
+                    "id": "phone",
+                    "label": "Telefon",
+                    "value": "+373 696 39 898"
+                },
+                {
+                    "id": "telegram",
+                    "label": "Telegram",
+                    "value": "@padolog"
+                },
+                {
+                    "id": "instagram",
+                    "label": "Instagram",
+                    "value": "@padolog"
+                },
+                {
+                    "id": "working",
+                    "label": "Program de lucru",
+                    "value": "Marți - Sâmbătă: 09:00 - 19:30"
+                }
+            ],
+            "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.7728685665093!2d28.798051300000004!3d47.0250632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97df235a250d7%3A0x695d32cb97ee6623!2z0JrQuNGI0LjQvdC10LIg0J_QvtC00L7Qu9C-0LMgfCBFdmFzc3RvcmUgfCBQb2RvbG9nIENoaXNpbmF1!5e0!3m2!1sen!2s!4v1773318461729!5m2!1sen!2s"
+        },
+        {
+            "category": "Padologie Chișinău",
+            "name": "EvPodolux",
+            "contact": [
+                {
+                    "id": "address",
+                    "label": "Adresa",
+                    "value": "Strada Mihai Eminescu 70, Chișinău, Moldova"
+                },
+                {
+                    "id": "phone",
+                    "label": "Telefon",
+                    "value": "+373 699 47 949"
+                },
+                {
+                    "id": "telegram",
+                    "label": "Telegram",
+                    "value": "@padolog"
+                },
+                {
+                    "id": "instagram",
+                    "label": "Instagram",
+                    "value": "@padolog"
+                },
+                {
+                    "id": "working",
+                    "label": "Program de lucru",
+                    "value": "Marți - Sâmbătă: 10:00 - 19:00"
+                }
+            ],
+            "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8535.45819176193!2d28.827175036794298!3d47.025710401950676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d887c620191%3A0x7ec9e739489e53ef!2zUG9kb2xvZyBDaGlzaW5hdSB8IEVWUG9kb2x1eCB8INCf0L7QtNC-0LvQvtCzINCa0LjRiNC40L3QtdCy!5e0!3m2!1sen!2s!4v1773318695929!5m2!1sen!2s"
+        }
+    ]
+}

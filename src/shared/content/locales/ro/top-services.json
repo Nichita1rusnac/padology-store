@@ -1,0 +1,40 @@
+{
+    "top_services": [
+        {
+            "id": "medical_pedicure",
+            "title": "Pedichiură Medicală",
+            "description": "Tratament complet pentru afecțiunile picioarelor și unghiilor, asigurând o igienă și sănătate optimă.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "ingrown_nail_treatment",
+            "title": "Tratament pentru Unghii Încarnate",
+            "description": "Corectarea nedureroasă și eficientă a unghiilor încarnate pentru a preveni infecțiile și disconfortul.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "custom_orthotics",
+            "title": "Tălpi Ortopedice Personalizate",
+            "description": "Tălpi personalizate concepute pentru a corecta mecanica mersului și a ameliora durerile de picioare și articulații.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "corn_callus_removal",
+            "title": "Îndepărtarea Bătăturilor și Calozităților",
+            "description": "Îndepărtarea delicată a pielii întărite pentru a restabili confortul și a preveni complicațiile ulterioare.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "fungal_nail_therapy",
+            "title": "Terapia Ciupercii Unghiei",
+            "description": "Tratamente avansate pentru a elimina infecțiile fungice și a restabili sănătatea unghiilor.",
+            "image": "placeholder for image url"
+        },
+        {
+            "id": "diabetic_foot_care",
+            "title": "Îngrijirea Piciorului Diabetic",
+            "description": "Îngrijire specializată pentru pacienții diabetici, pentru a preveni ulcerele și a menține sănătatea picioarelor.",
+            "image": "placeholder for image url"
+        }
+    ]
+}

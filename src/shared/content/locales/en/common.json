@@ -1,0 +1,24 @@
+{
+    "nav": {
+        "specialists": "Specialists",
+        "price": "Price",
+        "goods": "Goods",
+        "contacts": "Contacts",
+        "main": "Main"
+    },
+    "titles": {
+        "services": "Our Services",
+        "specialists": "Specialists",
+        "pricing": "Price List",
+        "contacts": "Contacts"
+    },
+    "salon": {
+        "buiucani": "Studio Buiucani",
+        "center": "Studio Center",
+        "select": "Select a salon"
+    },
+    "buttons": {
+        "book": "Book Now",
+        "more": "More"
+    }
+}

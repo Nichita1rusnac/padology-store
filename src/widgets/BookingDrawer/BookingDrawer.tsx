@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import { useLanguageStore } from '@/shared/store/language';
+import { useTranslation } from 'react-i18next';
 
 interface BookingDrawerProps {
   open: boolean;
@@ -8,7 +8,7 @@ interface BookingDrawerProps {
 }
 
 export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
-  const { t } = useLanguageStore();
+  const { t } = useTranslation('common');
   const [selectedSalon, setSelectedSalon] = useState<'buiucani' | 'center'>(
     'buiucani',
   );
@@ -36,7 +36,7 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
                   : 'bg-secondary text-foreground hover:bg-muted'
               }`}
             >
-              {t.salonBuiucani}
+              {t('salon.buiucani')}
             </button>
             <button
               onClick={() => setSelectedSalon('center')}
@@ -46,7 +46,7 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
                   : 'bg-secondary text-foreground hover:bg-muted'
               }`}
             >
-              {t.salonCenter}
+              {t('salon.center')}
             </button>
           </div>
           <button
@@ -61,8 +61,8 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
         <div className="flex-1 p-6">
           <div className="w-full h-full rounded-2xl bg-card border-2 border-dashed border-border flex items-center justify-center">
             <p className="text-muted-foreground font-body text-sm">
-              {t.selectSalon}:{' '}
-              {selectedSalon === 'buiucani' ? t.salonBuiucani : t.salonCenter}
+              {t('salon.select')}:{' '}
+              {selectedSalon === 'buiucani' ? t('salon.buiucani') : t('salon.center')}
             </p>
           </div>
         </div>

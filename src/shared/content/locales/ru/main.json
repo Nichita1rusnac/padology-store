@@ -1,0 +1,57 @@
+{
+    "hero": {
+        "title": "Экспертная Подология",
+        "subtitle": "Верните себе легкость походки: решаем проблемы стоп там, где другие бессильны.",
+        "image": "placeholder for image url",
+        "employes": {
+            "quantity": "10+",
+            "description": "Специалистов",
+            "images": [
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url",
+                "placeholder for image url"
+            ]
+        },
+        "locations": {
+            "quantity": "2",
+            "items": "cтудии",
+            "description": "Кишинёв"
+        },
+        "rating": {
+            "value": "5.0",
+            "description": "Наш рейтинг на основе отзывов"
+        }
+    },
+    "about": {
+        "title": "Подология и ортопедия в Кишинёве",
+        "subtitle": "Лечим причину, а не только симптом",
+        "intro": "Мы — две специализированные студии, где не просто делают педикюр, а восстанавливают биомеханику стопы.",
+        "difference": {
+            "heading": "В чём наше отличие?",
+            "items": [
+                {
+                    "title": "Ортопедический подход",
+                    "description": "90% проблем возвращаются, если не исправить нагрузку при ходьбе. Мы соединяем подологию с ортопедией."
+                },
+                {
+                    "title": "Авторские лекала Евгении",
+                    "description": "Наши стельки имеют расширенный передний отдел. В отличие от узких заводских, они не сжимают пальцы, а правильно распределяют вес и улучшают кровообращение."
+                }
+            ]
+        },
+        "result": {
+            "heading": "Результат:",
+            "description": "Устраняем боль навсегда, предотвращаем рецидивы и возвращаем вам лёгкость каждого шага."
+        },
+        "image": "placeholder for image url"
+    }
+}

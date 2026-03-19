@@ -1,0 +1,24 @@
+{
+    "nav": {
+        "specialists": "Specialiști",
+        "price": "Prețuri",
+        "goods": "Produse",
+        "contacts": "Contacte",
+        "main": "Pagina principală"
+    },
+    "titles": {
+        "services": "Serviciile noastre",
+        "specialists": "Specialiștii",
+        "pricing": "Lista de prețuri",
+        "contacts": "Contacte"
+    },
+    "salon": {
+        "buiucani": "Studio Buiucani",
+        "center": "Studio Centru",
+        "select": "Selectați salonul"
+    },
+    "buttons": {
+        "book": "Programare",
+        "more": "Mai mult"
+    }
+}

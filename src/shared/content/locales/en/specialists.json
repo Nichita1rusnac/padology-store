@@ -1,0 +1,18 @@
+{
+    "specialists": [
+        {
+            "id": "sp1",
+            "first_name": "John",
+            "last_name": "Doe",
+            "specialty": "Podiatrist",
+            "image_url": "test"
+        },
+        {
+            "id": "sp2",
+            "first_name": "Anna",
+            "last_name": "Smith",
+            "specialty": "Podiatrist",
+            "image_url": "test"
+        }
+    ]
+}

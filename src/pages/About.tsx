@@ -7,13 +7,13 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { useLanguageStore } from '@/shared/store/language';
+import { useTranslation } from 'react-i18next';
 import { Header } from '@/widgets/Header/Header';
 import { AboutSection } from '@/widgets/AboutSection/AboutSection';
 import { Footer } from '@/widgets/Footer/Footer';
 
 const About = () => {
-  const { t } = useLanguageStore();
+  const { t } = useTranslation('common');
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,12 +25,12 @@ const About = () => {
               <BreadcrumbList>
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to="/">Main</Link>
+                    <Link to="/">{t('nav.main')}</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>{t.about}</BreadcrumbPage>
+                  <BreadcrumbPage>{t('nav.about')}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>

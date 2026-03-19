@@ -49,8 +49,10 @@
     --nav-foreground: 30 33% 96%;
     --hero-accent: 28 35% 60%;
 
-    --font-display: 'Cormorant Garamond', serif;
-    --font-body: 'Montserrat', sans-serif;
+    --font-display: 'Oswald', serif;
+    --font-body: 'Roboto', sans-serif;
+
+    --c-line: hsl(var(--card));
   }
 }
 
@@ -69,5 +71,29 @@
   h3,
   h4 {
     font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background-image: linear-gradient(
+      15deg,
+      hsl(27deg 20% 18%) 11%,
+      hsl(26deg 25% 22%) 31%,
+      hsl(26deg 29% 26%) 42%,
+      hsl(25deg 33% 31%) 50%,
+      hsl(25deg 38% 35%) 57%,
+      hsl(25deg 42% 39%) 64%,
+      hsl(25deg 47% 44%) 70%,
+      hsl(24deg 44% 48%) 75%,
+      hsl(24deg 42% 52%) 81%,
+      hsl(24deg 40% 57%) 86%,
+      hsl(24deg 38% 61%) 91%,
+      hsl(24deg 36% 65%) 95%,
+      hsl(24deg 33% 69%) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

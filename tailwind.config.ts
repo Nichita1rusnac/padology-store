@@ -18,8 +18,8 @@ export default {
       },
     },
     fontFamily: {
-      display: ['Cormorant Garamond', 'serif'],
-      body: ['Montserrat', 'sans-serif'],
+      display: ['Oswald', 'serif'],
+      body: ['Roboto', 'sans-serif'],
     },
     extend: {
       colors: {

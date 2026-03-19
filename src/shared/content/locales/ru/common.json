@@ -1,0 +1,24 @@
+{
+    "nav": {
+        "specialists": "Специалисты",
+        "price": "Цены",
+        "goods": "Товары",
+        "contacts": "Контакты",
+        "main": "Главная"
+    },
+    "titles": {
+        "services": "Наши услуги",
+        "specialists": "Специалисты",
+        "pricing": "Прайс-лист",
+        "contacts": "Контакты"
+    },
+    "salon": {
+        "buiucani": "Студия Буюкань",
+        "center": "Студия Центр",
+        "select": "Выберите салон"
+    },
+    "buttons": {
+        "book": "Записаться",
+        "more": "Ещё"
+    }
+}

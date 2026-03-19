@@ -1,0 +1,40 @@
+{
+    "price_list": [
+        {
+            "id": "service_1",
+            "name": "Servive 1",
+            "price": 25,
+            "currency": "Lei"
+        },
+        {
+            "id": "service_2",
+            "name": "Servive 2",
+            "price": 50,
+            "currency": "Lei"
+        },
+        {
+            "id": "service_3",
+            "name": "Servive 3",
+            "price": 50,
+            "currency": "Lei"
+        },
+        {
+            "id": "service_4",
+            "name": "Servive 4",
+            "price": 50,
+            "currency": "Lei"
+        },
+        {
+            "id": "service_5",
+            "name": "Servive 5",
+            "price": 50,
+            "currency": "Lei"
+        },
+        {
+            "id": "service_6",
+            "name": "Servive 6",
+            "price": 50,
+            "currency": "Lei"
+        }
+    ]
+}

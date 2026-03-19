@@ -1,4 +1,4 @@
-import { useLanguageStore } from '@/shared/store/language';
+import { useTranslation } from 'react-i18next';
 
 const specialists = [
   { name: 'Lorem Ipsum', role: 'Lorem Specialist' },
@@ -8,13 +8,13 @@ const specialists = [
 ];
 
 export const SpecialistsSection = () => {
-  const { t } = useLanguageStore();
+  const { t } = useTranslation('common');
 
   return (
     <section id="specialists" className="py-16 px-4">
       <div className="mx-auto max-w-9xl">
         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-8">
-          {t.specialistsTitle}
+          {t('titles.specialists')}
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {specialists.map((s) => (
