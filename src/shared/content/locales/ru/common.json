@@ -2,7 +2,7 @@
     "nav": {
         "specialists": "Специалисты",
         "price": "Цены",
-        "goods": "Товары",
+        "products": "Товары",
         "contacts": "Контакты",
         "main": "Главная"
     },
@@ -10,6 +10,7 @@
         "services": "Наши услуги",
         "specialists": "Специалисты",
         "pricing": "Прайс-лист",
+        "products": "Товары",
         "contacts": "Контакты"
     },
     "salon": {

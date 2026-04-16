@@ -22,20 +22,20 @@ export const AboutSection = () => {
         
         {/* 1. Intro Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="font-display text-lg md:text-xl text-primary font-medium tracking-wide uppercase mb-4 block">
+          <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('about.subtitle')}
           </span>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light gradient-text mb-6">
+          <h1 className="font-display text-display-lg font-light gradient-text mb-6">
             {t('about.title')}
           </h1>
-          <p className="text-muted-foreground font-body text-lg md:text-xl leading-relaxed">
+          <p className="text-muted-foreground font-body text-lg-fluid leading-relaxed">
             {t('about.intro')}
           </p>
         </div>
 
         {/* 2. "Our Difference" Cards */}
         <div className="mb-20">
-          <h2 className="text-center font-display text-3xl md:text-4xl font-light text-foreground mb-12">
+          <h2 className="text-center font-display text-display-sm font-light text-foreground mb-12">
             {t('about.difference.heading')}
           </h2>
           
@@ -50,10 +50,10 @@ export const AboutSection = () => {
                   <div className="h-14 w-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
                     <Icon size={28} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-2xl text-card-foreground mb-4">
+                  <h3 className="font-display text-2xl-fluid text-card-foreground mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed">
+                  <p className="text-muted-foreground font-body text-base-fluid leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -69,10 +69,10 @@ export const AboutSection = () => {
            
            <div className="relative z-10">
               <Target className="mx-auto mb-6 opacity-90" size={48} strokeWidth={1.5} />
-              <h2 className="font-display text-3xl md:text-4xl font-light mb-6">
+              <h2 className="font-display text-display-sm font-light mb-6">
                 {t('about.result.heading')}
               </h2>
-              <p className="font-body text-lg md:text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
+              <p className="font-body text-lg-fluid opacity-90 leading-relaxed max-w-2xl mx-auto">
                 {t('about.result.description')}
               </p>
            </div>

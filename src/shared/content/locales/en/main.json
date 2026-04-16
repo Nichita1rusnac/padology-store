@@ -39,5 +39,29 @@
             "description": "Permanent pain relief, prevention of future issues, and an effortless stride with every step."
         },
         "image": "placeholder for image url"
+    },
+    "top_services": {
+        "title": "Services",
+        "description": "Discover our most popular services, designed to address the most common foot and ankle concerns.",
+        "items": {
+            "podiatric_consultation": {
+                "title": "Podiatric Consultation",
+                "description": "Comprehensive evaluation of foot mechanics to pinpoint the exact cause of pain or discomfort. Essential for creating a tailor-made treatment plan."
+            },
+            "medical_pedicure": {
+                "title": "Medical Pedicure",
+                "description": "A safe, sterile treatment focusing on the health of your nails and skin. Perfect for treating calluses, ingrown nails, and fungal infections."
+            },
+            "orthopedic_insoles": {
+                "title": "Custom Orthopedic Insoles",
+                "description": "Bespoke insoles crafted with Evgenia’s signature wide toe box design, ensuring optimal weight distribution and corrected biomechanics."
+            }
+        }
+    },
+    "specialists": {
+        "title": "Our Team",
+        "subtitle": "Masters of your wellness journey",
+        "description": "Meet our highly qualified specialists dedicated to providing you with the best care.",
+        "view_all_cta": "All Specialists"
     }
 }

@@ -10,9 +10,9 @@ import contacts_en from "../content/locales/en/contacts.json";
 import contacts_ro from "../content/locales/ro/contacts.json";
 import contacts_ru from "../content/locales/ru/contacts.json";
 
-import goods_en from "../content/locales/en/goods.json";
-import goods_ro from "../content/locales/ro/goods.json";
-import goods_ru from "../content/locales/ru/goods.json";
+import products_en from "../content/locales/en/products.json";
+import products_ro from "../content/locales/ro/products.json";
+import products_ru from "../content/locales/ru/products.json";
 
 import price_en from "../content/locales/en/price.json";
 import price_ro from "../content/locales/ro/price.json";
@@ -32,7 +32,7 @@ export const resources = {
         common: common_en,
         main: main_en,
         contacts: contacts_en,
-        goods: goods_en,
+        products: products_en,
         price: price_en,
         specialists: specialists_en,
         top_services: top_services_en,
@@ -41,7 +41,7 @@ export const resources = {
         common: common_ro,
         main: main_ro,
         contacts: contacts_ro,
-        goods: goods_ro,
+        products: products_ro,
         price: price_ro,
         specialists: specialists_ro,
         top_services: top_services_ro,
@@ -50,7 +50,7 @@ export const resources = {
         common: common_ru,
         main: main_ru,
         contacts: contacts_ru,
-        goods: goods_ru,
+        products: products_ru,
         price: price_ru,
         specialists: specialists_ru,
         top_services: top_services_ru,

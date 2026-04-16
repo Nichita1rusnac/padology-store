@@ -1,40 +1,94 @@
 {
-    "top_services": [
-        {
-            "id": "medical_pedicure",
-            "title": "Pedichiură Medicală",
-            "description": "Tratament complet pentru afecțiunile picioarelor și unghiilor, asigurând o igienă și sănătate optimă.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "ingrown_nail_treatment",
-            "title": "Tratament pentru Unghii Încarnate",
-            "description": "Corectarea nedureroasă și eficientă a unghiilor încarnate pentru a preveni infecțiile și disconfortul.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "custom_orthotics",
-            "title": "Tălpi Ortopedice Personalizate",
-            "description": "Tălpi personalizate concepute pentru a corecta mecanica mersului și a ameliora durerile de picioare și articulații.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "corn_callus_removal",
-            "title": "Îndepărtarea Bătăturilor și Calozităților",
-            "description": "Îndepărtarea delicată a pielii întărite pentru a restabili confortul și a preveni complicațiile ulterioare.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "fungal_nail_therapy",
-            "title": "Terapia Ciupercii Unghiei",
-            "description": "Tratamente avansate pentru a elimina infecțiile fungice și a restabili sănătatea unghiilor.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "diabetic_foot_care",
-            "title": "Îngrijirea Piciorului Diabetic",
-            "description": "Îngrijire specializată pentru pacienții diabetici, pentru a preveni ulcerele și a menține sănătatea picioarelor.",
-            "image": "placeholder for image url"
+    "title": "Servicii",
+    "description": "Descoperiți cele mai populare servicii ale noastre, concepute pentru a rezolva cele mai comune probleme ale picioarelor.",
+    "service_1": {
+        "title": "Diagnostic biomecanic al piciorului",
+        "hook": "Durerea la nivelul picioarelor nu este o normalitate, ci un semnal.",
+        "description": "Analiza mersului, a distribuției sarcinii și a punctelor de sprijin.",
+        "results": {
+            "0": "Înțelegerea cauzei deformației",
+            "1": "Plan individual de corecție",
+            "2": "Prevenirea progresiei"
         }
-    ]
+    },
+    "service_2": {
+        "title": "Talonete ortopedice individuale",
+        "hook": "Talonetele universale nu tratează, ci maschează problema.",
+        "description": "Corecție personalizată în funcție de anatomia și mersul dumneavoastră.",
+        "results": {
+            "0": "Reducerea durerii din primele zile",
+            "1": "Distribuirea corectă a sarcinii",
+            "2": "Îmbunătățirea posturii"
+        }
+    },
+    "service_3": {
+        "title": "Orteze individuale din silicon",
+        "hook": "Hallux valgus nu este doar o problemă estetică, ci o afectare a întregului picior.",
+        "description": "Corecție blândă a poziției degetelor și protecție împotriva presiunii.",
+        "results": {
+            "0": "Reducerea frecării și a inflamației",
+            "1": "Încetinirea progresiei deformației",
+            "2": "Confort în timpul mersului"
+        }
+    },
+    "service_4": {
+        "title": "Reducerea presiunii în zonele afectate",
+        "hook": "Eliminarea bătăturii nu înseamnă rezolvarea problemei.",
+        "description": "Eliminarea cauzei presiunii + tratarea pielii.",
+        "results": {
+            "0": "Ameliorare imediată",
+            "1": "Prevenirea reapariției",
+            "2": "Refacerea pielii sănătoase"
+        }
+    },
+    "service_5": {
+        "title": "Corecția unghiei încarnate",
+        "hook": "Unghia incarnată poate fi tratată fără intervenție chirurgicală.",
+        "description": "Metode nedureroase de corectare a plăcii unghiale.",
+        "results": {
+            "0": "Eliminarea durerii",
+            "1": "Salvarea unghiei",
+            "2": "Prevenirea recidivelor"
+        }
+    },
+    "service_6": {
+        "title": "Îngrijire podologică medicală",
+        "hook": "Pedichiura este estetică, podologia este sănătate.",
+        "description": "Prelucrare medicală adaptată diagnosticului.",
+        "results": {
+            "0": "Eliminarea fisurilor și a hiperkeratozei",
+            "1": "Prevenirea complicațiilor",
+            "2": "Aspect îngrijit și sănătos"
+        }
+    },
+    "service_7": {
+        "title": "Tratamentul călcâielor crăpate",
+        "hook": "Fisurile nu înseamnă uscăciune, ci supraîncărcarea piciorului.",
+        "description": "Prelucrare profundă + descărcarea presiunii.",
+        "results": {
+            "0": "Vindecare rapidă",
+            "1": "Reducerea durerii la mers",
+            "2": "Prevenirea reapariției"
+        }
+    },
+    "service_8": {
+        "title": "Corecția conservatoare a deformațiilor piciorului",
+        "hook": "Chiar și la gradele 3-4, calitatea vieții poate fi îmbunătățită fără operație.",
+        "description": "Complex: talonete + orteze + controlul biomecanicii sprijinului.",
+        "results": {
+            "0": "Stabilizarea stării",
+            "1": "Reducerea durerii",
+            "2": "Îmbunătățirea mersului"
+        }
+    },
+    "service_9": {
+        "title": "Monitorizare și îngrijire podologică continuă",
+        "hook": "O singură procedură nu rezolvă o problemă cronică.",
+        "description": "Monitorizare continuă și ajustarea tratamentului.",
+        "results": {
+            "0": "Rezultat pe termen lung",
+            "1": "Controlul progresiei",
+            "2": "Strategie individuală pentru sănătatea picioarelor"
+        }
+    }
 }

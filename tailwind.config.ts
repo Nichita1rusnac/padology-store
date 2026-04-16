@@ -18,10 +18,55 @@ export default {
       },
     },
     fontFamily: {
-      display: ['Oswald', 'serif'],
-      body: ['Roboto', 'sans-serif'],
+      display: ['Noto Serif Japanese', 'roboto'],
+      body: ['Source Sans 3', 'sans-serif'],
     },
     extend: {
+      fontSize: {
+        // Fluid typography: scales from min → max across viewports
+        'xs-fluid': ['clamp(0.75rem, 1.5vw, 0.8125rem)', { lineHeight: '1.4' }],
+        'sm-fluid': ['clamp(0.8125rem, 2vw, 0.875rem)', { lineHeight: '1.5' }],
+        'base-fluid': ['clamp(1rem, 2.5vw, 1.125rem)', { lineHeight: '1.6' }],
+        'lg-fluid': ['clamp(1.125rem, 3vw, 1.25rem)', { lineHeight: '1.6' }],
+        'xl-fluid': ['clamp(1.25rem, 4vw, 1.5rem)', { lineHeight: '1.5' }],
+        '2xl-fluid': ['clamp(1.5rem, 5vw, 1.75rem)', { lineHeight: '1.4' }],
+        '3xl-fluid': ['clamp(1.75rem, 6vw, 2.25rem)', { lineHeight: '1.3' }],
+        '4xl-fluid': ['clamp(2.25rem, 7vw, 3rem)', { lineHeight: '1.2' }],
+
+        // Marketing/Display scales
+        'display-sm': ['clamp(1.5rem, 5vw, 2rem)', { lineHeight: '1.2' }],
+        'display-md': ['clamp(2rem, 6vw, 2.5rem)', { lineHeight: '1.2' }],
+        'display-lg': ['clamp(2.5rem, 8vw, 3.5rem)', { lineHeight: '1.1' }],
+
+        // Accessibility-First Sizing Scale
+        'caption': ['0.75rem', { lineHeight: '1.4', fontWeight: '400' }],
+        'small': ['0.8125rem', { lineHeight: '1.5', fontWeight: '400' }],
+        'body': ['1rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-lg': ['1.0625rem', { lineHeight: '1.6', fontWeight: '400' }],
+
+        // Headings with semantic weights
+        'h6': ['0.875rem', { lineHeight: '1.5', fontWeight: '500' }],
+        'h5': ['1rem', { lineHeight: '1.5', fontWeight: '500' }],
+        'h4': ['1.125rem', { lineHeight: '1.4', fontWeight: '600' }],
+        'h3': ['1.25rem', { lineHeight: '1.35', fontWeight: '600' }],
+        'h2': ['1.5rem', { lineHeight: '1.3', fontWeight: '600' }],
+        'h1': ['1.75rem', { lineHeight: '1.25', fontWeight: '700' }],
+
+        // Labels & UI
+        'label': ['0.8125rem', { lineHeight: '1.4', fontWeight: '500' }],
+        'button': ['0.875rem', { lineHeight: '1.5', fontWeight: '600' }],
+
+        // Platform-inspired presets
+        'ios-body': ['16px', { lineHeight: '1.6' }],
+        'ios-headline': ['17px', { lineHeight: '1.2', fontWeight: '600' }],
+        'ios-title': ['28px', { lineHeight: '1.15', fontWeight: '700' }],
+        'material-body': ['14px', { lineHeight: '1.5' }],
+        'material-label-small': ['11px', { lineHeight: '1.4' }],
+        'material-headline-small': ['20px', { lineHeight: '1.3' }],
+      },
+      backgroundImage: {
+        'instagram': 'var(--instagram)',
+      },
       colors: {
         nav: {
           DEFAULT: 'hsl(var(--nav-background))',
@@ -106,5 +151,30 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+    // Implementation of the proposed custom plugins
+    function({ addVariant, addUtilities, theme }) {
+      // Dynamic Type / Responsive Text Variants
+      addVariant('supports-large-text', '@supports (font-size: clamp(1px, 1vw, 2px))');
+      
+      // Contrast & Readability Utilities
+      // These map to standard high-contrast accessible colors
+      addUtilities({
+        '.text-contrast-high': {
+          color: theme('colors.foreground'),
+          filter: 'contrast(1.2)',
+        },
+        '.text-contrast-normal': {
+          color: theme('colors.foreground'),
+          opacity: '0.9',
+        },
+        '.text-contrast-low': {
+          color: theme('colors.muted.foreground'),
+        },
+      });
+    },
+  ],
 } satisfies Config;
+

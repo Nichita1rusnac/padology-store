@@ -1,1 +1,206 @@
-{}
+{
+  "team": {
+    "sp8": {
+      "first_name": "Eugenia",
+      "last_name": "Poliacova",
+      "specialty": [
+        "Podolog principal",
+        "Fondator"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "master",
+        "administration"
+      ]
+    },
+    "sp1": {
+      "first_name": "Marina",
+      "last_name": "Jarrar",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp2": {
+      "first_name": "Daria",
+      "last_name": "Carpova",
+      "specialty": [
+        "Podolog",
+        "Manichiură și pedichiură"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp3": {
+      "first_name": "Svitlana",
+      "last_name": "Portnova",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp12": {
+      "first_name": "Svetlana",
+      "last_name": "Iarovaia",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp13": {
+      "first_name": "Tatiana",
+      "last_name": "Creciun",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp14": {
+      "first_name": "Angela",
+      "last_name": "Luca",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp15": {
+      "first_name": "Ksenia",
+      "last_name": "Kolesnichenko",
+      "specialty": [
+        "Podolog"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp5": {
+      "first_name": "Mădălina",
+      "last_name": "Sinchevici",
+      "specialty": [
+        "Top meșter de manichiură și pedichiură"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp6": {
+      "first_name": "Melisa",
+      "last_name": "Zaltur",
+      "specialty": [
+        "Top meșter de manichiură și pedichiură"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp4": {
+      "first_name": "Janna",
+      "last_name": "Crăciun",
+      "specialty": [
+        "Manichiură și pedichiură"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp7": {
+      "first_name": "Irina",
+      "last_name": "Voznevscaia",
+      "specialty": [
+        "Manichiură-Pedichiură"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp9": {
+      "first_name": "Veaceslav",
+      "last_name": "Poliacov",
+      "specialty": [
+        "Director",
+        "Fondator"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp10": {
+      "first_name": "Alena",
+      "last_name": "Trofimov",
+      "specialty": [
+        "Manager"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp11": {
+      "first_name": "Alina",
+      "last_name": "Kravets",
+      "specialty": [
+        "Administrator"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    }
+  },
+  "book_cta": "Programează-te"
+}

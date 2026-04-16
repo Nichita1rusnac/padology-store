@@ -1,0 +1,65 @@
+{
+    "title": "Products",
+    "items": {
+        "good_0": {
+            "title": "Individual Anatomical Insoles",
+            "price": "1 750 MDL"
+        },
+        "good_1": {
+            "title": "Black Leather Ergonomic  Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_2": {
+            "title": "Brown Suede Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_3": {
+            "title": "White Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_4": {
+            "title": "White Leahter-Suede Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_5": {
+            "title": "Black Leather Ankle Boots",
+            "price": "3 500 MDL"
+        },
+        "good_6": {
+            "title": "Blue Suede Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_7": {
+            "title": "Light Gray Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_8": {
+            "title": "Gray Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_9": {
+            "title": "Minimalist Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_10": {
+            "title": "Navy Blue Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_11": {
+            "title": "Light Blue-Gray Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_12": {
+            "title": "Black Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_13": {
+            "title": "Suede Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        },
+        "good_14": {
+            "title": "Black Leather Ergonomic Shoes",
+            "price": "2 800 - 3 000 MDL"
+        }
+    }
+}

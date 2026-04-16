@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 
 interface BookingDrawerProps {
   open: boolean;
@@ -9,9 +10,29 @@ interface BookingDrawerProps {
 
 export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
   const { t } = useTranslation('common');
-  const [selectedSalon, setSelectedSalon] = useState<'buiucani' | 'center'>(
-    'buiucani',
-  );
+  const [searchParams, setSearchParams] = useSearchParams();
+  const locationParam = searchParams.get('location');
+  const selectedSalon = locationParam === 'center' ? 'center' : 'buiucani';
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [selectedSalon]);
+
+  const bookingUrls = {
+    buiucani: 'https://n611751.alteg.io/',
+    center: 'https://n1382034.alteg.io',
+  };
+
+  const handleSalonChange = (salon: 'buiucani' | 'center') => {
+    if (salon !== selectedSalon) {
+      setIsLoading(true);
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set('location', salon);
+      setSearchParams(newParams, { replace: true });
+    }
+  };
 
   if (!open) return null;
 
@@ -29,22 +50,20 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
         <div className="flex items-center justify-between p-6 border-b border-border">
           <div className="flex gap-2">
             <button
-              onClick={() => setSelectedSalon('buiucani')}
-              className={`px-4 py-2 rounded-full text-sm font-body font-medium transition-colors ${
-                selectedSalon === 'buiucani'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary text-foreground hover:bg-muted'
-              }`}
+              onClick={() => handleSalonChange('buiucani')}
+              className={`px-4 py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'buiucani'
+                ? 'bg-primary text-primary-foreground'
+                : 'bg-secondary text-foreground hover:bg-muted'
+                }`}
             >
               {t('salon.buiucani')}
             </button>
             <button
-              onClick={() => setSelectedSalon('center')}
-              className={`px-4 py-2 rounded-full text-sm font-body font-medium transition-colors ${
-                selectedSalon === 'center'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary text-foreground hover:bg-muted'
-              }`}
+              onClick={() => handleSalonChange('center')}
+              className={`px-4 py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'center'
+                ? 'bg-primary text-primary-foreground'
+                : 'bg-secondary text-foreground hover:bg-muted'
+                }`}
             >
               {t('salon.center')}
             </button>
@@ -58,12 +77,23 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
         </div>
 
         {/* Placeholder for iframe */}
-        <div className="flex-1 p-6">
-          <div className="w-full h-full rounded-2xl bg-card border-2 border-dashed border-border flex items-center justify-center">
-            <p className="text-muted-foreground font-body text-sm">
-              {t('salon.select')}:{' '}
-              {selectedSalon === 'buiucani' ? t('salon.buiucani') : t('salon.center')}
-            </p>
+        <div className="flex-1">
+          <div className="relative w-full h-full rounded-2xl bg-card border-border overflow-hidden">
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-card z-10">
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+              </div>
+            )}
+            <iframe
+              key={selectedSalon}
+              width="100%"
+              height="100%"
+              scrolling="no"
+              frameBorder="0"
+              id="ms_booking_iframe"
+              src={bookingUrls[selectedSalon]}
+              onLoad={() => setIsLoading(false)}
+            ></iframe>
           </div>
         </div>
       </div>

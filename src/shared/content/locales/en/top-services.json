@@ -1,40 +1,94 @@
 {
-    "top_services": [
-        {
-            "id": "medical_pedicure",
-            "title": "Medical Pedicure",
-            "description": "Comprehensive treatment for foot and nail conditions, ensuring optimal hygiene and health.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "ingrown_nail_treatment",
-            "title": "Ingrown Toenail Treatment",
-            "description": "Painless and effective correction of ingrown toenails to prevent infection and discomfort.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "custom_orthotics",
-            "title": "Custom Orthotic Insoles",
-            "description": "Personalized insoles designed to correct walking mechanics and relieve foot and joint pain.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "corn_callus_removal",
-            "title": "Corn and Callus Removal",
-            "description": "Gentle removal of hardened skin to restore comfort and prevent further complications.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "fungal_nail_therapy",
-            "title": "Fungal Nail Therapy",
-            "description": "Advanced treatments to eliminate fungal infections and restore healthy nails.",
-            "image": "placeholder for image url"
-        },
-        {
-            "id": "diabetic_foot_care",
-            "title": "Diabetic Foot Care",
-            "description": "Specialized care for diabetic patients to prevent ulcers and maintain foot health.",
-            "image": "placeholder for image url"
+    "title": "Services",
+    "description": "Discover our most popular services, designed to address the most common foot and ankle concerns.",
+    "service_1": {
+        "title": "Podiatric and Biomechanical Diagnostics",
+        "hook": "Foot pain is not normal, it's a signal.",
+        "description": "Gait analysis, load distribution, and pressure point analysis.",
+        "results": {
+            "0": "Understanding the cause of deformity",
+            "1": "Individual correction plan",
+            "2": "Progression prevention"
         }
-    ]
+    },
+    "service_2": {
+        "title": "Custom Orthopedic Insoles",
+        "hook": "Universal insoles don't treat—they mask the problem.",
+        "description": "Personal correction tailored to your anatomy and gait.",
+        "results": {
+            "0": "Pain reduction from the very first days",
+            "1": "Proper load distribution",
+            "2": "Improved posture"
+        }
+    },
+    "service_3": {
+        "title": "Custom Silicone Toe Orthoses",
+        "hook": "The \"bunion\" is not just aesthetics; it's a structural foot issue.",
+        "description": "Gentle toe position correction and pressure protection.",
+        "results": {
+            "0": "Reduced friction and inflammation",
+            "1": "Slowing the progression of deformity",
+            "2": "Comfort while walking"
+        }
+    },
+    "service_4": {
+        "title": "Pressure Relief for Problem Areas (Corns, Calluses)",
+        "hook": "Removing a callus doesn't mean solving the problem.",
+        "description": "Eliminating the cause of pressure + skin treatment.",
+        "results": {
+            "0": "Immediate relief",
+            "1": "Prevention of recurrence",
+            "2": "Restoration of healthy skin"
+        }
+    },
+    "service_5": {
+        "title": "Ingrown Toenail Correction",
+        "hook": "Ingrown toenails can be treated without surgery.",
+        "description": "Painless nail plate correction methods.",
+        "results": {
+            "0": "Elimination of pain",
+            "1": "Nail preservation",
+            "2": "Recurrence prevention"
+        }
+    },
+    "service_6": {
+        "title": "Medical Podiatric Foot Care",
+        "hook": "Pedicure is aesthetics, podiatry is health.",
+        "description": "Medical treatment based on the diagnosis.",
+        "results": {
+            "0": "Elimination of cracks and hyperkeratosis",
+            "1": "Complication prevention",
+            "2": "Groomed and healthy appearance"
+        }
+    },
+    "service_7": {
+        "title": "Treatment of Cracked Heels",
+        "hook": "Cracks are not about dryness; they are about foot overload.",
+        "description": "Deep treatment + pressure offloading.",
+        "results": {
+            "0": "Rapid healing",
+            "1": "Pain reduction during walking",
+            "2": "Prevention of recurrence"
+        }
+    },
+    "service_8": {
+        "title": "Conservative Treatment of Foot Deformities",
+        "hook": "Even at grades 3–4, quality of life can be improved without surgery.",
+        "description": "Comprehensive approach: insoles + orthoses + load control.",
+        "results": {
+            "0": "Condition stabilization",
+            "1": "Pain reduction",
+            "2": "Improved gait"
+        }
+    },
+    "service_9": {
+        "title": "Ongoing Podiatric Care & Monitoring",
+        "hook": "A single procedure doesn't solve a chronic problem.",
+        "description": "Dynamic monitoring and treatment adjustment.",
+        "results": {
+            "0": "Long-term results",
+            "1": "Control of progression",
+            "2": "Individual foot health strategy"
+        }
+    }
 }

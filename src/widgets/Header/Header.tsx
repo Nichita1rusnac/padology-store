@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Phone, Send, Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { BookingDrawer } from '@/widgets/BookingDrawer/BookingDrawer';
+
+import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 
 const languages = ['ru', 'ro', 'en'];
 const langLabels: Record<string, string> = {
@@ -17,7 +18,9 @@ export const Header = () => {
   const navigate = useNavigate();
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const bookingPath = useBookingPath();
+
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [telegramOpen, setTelegramOpen] = useState(false);
@@ -49,6 +52,7 @@ export const Header = () => {
   const navItems = [
     { label: t('nav.specialists'), path: `/${currentLang}/specialists` },
     { label: t('nav.price'), path: `/${currentLang}/pricing` },
+    { label: t('nav.products'), path: `/${currentLang}/products` },
     { label: t('nav.contacts'), path: `/${currentLang}/contacts` },
   ];
 
@@ -68,7 +72,7 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50">
         <div className="mx-auto max-w-9xl px-2 py-3 flex items-center justify-between">
           {/* Logo + Nav */}
-          <div className="flex items-center gap-0 bg-nav rounded-full px-2 py-2">
+          <div className="flex items-center gap-0 bg-nav rounded-full px-[1px] py-[1px] lg:px-2 lg:py-2">
             {/* Logo placeholder */}
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-lg font-bold shrink-0 cursor-pointer">
               <Link className='w-full h-full' to={`/${currentLang}`}>
@@ -82,7 +86,7 @@ export const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="px-4 py-2 text-nav-foreground text-sm font-body font-medium rounded-full transition-colors hover:bg-primary/20"
+                  className="px-4 py-2 text-nav-foreground text-sm-fluid font-body font-medium rounded-full transition-colors hover:bg-primary/20"
                 >
                   {item.label}
                 </Link>
@@ -92,7 +96,7 @@ export const Header = () => {
               <div className="relative ml-1" ref={langRef}>
                 <button
                   onClick={() => setLangOpen(!langOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-nav-foreground text-sm font-body rounded-full hover:bg-primary/20 transition-colors"
+                  className="flex items-center gap-1 px-3 py-2 text-nav-foreground text-sm-fluid font-body rounded-full hover:bg-primary/20 transition-colors"
                 >
                   {langLabels[currentLang]}
                   <ChevronDown size={14} />
@@ -106,7 +110,7 @@ export const Header = () => {
                           handleLanguageChange(lang);
                           setLangOpen(false);
                         }}
-                        className={`block w-full text-left px-4 py-2.5 text-sm font-body transition-colors hover:bg-secondary ${currentLang === lang ? 'text-primary font-semibold' : 'text-foreground'}`}
+                        className={`block w-full text-left px-4 py-2.5 text-sm-fluid font-body transition-colors hover:bg-secondary ${currentLang === lang ? 'text-primary font-semibold' : 'text-foreground'}`}
                       >
                         {langLabels[lang]}
                       </button>
@@ -130,8 +134,8 @@ export const Header = () => {
                 <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[calc(100vw-2rem)] sm:w-[340px] max-w-[calc(100vw-1rem)]">
                   <a href="tel:+37369947949" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
                     <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-medium text-foreground">{t('salon.center')}</span>
-                    <span className='text-sm font-semibold text-primary'>+373 69 947 949</span>
+                    <span className="text-sm-fluid font-medium text-foreground">{t('salon.center')}</span>
+                    <span className='text-sm-fluid font-semibold text-primary'>+373 69 947 949</span>
                   </a>
                   <div className="h-px bg-border mx-4"></div>
                   <a href="tel:+37369947949" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
@@ -163,12 +167,12 @@ export const Header = () => {
                 </div>
               )}
             </div>
-            <button
-              onClick={() => setDrawerOpen(true)}
-              className="px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-body font-semibold hover:opacity-90 transition-opacity"
+            <Link
+              to={bookingPath}
+              className="px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-button font-body font-semibold hover:opacity-90 transition-opacity"
             >
               {t('buttons.book')}
-            </button>
+            </Link>
 
             {/* Mobile menu toggle */}
             <button
@@ -212,8 +216,6 @@ export const Header = () => {
           </div>
         )}
       </header>
-
-      <BookingDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </>
   );
 };

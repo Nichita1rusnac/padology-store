@@ -29,7 +29,7 @@
                     "description": "90% dintre probleme revin dacă nu se corectează distribuția greutății la mers. Noi combinăm podologia cu ortopedia."
                 },
                 {
-                    "title": "Tipare proprii ale Evgeniei",
+                    "title": "Tipare proprii ale Evgheniei",
                     "description": "Talentele noastre au o secțiune frontală extinsă. Spre deosebire de cele de serie înguste, acestea nu comprimă degetele, ci distribuie corect greutatea și îmbunătățesc circulația sângelui."
                 }
             ]
@@ -39,5 +39,29 @@
             "description": "Eliminăm durerea pentru totdeauna, prevenim recidivele și vă redăm lejeritatea fiecărui pas."
         },
         "image": "placeholder for image url"
+    },
+    "top_services": {
+        "title": "Servicii",
+        "description": "Descoperiți cele mai populare servicii ale noastre, concepute pentru a rezolva cele mai comune probleme ale picioarelor.",
+        "items": {
+            "podiatric_consultation": {
+                "title": "Consultație podologică",
+                "description": "Evaluare complexă a biomecanicii piciorului pentru a identifica cauza exactă a durerii. Primul pas esențial pentru un plan de tratament."
+            },
+            "medical_pedicure": {
+                "title": "Pedichiură medicală",
+                "description": "Tratament sigur și steril concentrat pe sănătatea unghiilor și a pielii. Ideal pentru tratarea calusurilor, unghiilor încarnate și infecțiilor fungice."
+            },
+            "orthopedic_insoles": {
+                "title": "Tălpi ortopedice",
+                "description": "Tălpi personalizate realizate după tipare proprii, garantând o distribuție corectă a greutății și o mecanică a mersului îmbunătățită."
+            }
+        }
+    },
+    "specialists": {
+        "title": "Echipa noastră",
+        "subtitle": "Maeștrii călătoriei tale spre bunăstare",
+        "description": "Descoperiți cei mai populari specialiști ai noștri, concepuți pentru a rezolva cele mai comune probleme ale picioarelor.",
+        "view_all_cta": "Toți specialiștii"
     }
 }

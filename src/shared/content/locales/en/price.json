@@ -1,40 +1,522 @@
 {
-    "price_list": [
-        {
-            "id": "service_1",
-            "name": "Servive 1",
-            "price": 25,
-            "currency": "Lei"
+    "price_list": {
+        "buiucani": {
+            "currency": "MDL",
+            "categories": [
+                {
+                    "category": "Pedicure",
+                    "services": [
+                        {
+                            "title": "Podo-medical pedicure category 1",
+                            "price": 700
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 2",
+                            "price": 800
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 3",
+                            "price": 900
+                        },
+                        {
+                            "title": "KART Pedicure",
+                            "price": 800
+                        },
+                        {
+                            "title": "KART Pedicure foot and heels",
+                            "price": 550
+                        },
+                        {
+                            "title": "KART medical pedicure with gel polish",
+                            "price": 950
+                        },
+                        {
+                            "title": "KART medical pedicure with nail polish",
+                            "price": 850
+                        },
+                        {
+                            "title": "Full pedicure without coating",
+                            "price": 550
+                        },
+                        {
+                            "title": "Full pedicure with coating",
+                            "price": 700
+                        },
+                        {
+                            "title": "Pedicure only toes with coating",
+                            "price": 600
+                        },
+                        {
+                            "title": "Medical toe cleaning",
+                            "price": 500
+                        },
+                        {
+                            "title": "Medical cleaning of one toe",
+                            "price": 250
+                        },
+                        {
+                            "title": "Medical cleaning of two toes",
+                            "price": 350
+                        },
+                        {
+                            "title": "HPV treatment",
+                            "price": 250
+                        },
+                        {
+                            "title": "Callus category 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Callus category 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Edge nail sectioning",
+                            "price": 250
+                        },
+                        {
+                            "title": "Plastic correction system",
+                            "price": 250
+                        },
+                        {
+                            "title": "Nail plate prosthetics",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Control examination + dressing/tamponade",
+                            "price": 200
+                        },
+                        {
+                            "title": "Pedicure gel polish coating",
+                            "price": 150
+                        },
+                        {
+                            "title": "Pedicure nail polish coating",
+                            "price": 100
+                        },
+                        {
+                            "title": "Material removal",
+                            "price_range": [
+                                100,
+                                250
+                            ]
+                        },
+                        {
+                            "title": "Men's pedicure",
+                            "price": 650
+                        },
+                        {
+                            "title": "Children's pedicure",
+                            "price": 400
+                        },
+                        {
+                            "title": "SPA procedure 'Cold Paraffin' (hands)",
+                            "price": 200
+                        }
+                    ]
+                },
+                {
+                    "category": "Podology and Orthopedics",
+                    "services": [
+                        {
+                            "title": "Podologist consultation",
+                            "price": 250
+                        },
+                        {
+                            "title": "Flat-foot diagnostics",
+                            "price": 500
+                        },
+                        {
+                            "title": "Silicone orthosis",
+                            "price_range": [
+                                450,
+                                1000
+                            ],
+                            "note": "30 lei per gram"
+                        },
+                        {
+                            "title": "Titanium thread installation",
+                            "price": 850
+                        },
+                        {
+                            "title": "Brace installation",
+                            "price": 1000
+                        },
+                        {
+                            "title": "Individual insoles",
+                            "price": 1750
+                        },
+                        {
+                            "title": "Insole correction",
+                            "price": 800
+                        }
+                    ]
+                },
+                {
+                    "category": "Manicure",
+                    "services": [
+                        {
+                            "title": "Manicure without coating",
+                            "price": 300
+                        },
+                        {
+                            "title": "Hygienic manicure + clear polish coating",
+                            "price": 350
+                        },
+                        {
+                            "title": "Manicure + nail polish coating",
+                            "price": 400
+                        },
+                        {
+                            "title": "Japanese manicure",
+                            "price": 400
+                        },
+                        {
+                            "title": "Gel coating",
+                            "price": 500
+                        },
+                        {
+                            "title": "Gel correction",
+                            "price": 550
+                        },
+                        {
+                            "title": "Complex gel correction",
+                            "price_range": [
+                                600,
+                                700
+                            ]
+                        },
+                        {
+                            "title": "Extension + coating + manicure",
+                            "price_range": [
+                                600,
+                                900
+                            ]
+                        },
+                        {
+                            "title": "Dry manicure with Japanese polishing",
+                            "price": 400
+                        },
+                        {
+                            "title": "French",
+                            "price": 50
+                        },
+                        {
+                            "title": "Material removal",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Nail plate strengthening",
+                            "price": 50
+                        },
+                        {
+                            "title": "Medical manicure",
+                            "price": 400
+                        },
+                        {
+                            "title": "Children's manicure",
+                            "price": 250
+                        },
+                        {
+                            "title": "Men's manicure",
+                            "price": 350
+                        },
+                        {
+                            "title": "SPA procedure 'Cold Paraffin' (hands)",
+                            "price": 200
+                        }
+                    ]
+                },
+                {
+                    "category": "Top Master Manicure",
+                    "services": [
+                        {
+                            "title": "Gel, gel polish correction",
+                            "price_range": [
+                                600,
+                                750
+                            ]
+                        },
+                        {
+                            "title": "Complex gel correction",
+                            "price_range": [
+                                650,
+                                750
+                            ]
+                        },
+                        {
+                            "title": "Natural nail strengthening with gel",
+                            "price": 500
+                        },
+                        {
+                            "title": "Nail extensions",
+                            "price_range": [
+                                700,
+                                1000
+                            ]
+                        },
+                        {
+                            "title": "Complex extensions",
+                            "price_range": [
+                                850,
+                                1000
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "category": "Top Master Podologist",
+                    "services": [
+                        {
+                            "title": "Podologist consultation",
+                            "price": 250
+                        },
+                        {
+                            "title": "Flat-foot diagnostics",
+                            "price": 500
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 1",
+                            "price": 800
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 2",
+                            "price": 950
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 3",
+                            "price": 1100
+                        },
+                        {
+                            "title": "KART medical pedicure",
+                            "price": 900
+                        },
+                        {
+                            "title": "Medical cleaning of one toe",
+                            "price": 250
+                        },
+                        {
+                            "title": "Medical cleaning of two toes",
+                            "price": 450
+                        },
+                        {
+                            "title": "Medical toe cleaning",
+                            "price": 600
+                        },
+                        {
+                            "title": "HPV treatment",
+                            "price": 300
+                        },
+                        {
+                            "title": "Edge nail sectioning",
+                            "price": 350
+                        },
+                        {
+                            "title": "Callus category 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Callus category 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Plastic correction system",
+                            "price": 350
+                        },
+                        {
+                            "title": "Brace installation",
+                            "price": 1300
+                        },
+                        {
+                            "title": "Titanium thread installation",
+                            "price": 1000
+                        }
+                    ]
+                }
+            ]
         },
-        {
-            "id": "service_2",
-            "name": "Servive 2",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_3",
-            "name": "Servive 3",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_4",
-            "name": "Servive 4",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_5",
-            "name": "Servive 5",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_6",
-            "name": "Servive 6",
-            "price": 50,
-            "currency": "Lei"
+        "center": {
+            "currency": "MDL",
+            "categories": [
+                {
+                    "category": "Pedicure",
+                    "services": [
+                        {
+                            "title": "Medical foot cleaning",
+                            "price": 500
+                        },
+                        {
+                            "title": "Treatment of deformed nails",
+                            "price": 500
+                        },
+                        {
+                            "title": "KART crack treatment (feet)",
+                            "price_range": [
+                                400,
+                                600
+                            ]
+                        },
+                        {
+                            "title": "Callous removal",
+                            "price": 400
+                        },
+                        {
+                            "title": "Diabetic foot care",
+                            "price": 900
+                        },
+                        {
+                            "title": "Laboratory sampling",
+                            "price": 200
+                        },
+                        {
+                            "title": "Tamponade",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Material removal",
+                            "price": 200
+                        },
+                        {
+                            "title": "Nail plate prosthetics",
+                            "price": 250
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 3",
+                            "price": 1100
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 2",
+                            "price": 950
+                        },
+                        {
+                            "title": "Podo-medical pedicure category 1",
+                            "price": 800
+                        },
+                        {
+                            "title": "Plastic correction system",
+                            "price": 350
+                        },
+                        {
+                            "title": "KART Pedicure",
+                            "price": 900
+                        },
+                        {
+                            "title": "HPV treatment",
+                            "price_range": [
+                                300,
+                                600
+                            ]
+                        },
+                        {
+                            "title": "Men's pedicure",
+                            "price": 700
+                        },
+                        {
+                            "title": "Callus category 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Callus category 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Medical toe cleaning",
+                            "price": 600
+                        },
+                        {
+                            "title": "Medical cleaning of one toe",
+                            "price": 250
+                        },
+                        {
+                            "title": "Medical cleaning of two toes",
+                            "price": 450
+                        },
+                        {
+                            "title": "Edge nail sectioning",
+                            "price": 350
+                        },
+                        {
+                            "title": "Full pedicure with coating",
+                            "price": 900
+                        },
+                        {
+                            "title": "Full pedicure without coating",
+                            "price": 650
+                        }
+                    ]
+                },
+                {
+                    "category": "Podology and Orthopedics",
+                    "services": [
+                        {
+                            "title": "Podologist consultation",
+                            "price": 250
+                        },
+                        {
+                            "title": "Pododiagnostics of foot and skeletal frame",
+                            "price": 750
+                        },
+                        {
+                            "title": "Silicone orthosis",
+                            "price_range": [
+                                500,
+                                700
+                            ],
+                            "note": "35 lei per gram"
+                        },
+                        {
+                            "title": "Titanium thread installation",
+                            "price": 1000
+                        },
+                        {
+                            "title": "Brace installation",
+                            "price": 1300
+                        },
+                        {
+                            "title": "Individual insoles",
+                            "price": 1750
+                        },
+                        {
+                            "title": "Insole correction",
+                            "price": 800
+                        },
+                        {
+                            "title": "Pressure relief",
+                            "price": 250
+                        }
+                    ]
+                },
+                {
+                    "category": "Manicure",
+                    "services": [
+                        {
+                            "title": "Men's manicure",
+                            "price": 400
+                        },
+                        {
+                            "title": "Medical manicure",
+                            "price": 450
+                        },
+                        {
+                            "title": "Japanese manicure",
+                            "price": 450
+                        },
+                        {
+                            "title": "Hygienic manicure",
+                            "price": 350
+                        }
+                    ]
+                }
+            ]
         }
-    ]
+    }
 }

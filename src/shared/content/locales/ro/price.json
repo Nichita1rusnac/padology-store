@@ -1,40 +1,522 @@
 {
-    "price_list": [
-        {
-            "id": "service_1",
-            "name": "Serviciu 1",
-            "price": 25,
-            "currency": "Lei"
+    "price_list": {
+        "buiucani": {
+            "currency": "MDL",
+            "categories": [
+                {
+                    "category": "Pedichiură",
+                    "services": [
+                        {
+                            "title": "Pedichiură podo-medicală categoria 1",
+                            "price": 700
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 2",
+                            "price": 800
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 3",
+                            "price": 900
+                        },
+                        {
+                            "title": "Pedichiură KART",
+                            "price": 800
+                        },
+                        {
+                            "title": "Pedichiură KART talpă și călcâi",
+                            "price": 550
+                        },
+                        {
+                            "title": "Pedichiură medicală KART cu acoperire oja-gel",
+                            "price": 950
+                        },
+                        {
+                            "title": "Pedichiură medicală KART cu acoperire ojă",
+                            "price": 850
+                        },
+                        {
+                            "title": "Pedichiură completă fără acoperire",
+                            "price": 550
+                        },
+                        {
+                            "title": "Pedichiură completă cu acoperire",
+                            "price": 700
+                        },
+                        {
+                            "title": "Pedichiură doar degete cu acoperire",
+                            "price": 600
+                        },
+                        {
+                            "title": "Curățare medicală a degetelor",
+                            "price": 500
+                        },
+                        {
+                            "title": "Curățare medicală a unui deget",
+                            "price": 250
+                        },
+                        {
+                            "title": "Curățare medicală a două degete",
+                            "price": 350
+                        },
+                        {
+                            "title": "Tratament HPV",
+                            "price": 250
+                        },
+                        {
+                            "title": "Bătătură categoria 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Bătătură categoria 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Secționarea marginii unghiei",
+                            "price": 250
+                        },
+                        {
+                            "title": "Sistem de corecție din plastic",
+                            "price": 250
+                        },
+                        {
+                            "title": "Protezarea plăcii unghiale",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Control + pansament/tamponadă",
+                            "price": 200
+                        },
+                        {
+                            "title": "Aplicare ojă-gel pedichiură",
+                            "price": 150
+                        },
+                        {
+                            "title": "Aplicare ojă pedichiură",
+                            "price": 100
+                        },
+                        {
+                            "title": "Scoaterea materialului",
+                            "price_range": [
+                                100,
+                                250
+                            ]
+                        },
+                        {
+                            "title": "Pedichiură bărbați",
+                            "price": 650
+                        },
+                        {
+                            "title": "Pedichiură copii",
+                            "price": 400
+                        },
+                        {
+                            "title": "Procedură SPA „Parafină rece” (mâini)",
+                            "price": 200
+                        }
+                    ]
+                },
+                {
+                    "category": "Podologie și Ortopedie",
+                    "services": [
+                        {
+                            "title": "Consultația podologului",
+                            "price": 250
+                        },
+                        {
+                            "title": "Diagnostic platfus",
+                            "price": 500
+                        },
+                        {
+                            "title": "Orteză din silicon",
+                            "price_range": [
+                                450,
+                                1000
+                            ],
+                            "note": "30 lei gram"
+                        },
+                        {
+                            "title": "Instalare fir de titan",
+                            "price": 850
+                        },
+                        {
+                            "title": "Instalare scoabă",
+                            "price": 1000
+                        },
+                        {
+                            "title": "Susținători plantari individuali",
+                            "price": 1750
+                        },
+                        {
+                            "title": "Corecție susținători plantari",
+                            "price": 800
+                        }
+                    ]
+                },
+                {
+                    "category": "Manichiură",
+                    "services": [
+                        {
+                            "title": "Manichiură fără acoperire",
+                            "price": 300
+                        },
+                        {
+                            "title": "Manichiură igienică + acoperire cu lac incolor",
+                            "price": 350
+                        },
+                        {
+                            "title": "Manichiură + acoperire cu ojă",
+                            "price": 400
+                        },
+                        {
+                            "title": "Manichiură japoneză",
+                            "price": 400
+                        },
+                        {
+                            "title": "Acoperire cu gel",
+                            "price": 500
+                        },
+                        {
+                            "title": "Corecție cu gel",
+                            "price": 550
+                        },
+                        {
+                            "title": "Corecție complexă cu gel",
+                            "price_range": [
+                                600,
+                                700
+                            ]
+                        },
+                        {
+                            "title": "Construcție + acoperire + manichiură",
+                            "price_range": [
+                                600,
+                                900
+                            ]
+                        },
+                        {
+                            "title": "Manichiură dry cu lustruire japoneză",
+                            "price": 400
+                        },
+                        {
+                            "title": "French",
+                            "price": 50
+                        },
+                        {
+                            "title": "Scoaterea materialului",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Întărirea plăcii unghiale",
+                            "price": 50
+                        },
+                        {
+                            "title": "Manichiură medicală",
+                            "price": 400
+                        },
+                        {
+                            "title": "Manichiură copii",
+                            "price": 250
+                        },
+                        {
+                            "title": "Manichiură bărbați",
+                            "price": 350
+                        },
+                        {
+                            "title": "Procedură SPA „Parafină rece” (mâini)",
+                            "price": 200
+                        }
+                    ]
+                },
+                {
+                    "category": "Manichiură Top Master",
+                    "services": [
+                        {
+                            "title": "Corecție cu gel, ojă-gel",
+                            "price_range": [
+                                600,
+                                750
+                            ]
+                        },
+                        {
+                            "title": "Corecție complexă cu gel",
+                            "price_range": [
+                                650,
+                                750
+                            ]
+                        },
+                        {
+                            "title": "Întărirea unghiei naturale cu gel",
+                            "price": 500
+                        },
+                        {
+                            "title": "Construcția unghiilor",
+                            "price_range": [
+                                700,
+                                1000
+                            ]
+                        },
+                        {
+                            "title": "Construcție complexă",
+                            "price_range": [
+                                850,
+                                1000
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "category": "Top Master Podolog",
+                    "services": [
+                        {
+                            "title": "Consultația podologului",
+                            "price": 250
+                        },
+                        {
+                            "title": "Diagnostic platfus",
+                            "price": 500
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 1",
+                            "price": 800
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 2",
+                            "price": 950
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 3",
+                            "price": 1100
+                        },
+                        {
+                            "title": "Pedichiură medicală KART",
+                            "price": 900
+                        },
+                        {
+                            "title": "Curățare medicală a unui deget",
+                            "price": 250
+                        },
+                        {
+                            "title": "Curățare medicală a două degete",
+                            "price": 450
+                        },
+                        {
+                            "title": "Curățare medicală a degetelor",
+                            "price": 600
+                        },
+                        {
+                            "title": "Tratament HPV",
+                            "price": 300
+                        },
+                        {
+                            "title": "Secționarea marginii unghiei",
+                            "price": 350
+                        },
+                        {
+                            "title": "Bătătură categoria 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Bătătură categoria 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Sistem de corecție din plastic",
+                            "price": 350
+                        },
+                        {
+                            "title": "Instalare scoabă",
+                            "price": 1300
+                        },
+                        {
+                            "title": "Instalare fir de titan",
+                            "price": 1000
+                        }
+                    ]
+                }
+            ]
         },
-        {
-            "id": "service_2",
-            "name": "Serviciu 2",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_3",
-            "name": "Serviciu 3",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_4",
-            "name": "Serviciu 4",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_5",
-            "name": "Serviciu 5",
-            "price": 50,
-            "currency": "Lei"
-        },
-        {
-            "id": "service_6",
-            "name": "Serviciu 6",
-            "price": 50,
-            "currency": "Lei"
+        "center": {
+            "currency": "MDL",
+            "categories": [
+                {
+                    "category": "Pedichiură",
+                    "services": [
+                        {
+                            "title": "Curățare medicală a tălpilor",
+                            "price": 500
+                        },
+                        {
+                            "title": "Tratarea unghiilor deformate",
+                            "price": 500
+                        },
+                        {
+                            "title": "Tratamentul fisurilor KART (tălpi)",
+                            "price_range": [
+                                400,
+                                600
+                            ]
+                        },
+                        {
+                            "title": "Îndepărtarea calozităților",
+                            "price": 400
+                        },
+                        {
+                            "title": "Îngrijirea piciorului diabetic",
+                            "price": 900
+                        },
+                        {
+                            "title": "Recoltare probe laborator",
+                            "price": 200
+                        },
+                        {
+                            "title": "Tamponadă",
+                            "price_range": [
+                                100,
+                                150
+                            ]
+                        },
+                        {
+                            "title": "Scoaterea materialului",
+                            "price": 200
+                        },
+                        {
+                            "title": "Protezarea plăcii unghiale",
+                            "price": 250
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 3",
+                            "price": 1100
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 2",
+                            "price": 950
+                        },
+                        {
+                            "title": "Pedichiură podo-medicală categoria 1",
+                            "price": 800
+                        },
+                        {
+                            "title": "Sistem de corecție din plastic",
+                            "price": 350
+                        },
+                        {
+                            "title": "Pedichiură KART",
+                            "price": 900
+                        },
+                        {
+                            "title": "Tratament HPV",
+                            "price_range": [
+                                300,
+                                600
+                            ]
+                        },
+                        {
+                            "title": "Pedichiură bărbați",
+                            "price": 700
+                        },
+                        {
+                            "title": "Bătătură categoria 2",
+                            "price": 350
+                        },
+                        {
+                            "title": "Bătătură categoria 1",
+                            "price": 250
+                        },
+                        {
+                            "title": "Curățare medicală a degetelor",
+                            "price": 600
+                        },
+                        {
+                            "title": "Curățare medicală a unui deget",
+                            "price": 250
+                        },
+                        {
+                            "title": "Curățare medicală a două degete",
+                            "price": 450
+                        },
+                        {
+                            "title": "Secționarea marginii unghiei",
+                            "price": 350
+                        },
+                        {
+                            "title": "Pedichiură completă cu acoperire",
+                            "price": 900
+                        },
+                        {
+                            "title": "Pedichiură completă fără acoperire",
+                            "price": 650
+                        }
+                    ]
+                },
+                {
+                    "category": "Podologie și Ortopedie",
+                    "services": [
+                        {
+                            "title": "Consultația podologului",
+                            "price": 250
+                        },
+                        {
+                            "title": "Diagnostic podologic al tălpii și sistemului osos",
+                            "price": 750
+                        },
+                        {
+                            "title": "Orteză din silicon",
+                            "price_range": [
+                                500,
+                                700
+                            ],
+                            "note": "35 lei gram"
+                        },
+                        {
+                            "title": "Instalare fir de titan",
+                            "price": 1000
+                        },
+                        {
+                            "title": "Instalare scoabă",
+                            "price": 1300
+                        },
+                        {
+                            "title": "Susținători plantari individuali",
+                            "price": 1750
+                        },
+                        {
+                            "title": "Corecție susținători plantari",
+                            "price": 800
+                        },
+                        {
+                            "title": "Descărcare (Pressure relief)",
+                            "price": 250
+                        }
+                    ]
+                },
+                {
+                    "category": "Manichiură",
+                    "services": [
+                        {
+                            "title": "Manichiură bărbați",
+                            "price": 400
+                        },
+                        {
+                            "title": "Manichiură medicală",
+                            "price": 450
+                        },
+                        {
+                            "title": "Manichiură japoneză",
+                            "price": 450
+                        },
+                        {
+                            "title": "Manichiură igienică",
+                            "price": 350
+                        }
+                    ]
+                }
+            ]
         }
-    ]
+    }
 }

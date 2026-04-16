@@ -1,18 +1,206 @@
 {
-    "specialists": [
-        {
-            "id": "sp1",
-            "first_name": "John",
-            "last_name": "Doe",
-            "specialty": "Подолог",
-            "image_url": "test"
-        },
-        {
-            "id": "sp2",
-            "first_name": "Anna",
-            "last_name": "Smith",
-            "specialty": "Подолог",
-            "image_url": "test"
-        }
-    ]
+  "team": {
+    "sp8": {
+      "first_name": "Евгения",
+      "last_name": "Полякова",
+      "specialty": [
+        "Ведущий подолог",
+        "Учредитель"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "master",
+        "administration"
+      ]
+    },
+    "sp1": {
+      "first_name": "Марина",
+      "last_name": "Жаррар",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp2": {
+      "first_name": "Дария",
+      "last_name": "Карпова",
+      "specialty": [
+        "Подолог",
+        "Маникюр-Педикюр"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp3": {
+      "first_name": "Светлана",
+      "last_name": "Портнова",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp12": {
+      "first_name": "Светлана",
+      "last_name": "Яровая",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp13": {
+      "first_name": "Татьяна",
+      "last_name": "Кречун",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp14": {
+      "first_name": "Анжела",
+      "last_name": "Луца",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp15": {
+      "first_name": "Ксения",
+      "last_name": "Колесниченко",
+      "specialty": [
+        "Подолог"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp5": {
+      "first_name": "Мэдэлина",
+      "last_name": "Синкевич",
+      "specialty": [
+        "Топ-мастер по маникюру и педикюру"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp6": {
+      "first_name": "Мелисса",
+      "last_name": "Залтур",
+      "specialty": [
+        "Топ-мастер по маникюру и педикюру"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp4": {
+      "first_name": "Жанна",
+      "last_name": "Крэчун",
+      "specialty": [
+        "Маникюр-Педикюр"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp7": {
+      "first_name": "Ирина",
+      "last_name": "Возневская",
+      "specialty": [
+        "Маникюр-Педикюр"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp9": {
+      "first_name": "Вячеслав",
+      "last_name": "Поляков",
+      "specialty": [
+        "Директор",
+        "Учредитель"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp10": {
+      "first_name": "Алёна",
+      "last_name": "Трофимов",
+      "specialty": [
+        "Менеджер"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp11": {
+      "first_name": "Алина",
+      "last_name": "Кравец",
+      "specialty": [
+        "Администратор"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    }
+  },
+  "book_cta": "Записаться"
 }

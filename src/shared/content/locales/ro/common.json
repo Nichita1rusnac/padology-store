@@ -2,7 +2,7 @@
     "nav": {
         "specialists": "Specialiști",
         "price": "Prețuri",
-        "goods": "Produse",
+        "products": "Produs e",
         "contacts": "Contacte",
         "main": "Pagina principală"
     },
@@ -10,6 +10,7 @@
         "services": "Serviciile noastre",
         "specialists": "Specialiștii",
         "pricing": "Lista de prețuri",
+        "products": "Produse",
         "contacts": "Contacte"
     },
     "salon": {

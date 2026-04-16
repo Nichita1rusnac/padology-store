@@ -2,7 +2,7 @@
     "nav": {
         "specialists": "Specialists",
         "price": "Price",
-        "goods": "Goods",
+        "products": "Products",
         "contacts": "Contacts",
         "main": "Main"
     },
@@ -10,6 +10,7 @@
         "services": "Our Services",
         "specialists": "Specialists",
         "pricing": "Price List",
+        "products": "Products",
         "contacts": "Contacts"
     },
     "salon": {

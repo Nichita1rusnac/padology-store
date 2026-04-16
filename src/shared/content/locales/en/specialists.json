@@ -1,18 +1,206 @@
 {
-    "specialists": [
-        {
-            "id": "sp1",
-            "first_name": "John",
-            "last_name": "Doe",
-            "specialty": "Podiatrist",
-            "image_url": "test"
-        },
-        {
-            "id": "sp2",
-            "first_name": "Anna",
-            "last_name": "Smith",
-            "specialty": "Podiatrist",
-            "image_url": "test"
-        }
-    ]
+  "team": {
+    "sp8": {
+      "first_name": "Eugenia",
+      "last_name": "Poliacova",
+      "specialty": [
+        "Chief podiatrist",
+        "Founder"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "master",
+        "administration"
+      ]
+    },
+    "sp1": {
+      "first_name": "Marina",
+      "last_name": "Jarrar",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp2": {
+      "first_name": "Daria",
+      "last_name": "Carpova",
+      "specialty": [
+        "Podiatrist",
+        "Manicure and pedicure"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp3": {
+      "first_name": "Svitlana",
+      "last_name": "Portnova",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp12": {
+      "first_name": "Svetlana",
+      "last_name": "Iarovaia",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp13": {
+      "first_name": "Tatiana",
+      "last_name": "Creciun",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp14": {
+      "first_name": "Angela",
+      "last_name": "Luca",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp15": {
+      "first_name": "Ksenia",
+      "last_name": "Kolesnichenko",
+      "specialty": [
+        "Podiatrist"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp5": {
+      "first_name": "Madalina",
+      "last_name": "Sinchevici",
+      "specialty": [
+        "Top master of manicure and pedicure"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp6": {
+      "first_name": "Melisa",
+      "last_name": "Zaltur",
+      "specialty": [
+        "Top master of manicure and pedicure"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp4": {
+      "first_name": "Janna",
+      "last_name": "Craciun",
+      "specialty": [
+        "Manicure and pedicure"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp7": {
+      "first_name": "Irina",
+      "last_name": "Voznevscaia",
+      "specialty": [
+        "Manicure and pedicure"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "master"
+      ]
+    },
+    "sp9": {
+      "first_name": "Veaceslav",
+      "last_name": "Poliacov",
+      "specialty": [
+        "Director",
+        "Founder"
+      ],
+      "location": [
+        "center"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp10": {
+      "first_name": "Alena",
+      "last_name": "Trofimov",
+      "specialty": [
+        "Manager"
+      ],
+      "location": [
+        "center",
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    },
+    "sp11": {
+      "first_name": "Alina",
+      "last_name": "Kravets",
+      "specialty": [
+        "Administrator"
+      ],
+      "location": [
+        "buiucani"
+      ],
+      "tags": [
+        "administration"
+      ]
+    }
+  },
+  "book_cta": "Book an appointment"
 }
