@@ -9,12 +9,19 @@ import {
 } from '@/components/ui/breadcrumb';
 import { useTranslation } from 'react-i18next';
 import { ProductsSection } from '@/widgets/ProductsSection/ProductsSection';
+import { SEO } from '@/components/SEO';
 
 const Products = () => {
-    const { t } = useTranslation('common');
+    const { t, i18n } = useTranslation('common');
+    const lang = i18n.resolvedLanguage || i18n.language || 'ro';
 
     return (
         <main className="pt-20">
+            <SEO
+                title={t('seo.products.title')}
+                description={t('seo.products.description')}
+                path={`/${lang}/products`}
+            />
             <section className="pt-4 px-4">
                 <div className="mx-auto max-w-9xl">
                     <Breadcrumb>

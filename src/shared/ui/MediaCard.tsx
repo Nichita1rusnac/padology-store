@@ -19,7 +19,7 @@ export const MediaCard = ({
 }: MediaCardProps) => {
   console.log(image)
   return (
-    <div
+    <article
       onClick={onClick}
       className={`overflow-hidden group transition-shadow flex flex-col h-full ${onClick ? 'cursor-pointer hover:shadow-lg' : ''} ${className}`}
     >
@@ -35,6 +35,7 @@ export const MediaCard = ({
           src={image}
           alt={alt || title}
           className="absolute inset-0 w-full h-full mix-blend-darken object-contain group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+          loading="lazy"
         />
       </div>
       <div className="flex-1 flex flex-col p-2">
@@ -46,6 +47,6 @@ export const MediaCard = ({
           {description}
         </p> */}
       </div>
-    </div>
+    </article>
   );
 };

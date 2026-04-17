@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
@@ -19,19 +19,20 @@ interface ContactLocation {
 export const ContactsSection = () => {
     const { t } = useTranslation(['contacts', 'common']);
     // Using i18next generic for type safety instead of casting
+
     const locations = t<string, { returnObjects: true }, ContactLocation[]>('contacts', {
         returnObjects: true,
     });
-
+    const { lang } = useParams<{ lang: string }>();
     const bookingPath = useBookingPath();
 
     return (
         <section id="contacts" className="py-16 px-4">
             <div className="mx-auto max-w-9xl">
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <h1 className="font-display text-display-lg font-light gradient-text mb-6">
+                    <h2 className="font-display text-display-lg font-light gradient-text mb-6">
                         {t('common:titles.contacts')}
-                    </h1>
+                    </h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                     {locations.map((location) => {
@@ -63,12 +64,14 @@ export const ContactsSection = () => {
                                             <span className="text-base-fluid">{workingHours}</span>
                                         </div>
                                     )}
-                                    <Link
-                                        to={`${bookingPath}?location=${location.contact.find((c) => c.id === 'tag')?.value}`}
-                                        className="inline-block w-full md:w-auto px-8 py-3.5 bg-primary text-primary-foreground rounded-full text-button font-body font-semibold text-center hover:shadow-lg hover:shadow-primary/20 transition-all"
-                                    >
-                                        {t('common:buttons.book')}
-                                    </Link>
+                                    <div className="flex flex-col sm:flex-row gap-3">
+                                        <Link
+                                            to={`${bookingPath}?location=${location.contact.find((c) => c.id === 'tag')?.value}`}
+                                            className="inline-block w-full md:w-auto px-8 py-3.5 bg-primary text-primary-foreground rounded-full text-button font-body font-semibold text-center hover:shadow-lg hover:shadow-primary/20 transition-all"
+                                        >
+                                            {t('common:buttons.book')}
+                                        </Link>
+                                    </div>
                                 </div>
                                 <div className="mt-6 aspect-video rounded-3xl bg-secondary overflow-hidden">
                                     <iframe

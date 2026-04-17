@@ -5,21 +5,7 @@
         "image": "placeholder for image url",
         "employes": {
             "quantity": "10+",
-            "description": "Специалистов",
-            "images": [
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url",
-                "placeholder for image url"
-            ]
+            "description": "Специалистов"
         },
         "locations": {
             "quantity": "2",

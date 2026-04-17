@@ -76,7 +76,7 @@ export const Header = () => {
             {/* Logo placeholder */}
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-lg font-bold shrink-0 cursor-pointer">
               <Link className='w-full h-full' to={`/${currentLang}`}>
-                <img className='w-full h-full object-cover rounded-full' src="/logo.webp" alt="Logo" />
+                <img className='w-full h-full object-cover rounded-full' src="/logo.webp" alt="Podiatric Studios Logo" />
               </Link>
             </div>
 
@@ -138,10 +138,10 @@ export const Header = () => {
                     <span className='text-sm-fluid font-semibold text-primary'>+373 69 947 949</span>
                   </a>
                   <div className="h-px bg-border mx-4"></div>
-                  <a href="tel:+37369947949" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
+                  <a href="tel:+37369639898" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
                     <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium text-foreground">{t('salon.buiucani')}</span>
-                    <span className='text-sm font-semibold text-primary'>+373 69 947 949</span>
+                    <span className='text-sm font-semibold text-primary'>+373 69 639 898</span>
                   </a>
                 </div>
               )}

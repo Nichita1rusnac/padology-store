@@ -21,5 +21,35 @@
     "buttons": {
         "book": "Book Now",
         "more": "More"
+    },
+    "seo": {
+        "home": {
+            "title": "Expert Podiatry Clinic",
+            "description": "Resolving complex foot and nail problems with medical precision. Custom orthotics, medical pedicure, and professional podiatry in Chișinău. Book your appointment today."
+        },
+        "about": {
+            "title": "About Us",
+            "description": "Learn about Podiatric Studios. Our orthopedic approach to podiatry ensures long-term foot health. Discover our mission, philosophy and team in Chișinău."
+        },
+        "services": {
+            "title": "Our Services",
+            "description": "Professional podiatry services: medical pedicure, custom orthopedic insoles, and treatment for ingrown nails. Expert care for your feet in Chișinău."
+        },
+        "specialists": {
+            "title": "Our Team",
+            "description": "Meet our expert podologists and medical pedicure specialists. Dedicated professionals providing high-quality foot care and biomechanical evaluations in Chișinău."
+        },
+        "pricing": {
+            "title": "Price List",
+            "description": "Transparent pricing for all podiatry and medical pedicure services in Chișinău. View our price list and book your professional podological visit today."
+        },
+        "products": {
+            "title": "Foot Care Products",
+            "description": "Explore our curated selection of orthopedic and podiatry products. High-quality creams, professional care and corrective devices for healthy feet."
+        },
+        "contacts": {
+            "title": "Contact Us",
+            "description": "Visit Podiatric Studios in Chișinău. Find our locations in Buiucani and Center. Call or message us to schedule your podiatry appointment."
+        }
     }
 }

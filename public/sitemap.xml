@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Romanian (Primary) -->
+  <url>
+    <loc>https://podiatricstudios.md/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://podiatricstudios.md/ro/"/>
+    <xhtml:link rel="alternate" hreflang="ru-MD" href="https://podiatricstudios.md/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en-MD" href="https://podiatricstudios.md/en/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/specialists</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/pricing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/products</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/contacts</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/locations/chisinau-centru-1</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ro/locations/chisinau-centru-2</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Russian -->
+  <url>
+    <loc>https://podiatricstudios.md/ru/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/specialists</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/pricing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/products</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/contacts</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/locations/chisinau-center-1</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/ru/locations/chisinau-center-2</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://podiatricstudios.md/en/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/specialists</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/pricing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/products</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/contacts</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/locations/chisinau-center-1</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://podiatricstudios.md/en/locations/chisinau-center-2</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>

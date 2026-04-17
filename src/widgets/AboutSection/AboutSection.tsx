@@ -14,8 +14,9 @@ export const AboutSection = () => {
       {/* Subtle Background Watermark */}
       <img 
         src="foot-prints.png" 
-        alt="" 
+        alt="Footprints background texture" 
         className="absolute -bottom-24 -left-20 w-96 object-contain mix-blend-multiply opacity-[0.03] pointer-events-none" 
+        loading="lazy"
       />
 
       <div className="mx-auto max-w-6xl relative z-10">
@@ -25,9 +26,9 @@ export const AboutSection = () => {
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('about.subtitle')}
           </span>
-          <h1 className="font-display text-display-lg font-light gradient-text mb-6">
+          <h2 className="font-display text-display-lg font-light gradient-text mb-6">
             {t('about.title')}
-          </h1>
+          </h2>
           <p className="text-muted-foreground font-body text-lg-fluid leading-relaxed">
             {t('about.intro')}
           </p>

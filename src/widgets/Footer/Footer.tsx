@@ -168,9 +168,11 @@ export const Footer = () => {
 
   // Social media links - update with your actual URLs
   const socialLinks = {
-    phone: 'tel:+37369947949', // Update with primary phone
-    telegram: 'https://t.me/evpodolux', // Update with actual Telegram
-    instagram: 'https://instagram.com/evpodolux', // Update with actual Instagram
+    phone: 'tel:+37369947949', // Center (primary)
+    telegram: 'https://t.me/evpodolux',
+    instagram: 'https://instagram.com/evpodolux',
+    email: 'TODO: contact@podiatricstudios.md', // To be updated
+    domain: 'TODO: podiatricstudios.md' // To be updated
   };
 
   return (
@@ -186,7 +188,8 @@ export const Footer = () => {
                   <img
                     className="w-full h-full object-cover rounded-full"
                     src="/logo.webp"
-                    alt="EV PODOLUX logo"
+                    alt="Podiatric Studios Logo"
+                    loading="lazy"
                   />
                 </div>
                 <p className="font-bold font-display gradient-text shrink whitespace-nowrap min-w-0 text-2xl-fluid overflow-hidden text-ellipsis">
@@ -224,7 +227,8 @@ export const Footer = () => {
                       <img
                         className="w-16 h-16 shrink-0 rounded-full object-cover"
                         src="/logo.webp"
-                        alt={`${buiucaniStore.name} clinic logo`}
+                        alt={`Logo of ${buiucaniStore.name} Podiatry Clinic`}
+                        loading="lazy"
                       />
                       <h3 className="text-2xl-fluid font-display tracking-[-0.02em]">
                         {buiucaniStore.name}
@@ -286,7 +290,8 @@ export const Footer = () => {
                       <img
                         className="w-16 h-16 shrink-0 rounded-full object-cover"
                         src="/logo.webp"
-                        alt={`${centerStore.name} clinic logo`}
+                        alt={`Logo of ${centerStore.name} Podiatry Clinic`}
+                        loading="lazy"
                       />
                       <h3 className="text-2xl-fluid font-display tracking-[-0.02em]">
                         {centerStore.name}

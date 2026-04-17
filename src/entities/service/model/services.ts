@@ -55,13 +55,13 @@ export const TOP_SERVICES: ServiceItem[] = [
   {
     id: 'service_8',
     token: 'service_8',
-    image: 'images/top-services/IMG_7749.webp',
+    image: 'images/top-services/IMG_9107.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_9',
     token: 'service_9',
-    image: 'images/top-services/IMG_7749.webp',
+    image: 'images/top-services/IMG_9106.webp',
     results: DEFAULT_RESULTS
   },
 ];

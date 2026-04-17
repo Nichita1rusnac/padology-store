@@ -11,9 +11,9 @@ export const ServicesSection = () => {
     <section id="services" className="py-16 px-4">
       <div className="mx-auto max-w-9xl">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h1 className="font-display text-display-lg font-light gradient-text mb-6">
+          <h2 className="font-display text-display-lg font-light gradient-text mb-6">
             {t('title')}
-          </h1>
+          </h2>
           <p className="text-muted-foreground font-body text-xl-fluid leading-relaxed">
             {t('description')}
           </p>
@@ -27,12 +27,17 @@ export const ServicesSection = () => {
             >
               <div className="aspect-[3/2] bg-secondary">
                 <div className="relative w-full h-full overflow-hidden rounded-ss-md">
-                  <img src={service.image} alt={t(`${service.token}.title`)} className="object-contain w-full h-full" />
+                  <img 
+                    src={service.image} 
+                    alt={`${t(`${service.token}.title`)} - Podiatry service at Podiatric Studios`} 
+                    className="object-contain w-full h-full" 
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="p-6">
-                <h1 className="text-lg-fluid font-light text-primary uppercase tracking-wider mb-2">{t(`${service.token}.title`)}</h1>
-                <h2 className="text-lg-fluid font-light text-foreground mb-2">{t(`${service.token}.hook`)}</h2>
+                <h3 className="text-lg-fluid font-light text-primary uppercase tracking-wider mb-2">{t(`${service.token}.title`)}</h3>
+                <h4 className="text-lg-fluid font-light text-foreground mb-2">{t(`${service.token}.hook`)}</h4>
                 <p className="text-muted-foreground font-body font-light text-base-fluid mt-2">
                   {t(`${service.token}.description`)}
                 </p>

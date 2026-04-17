@@ -12,12 +12,13 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
   const bookingPath = useBookingPath();
 
   return (
-    <div className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow">
+    <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow">
       <div className="aspect-[3/4] bg-secondary w-full relative overflow-hidden group">
         <img
           src={specialist.image}
-          alt={t(`${specialist.token}.first_name`)}
+          alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
@@ -58,6 +59,6 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
           {t('specialists:book_cta')}
         </Link>
       </div>
-    </div>
+    </article>
   );
 };

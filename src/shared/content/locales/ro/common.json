@@ -21,5 +21,35 @@
     "buttons": {
         "book": "Programare",
         "more": "Mai mult"
+    },
+    "seo": {
+        "home": {
+            "title": "Clinică de Podologie Expertă",
+            "description": "Rezolvăm probleme complexe ale picioarelor și unghiilor cu precizie medicală. Talonete personalizate, pedichiură medicală și podologie în Chișinău. Programate-vă acum."
+        },
+        "about": {
+            "title": "Despre Noi",
+            "description": "Aflați mai multe despre Podiatric Studios. Abordarea noastră ortopedică asigură sănătatea picioarelor pe termen lung. Descoperiți echipa noastră din Chișinău."
+        },
+        "services": {
+            "title": "Serviciile Noastre",
+            "description": "Servicii de podologie profesională: pedichiură medicală, talonete ortopedice personalizate și tratament pentru unghii încarnate. Îngrijire expertă în Chișinău."
+        },
+        "specialists": {
+            "title": "Echipa Noastră",
+            "description": "Faceți cunoștință cu podologii noștri experți. Profesioniști dedicați care oferă îngrijire de înaltă calitate pentru picioarele dumneavoastră în Chișinău."
+        },
+        "pricing": {
+            "title": "Listă de Prețuri",
+            "description": "Prețuri transparente pentru toate serviciile de podologie și pedichiură medicală din Chișinău. Vizualizați lista de prețuri și programați o vizită profesională."
+        },
+        "products": {
+            "title": "Produse de Îngrijire",
+            "description": "Explorați selecția noastră de produse ortopedice și de podologie. Creme de înaltă calitate și dispozitive corectoare pentru picioare sănătoase."
+        },
+        "contacts": {
+            "title": "Contacte",
+            "description": "Vizitați Podiatric Studios în Chișinău. Găsiți locațiile noastre din Buiucani și Centru. Sunați sau scrieți-ne pentru o programare."
+        }
     }
 }

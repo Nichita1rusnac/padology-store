@@ -14,15 +14,25 @@ import { useTranslation } from 'react-i18next';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SPECIALISTS_LIST } from '@/entities/specialist/model/specialists';
 import { SpecialistCard } from '@/entities/specialist/ui/SpecialistCard';
+import { SEO } from '@/components/SEO';
 
 const Specialists = () => {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+  const lang = i18n.resolvedLanguage || i18n.language || 'ro';
+
 
   const centerSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('center'));
   const buiucaniSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('buiucani'));
   console.log(buiucaniSpecialists)
   return (
     <main className="pt-20">
+      <SEO
+        title={t('seo.specialists.title')}
+        description={t('seo.specialists.description')}
+        path={`/${lang}/specialists`}
+        schemaType="Physicians"
+        specialistsData={SPECIALISTS_LIST}
+      />
       <section className="pt-4 px-4">
         <div className="mx-auto max-w-9xl">
           <Breadcrumb>
@@ -45,9 +55,9 @@ const Specialists = () => {
         <div className="mx-auto max-w-9xl">
           <Tabs defaultValue="center" className="w-full">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-              <h1 className="font-display text-display-md font-light text-foreground">
+              <h2 className="font-display text-display-md font-light text-foreground">
                 {t('titles.specialists')}
-              </h1>
+              </h2>
               <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full">
                 <TabsTrigger
                   value="center"

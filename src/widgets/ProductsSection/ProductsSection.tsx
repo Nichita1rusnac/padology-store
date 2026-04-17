@@ -6,10 +6,10 @@ import { MediaCard } from '@/shared/ui/MediaCard';
 export const ProductsSection = () => {
     const { t } = useTranslation('products');
     return (
-        <section id="products" className="py-16 px-4">
+        <section id="products" className="py-12 px-4">
             <div className="mx-auto max-w-9xl">
                 <div className="mb-12">
-                    <h1 className="font-display text-display-md font-light text-foreground">{t('title')}</h1>
+                    <h2 className="font-display text-display-md font-light text-foreground">{t('title')}</h2>
                 </div>
                 <CardGrid>
                     {PRODUCTS.map((product) => (

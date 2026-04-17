@@ -11,12 +11,22 @@
                 {
                     "id": "address",
                     "label": "Adresa",
-                    "value": "Strada Ioana Radu 27/4, Chișinău, Moldova"
+                    "value": "Strada Ioana Radu 27/4, Chișinău MD-2008, Moldova"
                 },
                 {
                     "id": "phone",
                     "label": "Telefon",
                     "value": "+373 696 39 898"
+                },
+                {
+                    "id": "email",
+                    "label": "Email",
+                    "value": "TODO: Adăugați e-mail în viitor"
+                },
+                {
+                    "id": "domain",
+                    "label": "Domeniu",
+                    "value": "TODO: Adăugați domeniul în viitor"
                 },
                 {
                     "id": "telegram",
@@ -48,12 +58,22 @@
                 {
                     "id": "address",
                     "label": "Adresa",
-                    "value": "Strada Mihai Eminescu 70, Chișinău, Moldova"
+                    "value": "Strada Mihai Eminescu 70, Chișinău MD-2012, Moldova"
                 },
                 {
                     "id": "phone",
                     "label": "Telefon",
                     "value": "+373 699 47 949"
+                },
+                {
+                    "id": "email",
+                    "label": "Email",
+                    "value": "TODO: Adăugați e-mail în viitor"
+                },
+                {
+                    "id": "domain",
+                    "label": "Domeniu",
+                    "value": "TODO: Adăugați domeniul în viitor"
                 },
                 {
                     "id": "telegram",

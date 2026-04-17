@@ -14,9 +14,9 @@ export const SpecialistsSection = () => {
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('specialists.subtitle')}
           </span>
-          <h1 className="font-display text-display-lg font-light gradient-text mb-6">
+          <h2 className="font-display text-display-lg font-light gradient-text mb-6">
             {t('specialists.title')}
-          </h1>
+          </h2>
           <p className="text-muted-foreground font-body text-lg-fluid leading-relaxed">
             {t('specialists.description')}
           </p>

@@ -86,11 +86,11 @@ export const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-16 px-4">
+    <section id="pricing" className="py-12 px-4">
       <div className="mx-auto max-w-9xl">
         <Tabs defaultValue="center" className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-            <h2 className="font-display text-display-sm font-light text-foreground">
+            <h2 className="font-display text-display-md font-light text-foreground">
               {t('common:titles.pricing')}
             </h2>
             <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full">

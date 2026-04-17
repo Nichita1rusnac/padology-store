@@ -11,12 +11,22 @@ import { useTranslation } from 'react-i18next';
 import { Header } from '@/widgets/Header/Header';
 import { ServicesSection } from '@/widgets/ServicesSection/ServicesSection';
 import { Footer } from '@/widgets/Footer/Footer';
+import { SEO } from '@/components/SEO';
 
 const Services = () => {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+  const lang = i18n.resolvedLanguage || i18n.language || 'ro';
 
   return (
     <main className="pt-20">
+      <SEO 
+        title={t('seo.services.title')}
+        description={t('seo.services.description')}
+        path={`/${lang}/services`}
+        schemaType="Service"
+        serviceName="Podiatry and Medical Pedicure Services"
+        serviceDescription={t('seo.services.description')}
+      />
       <section className="pt-4 px-4">
         <div className="mx-auto max-w-9xl">
           <Breadcrumb>
@@ -32,6 +42,9 @@ const Services = () => {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+          <h1 className="mt-8 font-display text-display-md font-light text-foreground">
+            {t('titles.services')}
+          </h1>
         </div>
       </section>
 
