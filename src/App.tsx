@@ -10,7 +10,6 @@ import Specialists from './pages/Specialists';
 import Pricing from './pages/Pricing';
 import Products from './pages/Products';
 import Contacts from './pages/Contacts';
-import LocationDetail from './pages/LocationDetail';
 import NotFound from './pages/NotFound';
 import { LanguageLayout, RootRedirect } from '@/components/LanguageRoutes';
 
@@ -42,7 +41,6 @@ const App = () => (
               <Route path="products/book" element={<Products />} />
               <Route path="contacts" element={<Contacts />} />
               <Route path="contacts/book" element={<Contacts />} />
-              <Route path="locations/:slug" element={<LocationDetail />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Route>

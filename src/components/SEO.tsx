@@ -222,7 +222,6 @@ export const SEO = ({
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="dns-prefetch" href="//maps.googleapis.com" />
 
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       {schemaData.map((data, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(data)}

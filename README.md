@@ -37,4 +37,4 @@ Open the URL shown in the terminal (usually `http://localhost:5173`).
   - `pages/` — route pages
   - `shared/` — shared state, i18n, etc.
   - `lib/`, `hooks/` — utilities and hooks
-- `public/` — static assets (favicon, images)
+- `public/` — static assets (images)
