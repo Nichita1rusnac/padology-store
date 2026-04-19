@@ -44,7 +44,7 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
           </p>
           {specialist.location.map((location) => {
             return (
-              <p className="text-muted-foreground font-body text-caption leading-tight">
+              <p key={location} className="text-muted-foreground font-body text-caption leading-tight">
                 {t(location === 'center' ? 'contacts:contacts.1.contact.0.value' : 'contacts:contacts.0.contact.0.value')}
               </p>
             )

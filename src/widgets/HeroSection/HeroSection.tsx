@@ -43,7 +43,6 @@ export const HeroSection = () => {
           alt="Professional podology and foot care treatment at Podiatric Studios Chișinău"
           className="w-full h-full object-cover object-center"
           loading="eager"
-          fetchPriority="high"
         />
       </div>
     </section>
