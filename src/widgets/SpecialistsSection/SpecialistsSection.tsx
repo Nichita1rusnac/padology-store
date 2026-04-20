@@ -31,7 +31,9 @@ export const SpecialistsSection = () => {
             to={`/${currentLang}/specialists`}
             className="group flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full font-medium text-base-fluid hover:bg-foreground/90 transition-all hover:gap-4 shadow-lg hover:shadow-xl"
           >
-            {t('specialists.view_all_cta', { defaultValue: 'View All Specialists' })}
+            {t('specialists.view_all_cta', {
+              defaultValue: 'View All Specialists',
+            })}
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

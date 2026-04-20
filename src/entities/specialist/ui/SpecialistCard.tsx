@@ -5,15 +5,16 @@ import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 
 interface SpecialistCardProps {
   specialist: Specialist;
+  isActive?: boolean;
 }
 
-export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
+export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) => {
   const { t } = useTranslation(['common', 'contacts', 'specialists']);
   const bookingPath = useBookingPath();
 
   return (
     <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow">
-      <div className="aspect-[4/5] bg-secondary w-full relative overflow-hidden group">
+      <div className="bg-secondary w-full relative overflow-hidden group">
         <img
           src={specialist.image}
           alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}
@@ -23,11 +24,11 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
       </div>
       <div className="p-4 md:p-6 flex flex-col flex-grow">
 
-        <div className="flex gap-1">
-          <h3 className="font-display text-lg-fluid text-foreground">
+        <div className="flex flex-wrap whitespace-wrap gap-1 text-lg-fluid font-bold">
+          <h3 className="font-display text-foreground">
             {t(`${specialist.token}.first_name`)}
           </h3>
-          <h3 className="font-display text-lg-fluid text-primary">
+          <h3 className="font-display text-primary">
             {t(`${specialist.token}.last_name`)}
           </h3>
         </div>
@@ -39,12 +40,12 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
         </p>
 
         <div className="py-3 border-t border-border/50">
-          <p className="text-foreground font-body text-caption font-bold uppercase tracking-wider mb-1">
+          <p className="text-primary font-body text-xs-fluid uppercase font-semibold tracking-[0.01] mb-1">
             {specialist.location.map((location) => t(`common:salon.${location}`)).join(' / ')}
           </p>
           {specialist.location.map((location) => {
             return (
-              <p key={location} className="text-muted-foreground font-body text-caption leading-tight">
+              <p key={location} className="text-muted-foreground font-body text-xs-fluid leading-relaxed">
                 {t(location === 'center' ? 'contacts:contacts.1.contact.0.value' : 'contacts:contacts.0.contact.0.value')}
               </p>
             )
@@ -54,7 +55,7 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
 
         <Link
           to={`${bookingPath}?location=${specialist.location[0]}`}
-          className="mt-auto w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 rounded-full font-medium transition-colors shadow-sm active:scale-95 duration-200 block text-center"
+          className="mt-auto w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 text-base-fluid rounded-full font-semibold transition-colors shadow-sm active:scale-95 duration-200 block text-center"
         >
           {t('specialists:book_cta')}
         </Link>

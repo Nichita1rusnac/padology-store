@@ -92,7 +92,7 @@ export const Footer = () => {
                       )}
                       <div className="flex flex-row gap-2">
                         <a
-                          href={`tel:${formatPhoneLink(centerStore.contact.find((c) => c.id === 'phone')?.value || '')}`}
+                          href={`tel:${formatPhoneLink(buiucaniStore.contact.find((c) => c.id === 'phone')?.value || '')}`}
                           className="flex w-10 h-10 rounded-full bg-transparent border border-border items-center justify-center text-foreground hover:bg-[#34C759] hover:text-white hover:border-[#34C759] transition-colors"
                         >
                           <Phone size={20} />

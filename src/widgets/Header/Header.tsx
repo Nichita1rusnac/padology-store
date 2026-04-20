@@ -30,13 +30,19 @@ export const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (phoneRef.current && !phoneRef.current.contains(event.target as Node)) {
+      if (
+        phoneRef.current &&
+        !phoneRef.current.contains(event.target as Node)
+      ) {
         setDropDownOpen(false);
       }
       if (langRef.current && !langRef.current.contains(event.target as Node)) {
         setLangOpen(false);
       }
-      if (telegramRef.current && !telegramRef.current.contains(event.target as Node)) {
+      if (
+        telegramRef.current &&
+        !telegramRef.current.contains(event.target as Node)
+      ) {
         setTelegramOpen(false);
       }
     };
@@ -47,7 +53,7 @@ export const Header = () => {
 
   const handleDropDownOpen = () => {
     setDropDownOpen(!dropDownOpen);
-  }
+  };
 
   const navItems = [
     { label: t('nav.specialists'), path: `/${currentLang}/specialists` },
@@ -75,8 +81,12 @@ export const Header = () => {
           <div className="flex items-center gap-0 bg-nav rounded-full px-[1px] py-[1px] lg:px-2 lg:py-2">
             {/* Logo placeholder */}
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-lg font-bold shrink-0 cursor-pointer">
-              <Link className='w-full h-full' to={`/${currentLang}`}>
-                <img className='w-full h-full object-cover rounded-full' src="/logo.webp" alt="Podiatric Studios Logo" />
+              <Link className="w-full h-full" to={`/${currentLang}`}>
+                <img
+                  className="w-full h-full object-cover rounded-full"
+                  src="/logo.webp"
+                  alt="Podiatric Studios Logo"
+                />
               </Link>
             </div>
 
@@ -132,16 +142,36 @@ export const Header = () => {
               </a>
               {dropDownOpen && (
                 <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-max">
-                  <a href="tel:+37369947949" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
-                    <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm-fluid font-medium text-foreground">{t('salon.center')}</span>
-                    <span className='text-sm-fluid font-semibold text-primary'>+373 69 947 949</span>
+                  <a
+                    href="tel:+37369947949"
+                    className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group"
+                  >
+                    <Phone
+                      size={18}
+                      className="text-muted-foreground group-hover:text-primary transition-colors"
+                    />
+                    <span className="text-sm-fluid font-medium text-foreground">
+                      {t('salon.center')}
+                    </span>
+                    <span className="text-sm-fluid font-semibold text-primary">
+                      +373 69 947 949
+                    </span>
                   </a>
                   <div className="h-px bg-border mx-4"></div>
-                  <a href="tel:+37369639898" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
-                    <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-medium text-foreground">{t('salon.buiucani')}</span>
-                    <span className='text-sm font-semibold text-primary'>+373 69 639 898</span>
+                  <a
+                    href="tel:+37369639898"
+                    className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group"
+                  >
+                    <Phone
+                      size={18}
+                      className="text-muted-foreground group-hover:text-primary transition-colors"
+                    />
+                    <span className="text-sm font-medium text-foreground">
+                      {t('salon.buiucani')}
+                    </span>
+                    <span className="text-sm font-semibold text-primary">
+                      +373 69 639 898
+                    </span>
                   </a>
                 </div>
               )}
@@ -155,14 +185,34 @@ export const Header = () => {
               </a>
               {telegramOpen && (
                 <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-max">
-                  <a href="https://t.me/Evpodolux" target="_blank" rel="noopener noreferrer" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
-                    <Send size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-medium text-foreground">{t('salon.center')}</span>
+                  <a
+                    href="https://t.me/Evpodolux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group"
+                  >
+                    <Send
+                      size={18}
+                      className="text-muted-foreground group-hover:text-primary transition-colors"
+                    />
+                    <span className="text-sm font-medium text-foreground">
+                      {t('salon.center')}
+                    </span>
                   </a>
                   <div className="h-px bg-border mx-4"></div>
-                  <a href="https://t.me/PoleacovaNailStudio" target="_blank" rel="noopener noreferrer" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
-                    <Send size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm font-medium text-foreground">{t('salon.buiucani')}</span>
+                  <a
+                    href="https://t.me/PoleacovaNailStudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group"
+                  >
+                    <Send
+                      size={18}
+                      className="text-muted-foreground group-hover:text-primary transition-colors"
+                    />
+                    <span className="text-sm font-medium text-foreground">
+                      {t('salon.buiucani')}
+                    </span>
                   </a>
                 </div>
               )}

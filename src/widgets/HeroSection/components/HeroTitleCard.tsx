@@ -20,7 +20,7 @@ export const HeroTitleCard = ({ title, subtitle }: HeroTitleCardProps) => {
             <>
               <span>{splittedTitle[0]}</span>
               <br />
-              <span className="text-primary">{splittedTitle[1]}</span>
+              {splittedTitle.length > 2 ? <span className="text-primary">{splittedTitle[1]} {splittedTitle[2]}</span> : <span className="text-primary">{splittedTitle[1]}</span>}
             </>
           }
         </h1>
