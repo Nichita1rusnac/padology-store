@@ -23,7 +23,6 @@ const Specialists = () => {
 
   const centerSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('center'));
   const buiucaniSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('buiucani'));
-  console.log(buiucaniSpecialists)
   return (
     <main className="pt-20">
       <SEO

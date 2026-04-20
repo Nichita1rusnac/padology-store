@@ -17,19 +17,11 @@ export const MediaCard = ({
   onClick,
   className = '',
 }: MediaCardProps) => {
-  console.log(image)
   return (
     <article
       onClick={onClick}
       className={`overflow-hidden group transition-shadow flex flex-col h-full ${onClick ? 'cursor-pointer hover:shadow-lg' : ''} ${className}`}
     >
-      {/* <div className="aspect-[4/3] relative bg-secondary overflow-hidden shrink-0">
-        <img
-          src={image}
-          alt={alt || title}
-          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
-        />
-      </div> */}
       <div className="aspect-[3/3] relative bg-secondary overflow-hidden shrink-0 p-3">
         <img
           src={image}
@@ -43,9 +35,6 @@ export const MediaCard = ({
         <p className="font-body text-card-foreground font-light text-base-fluid">
           {title}
         </p>
-        {/* <p className="text-muted-foreground font-body text-base leading-relaxed flex-1">
-          {description}
-        </p> */}
       </div>
     </article>
   );

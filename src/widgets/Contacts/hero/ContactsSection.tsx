@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
@@ -23,7 +23,6 @@ export const ContactsSection = () => {
     const locations = t<string, { returnObjects: true }, ContactLocation[]>('contacts', {
         returnObjects: true,
     });
-    const { lang } = useParams<{ lang: string }>();
     const bookingPath = useBookingPath();
 
     return (
@@ -36,7 +35,6 @@ export const ContactsSection = () => {
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                     {locations.map((location) => {
-                        console.log(location)
                         const address = location.contact.find((c) => c.id === 'address')?.value;
                         const phone = location.contact.find((c) => c.id === 'phone')?.value;
                         const workingHours = location.contact.find((c) => c.id === 'working')?.value;
@@ -89,7 +87,6 @@ export const ContactsSection = () => {
                     })}
                 </div>
             </div>
-
         </section>
     )
 }

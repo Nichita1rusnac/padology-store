@@ -8,7 +8,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { useTranslation } from 'react-i18next';
-import { ContactsSection } from '@/widgets/ContactsSection/ContactsSection';
+import { ContactsSection } from '@/widgets/ContactsSection';
 import { SEO } from '@/components/SEO';
 
 const Contacts = () => {
