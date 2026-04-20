@@ -3,6 +3,7 @@ import {
   Carousel,
   CarouselApi,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -42,7 +43,9 @@ export const SpecialistCarousel = () => {
         <CarouselContent className="py-4 -ml-2 md:-ml-4">
           {[...SPECIALISTS_LIST]
             .filter((specialist) => {
-              const tags = t(`${specialist.token}.tags`, { returnObjects: true });
+              const tags = t(`${specialist.token}.tags`, {
+                returnObjects: true,
+              });
               return Array.isArray(tags) && tags.includes('master');
             })
             .map((specialist, i) => {
@@ -72,6 +75,7 @@ export const SpecialistCarousel = () => {
           <CarouselPrevious className="w-14 h-14 border-2 bg-background/90 hover:bg-background -left-4 md:-left-12 transition-all xl:-left-16" />
           <CarouselNext className="w-14 h-14 border-2 bg-background/90 hover:bg-background -right-4 md:-right-12 transition-all xl:-right-16" />
         </div>
+        <CarouselDots className="mt-8" />
       </Carousel>
     </div>
   );
