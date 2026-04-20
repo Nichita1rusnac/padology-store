@@ -13,7 +13,7 @@ interface StudioInfoProps {
 
 export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoProps) => {
   const { t } = useTranslation(['contacts', 'common']);
-  
+
   const address = loc.contact.find((c) => c.id === 'address')?.value;
   const phone = loc.contact.find((c) => c.id === 'phone')?.value;
   const workingHours = loc.contact.find((c) => c.id === 'working')?.value;
@@ -54,7 +54,7 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
         </div>
         <div className="aspect-video md:aspect-auto md:w-1/2 rounded-3xl bg-secondary overflow-hidden shadow-sm border border-primary/5v">
           <iframe
-            src={loc.location}
+            src={loc.embed}
             width="100%"
             height="100%"
             style={{ border: 0 }}

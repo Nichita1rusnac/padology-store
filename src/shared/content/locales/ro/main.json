@@ -63,5 +63,9 @@
         "subtitle": "Maeștrii călătoriei tale spre bunăstare",
         "description": "Descoperiți cei mai populari specialiști ai noștri, concepuți pentru a rezolva cele mai comune probleme ale picioarelor.",
         "view_all_cta": "Toți specialiștii"
+    },
+    "footer": {
+        "title": "Studiourile noastre",
+        "all_rights_reserved": "Toate drepturile rezervate"
     }
 }

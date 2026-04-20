@@ -8,6 +8,7 @@ export interface ContactLocation {
   name: string;
   category: string;
   contact: ContactDetail[];
+  embed: string;
   location: string;
 }
 

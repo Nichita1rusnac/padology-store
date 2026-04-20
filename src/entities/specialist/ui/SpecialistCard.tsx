@@ -13,7 +13,7 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
 
   return (
     <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow">
-      <div className="aspect-[3/4] bg-secondary w-full relative overflow-hidden group">
+      <div className="aspect-[4/5] bg-secondary w-full relative overflow-hidden group">
         <img
           src={specialist.image}
           alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}
@@ -21,7 +21,7 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
           loading="lazy"
         />
       </div>
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-4 md:p-6 flex flex-col flex-grow">
 
         <div className="flex gap-1">
           <h3 className="font-display text-lg-fluid text-foreground">
@@ -31,14 +31,14 @@ export const SpecialistCard = ({ specialist }: SpecialistCardProps) => {
             {t(`${specialist.token}.last_name`)}
           </h3>
         </div>
-        <p className="text-muted-foreground font-body text-sm-fluid mt-1 mb-6">
+        <p className="text-muted-foreground font-body text-sm-fluid mt-1 mb-4">
           {(() => {
             const specialty = t(`${specialist.token}.specialty`, { returnObjects: true }) as unknown as string | string[];
             return Array.isArray(specialty) ? specialty.join(', ') : specialty;
           })()}
         </p>
 
-        <div className="py-4 border-t border-border/50">
+        <div className="py-3 border-t border-border/50">
           <p className="text-foreground font-body text-caption font-bold uppercase tracking-wider mb-1">
             {specialist.location.map((location) => t(`common:salon.${location}`)).join(' / ')}
           </p>

@@ -13,6 +13,7 @@ interface ContactLocation {
     name: string;
     category: string;
     contact: ContactDetail[];
+    embed: string;
     location: string;
 }
 
@@ -73,7 +74,7 @@ export const ContactsSection = () => {
                                 </div>
                                 <div className="mt-6 aspect-video rounded-3xl bg-secondary overflow-hidden">
                                     <iframe
-                                        src={location.location}
+                                        src={location.embed}
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}

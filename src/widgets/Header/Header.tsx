@@ -131,7 +131,7 @@ export const Header = () => {
                 <Phone size={18} />
               </a>
               {dropDownOpen && (
-                <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[calc(100vw-2rem)] sm:w-[340px] max-w-[calc(100vw-1rem)]">
+                <div className="absolute top-full mt-1 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-max">
                   <a href="tel:+37369947949" className="grid grid-cols-[auto_1fr_auto] items-center gap-3 w-full text-left px-5 py-3.5 transition-colors hover:bg-secondary group">
                     <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="text-sm-fluid font-medium text-foreground">{t('salon.center')}</span>

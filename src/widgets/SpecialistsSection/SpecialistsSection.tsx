@@ -8,9 +8,9 @@ export const SpecialistsSection = () => {
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
 
   return (
-    <section id="specialists" className="py-24 px-4 overflow-hidden">
+    <section id="specialists" className="py-12 md:py-20 px-4 overflow-hidden">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('specialists.subtitle')}
           </span>
@@ -26,7 +26,7 @@ export const SpecialistsSection = () => {
         <SpecialistCarousel />
 
         {/* Bottom CTA */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 md:mt-10 flex justify-center">
           <Link
             to={`/${currentLang}/specialists`}
             className="group flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full font-medium text-base-fluid hover:bg-foreground/90 transition-all hover:gap-4 shadow-lg hover:shadow-xl"

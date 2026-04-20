@@ -31,7 +31,7 @@ export const SpecialistCarousel = () => {
   }, [api]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 md:px-16 py-4">
+    <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 md:px-16 max-h-dvh">
       <Carousel
         setApi={setApi}
         opts={{
@@ -75,7 +75,7 @@ export const SpecialistCarousel = () => {
           <CarouselPrevious className="w-14 h-14 border-2 bg-background/90 hover:bg-background -left-4 md:-left-12 transition-all xl:-left-16" />
           <CarouselNext className="w-14 h-14 border-2 bg-background/90 hover:bg-background -right-4 md:-right-12 transition-all xl:-right-16" />
         </div>
-        <CarouselDots className="mt-8" />
+        <CarouselDots className="mt-4 md:mt-8" />
       </Carousel>
     </div>
   );

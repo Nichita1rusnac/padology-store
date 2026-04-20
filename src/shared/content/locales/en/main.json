@@ -63,5 +63,9 @@
         "subtitle": "Masters of your wellness journey",
         "description": "Meet our highly qualified specialists dedicated to providing you with the best care.",
         "view_all_cta": "All Specialists"
+    },
+    "footer": {
+        "title": "Our Studios",
+        "all_rights_reserved": "All rights reserved"
     }
 }
