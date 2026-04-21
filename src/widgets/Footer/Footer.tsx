@@ -59,7 +59,7 @@ export const Footer = () => {
                     <div className="flex flex-row items-center justify-start gap-3">
                       <img
                         className="w-16 h-16 shrink-0 rounded-full object-cover"
-                        src="/logo.webp"
+                        src="/logo_2.webp"
                         alt={`Logo of ${buiucaniStore.name} Podiatry Clinic`}
                         loading="lazy"
                       />
