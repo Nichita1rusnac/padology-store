@@ -19,7 +19,7 @@ export const MainLayout = () => {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow px-4 sm:px-[clamp(1rem,5vw,2rem)]">
         <Outlet />
       </main>
       <Footer />

@@ -10,7 +10,7 @@ export const AboutSection = () => {
   const icons = [Activity, Footprints];
 
   return (
-    <section id="about" className="py-24 px-4 relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden">
       {/* Subtle Background Watermark */}
       <img 
         src="foot-prints.png" 

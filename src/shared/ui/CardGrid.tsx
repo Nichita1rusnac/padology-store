@@ -2,14 +2,12 @@ import { ReactNode } from 'react';
 
 interface CardGridProps {
   children: ReactNode;
-  className?: string;
-  lgCols?: number;
+  gridCols?: string;
 }
 
-export const CardGrid = ({ children, className = '', lgCols = 4 }: CardGridProps) => {
-  const lgColsClass = `md:grid-cols-${lgCols}`;
+export const CardGrid = ({ children, gridCols }: CardGridProps) => {
   return (
-    <div className={`grid ${lgColsClass} sm:grid-cols-2 gap-x-4 gap-y-10 ${className}`}>
+    <div className={`grid ${gridCols}  gap-x-4 gap-y-10`}>
       {children}
     </div>
   );

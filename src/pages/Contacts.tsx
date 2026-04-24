@@ -22,7 +22,7 @@ const Contacts = () => {
         description={t('seo.contacts.description')}
         path={`/${lang}/contacts`}
       />
-      <section className="pt-4 px-4">
+      <section className="pt-4">
         <div className="mx-auto max-w-9xl">
           <Breadcrumb>
             <BreadcrumbList>

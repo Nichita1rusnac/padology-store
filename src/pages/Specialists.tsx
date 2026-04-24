@@ -32,7 +32,7 @@ const Specialists = () => {
         schemaType="Physicians"
         specialistsData={SPECIALISTS_LIST}
       />
-      <section className="pt-4 px-4">
+      <section className="pt-4">
         <div className="mx-auto max-w-9xl">
           <Breadcrumb>
             <BreadcrumbList>
@@ -50,7 +50,7 @@ const Specialists = () => {
         </div>
       </section>
 
-      <section className="py-12 px-4">
+      <section className="py-12">
         <div className="mx-auto max-w-9xl">
           <Tabs defaultValue="center" className="w-full">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">

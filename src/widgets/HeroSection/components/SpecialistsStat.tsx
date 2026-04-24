@@ -10,19 +10,18 @@ interface SpecialistsStatProps {
 
 export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsStatProps) => {
   return (
-    <div className="bg-card rounded-3xl flex flex-col min-[1141px]:p-[clamp(1.5rem,4vw,1.5rem)] max-[1140px]:p-[clamp(1rem,6vw,1.5rem)] items-start justify-between max-[900px]:gap-4 w-full">
+    <div className="bg-card rounded-3xl p-7 flex flex-col justify-between gap-6 border border-border/50 w-full">
       {/* Text Section */}
-      <div className="flex flex-col leading-tight">
-        <div className="flex items-center gap-1">
-          <p className="font-display text-foreground text-display-lg font-medium">10</p>
-          <span className="text-primary text-display-md">+</span>
+      <div className="flex flex-col">
+        <div className="flex items-center gap-1 leading-none">
+          <p className="font-display text-foreground text-5xl font-semibold">10</p>
+          <span className="text-primary text-3xl font-semibold ml-0.5">+</span>
         </div>
-        <p className="text-muted-foreground font-body font-light mt-1 text-base-fluid">
+        <p className="text-muted-foreground font-body text-sm mt-1">
           {title}
         </p>
       </div>
 
-      {/* Avatars Section — now w-full so it spans the card */}
       <div className="flex items-center w-full">
         <div className="flex items-center isolate w-full">
           {[0, 1, 2].map((index) => (

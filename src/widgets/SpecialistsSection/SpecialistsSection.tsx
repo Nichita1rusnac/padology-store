@@ -8,7 +8,7 @@ export const SpecialistsSection = () => {
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
 
   return (
-    <section id="specialists" className="py-12 md:py-20 px-4 overflow-hidden">
+    <section id="specialists" className="py-12 md:py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">

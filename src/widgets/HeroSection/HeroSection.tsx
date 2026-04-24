@@ -8,7 +8,7 @@ export const HeroSection = () => {
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
 
   return (
-    <section className="pt-28 pb-16 px-4 sm:px-[clamp(1rem,5vw,2rem)] flex">
+    <section className="pt-28 pb-16 flex">
       <div className="min-[1141px]:w-1/2 max-[1140px]:w-full">
         <div className="mx-auto max-w-7xl">
           <HeroTitleCard

@@ -22,7 +22,7 @@ const Products = () => {
                 description={t('seo.products.description')}
                 path={`/${lang}/products`}
             />
-            <section className="pt-4 px-4">
+            <section className="pt-4">
                 <div className="mx-auto max-w-9xl">
                     <Breadcrumb>
                         <BreadcrumbList>

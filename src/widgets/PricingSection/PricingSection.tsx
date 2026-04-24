@@ -19,7 +19,7 @@ interface SalonData {
 }
 
 export const PricingSection = () => {
-  const { t } = useTranslation(['price', 'common']);
+  const { t, i18n } = useTranslation(['price', 'common']);
 
   const getPriceDisplay = (service: Service, currency: string) => {
     if (service.price_range) {
@@ -36,8 +36,12 @@ export const PricingSection = () => {
     const firstCategory = salonData.categories[0]?.category;
 
     return (
-      <Tabs defaultValue={firstCategory} className="w-full">
-        <div className="flex overflow-x-auto px-4 mb-10 -mx-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <Tabs
+        key={`${salonKey}-${i18n.language}`}
+        defaultValue={firstCategory}
+        className="w-full"
+      >
+        <div className="flex overflow-x-auto mb-10 -mx-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <TabsList className="bg-transparent p-0 h-auto flex gap-3 min-w-max flex-nowrap">
             {salonData.categories.map((cat, idx) => (
               <TabsTrigger
@@ -73,7 +77,7 @@ export const PricingSection = () => {
                       </span>
                     )}
                   </div>
-                  <span className="text-primary font-semibold text-base-fluid whitespace-nowrap ml-4">
+                  <span className="font-sans font-semibold text-primary text-base-fluid whitespace-nowrap ml-4">
                     {getPriceDisplay(service, salonData.currency)}
                   </span>
                 </div>
@@ -86,7 +90,7 @@ export const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-12 px-4">
+    <section id="pricing" className="py-12">
       <div className="mx-auto max-w-9xl">
         <Tabs defaultValue="center" className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">

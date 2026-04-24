@@ -76,7 +76,7 @@ export const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto max-w-9xl px-2 py-3 flex items-center justify-between">
+        <div className="mx-auto max-w-9xl px-4 sm:px-[clamp(1rem,5vw,2rem)] py-3 flex items-center justify-between">
           {/* Logo + Nav */}
           <div className="flex items-center gap-0 bg-nav rounded-full px-[1px] py-[1px] lg:px-2 lg:py-2">
             {/* Logo placeholder */}

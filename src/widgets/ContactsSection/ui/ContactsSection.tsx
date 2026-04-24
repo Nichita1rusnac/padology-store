@@ -29,13 +29,11 @@ export const ContactsSection = () => {
   const centerStudio = locations.find(loc => loc.name === 'EvPodolux');
 
   return (
-    <section id="contacts" className="py-12 px-4">
+    <section id="contacts" className="py-12">
       <div className="mx-auto max-w-9xl">
         <Tabs defaultValue="center" className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-            <h2 className="font-display text-display-md font-light text-foreground">
-              {t('hero.title')}
-            </h2>
+            <h2 className="font-display text-display-md font-light text-foreground">{t('hero.title')}</h2>
             <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full">
               <TabsTrigger
                 value="center"
@@ -54,22 +52,22 @@ export const ContactsSection = () => {
 
           <TabsContent value="center" className="mt-0 outline-none focus:ring-0">
             {centerStudio && (
-              <StudioInfo 
-                loc={centerStudio} 
-                type="center" 
-                bookingPath={bookingPath} 
-                onImageClick={open} 
+              <StudioInfo
+                loc={centerStudio}
+                type="center"
+                bookingPath={bookingPath}
+                onImageClick={open}
               />
             )}
           </TabsContent>
 
           <TabsContent value="buiucani" className="mt-0 outline-none focus:ring-0">
             {buiucaniStudio && (
-              <StudioInfo 
-                loc={buiucaniStudio} 
-                type="buiucani" 
-                bookingPath={bookingPath} 
-                onImageClick={open} 
+              <StudioInfo
+                loc={buiucaniStudio}
+                type="buiucani"
+                bookingPath={bookingPath}
+                onImageClick={open}
               />
             )}
           </TabsContent>

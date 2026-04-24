@@ -27,7 +27,7 @@ export const ContactsSection = () => {
     const bookingPath = useBookingPath();
 
     return (
-        <section id="contacts" className="py-16 px-4">
+        <section id="contacts" className="py-16">
             <div className="mx-auto max-w-9xl">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h2 className="font-display text-display-lg font-light gradient-text mb-6">
@@ -39,40 +39,60 @@ export const ContactsSection = () => {
                         const address = location.contact.find((c) => c.id === 'address')?.value;
                         const phone = location.contact.find((c) => c.id === 'phone')?.value;
                         const workingHours = location.contact.find((c) => c.id === 'working')?.value;
+                        const bookTag = location.contact.find((c) => c.id === 'tag')?.value;
+
+                        // Split address into main and secondary for better hierarchy
+                        const addressParts = address?.split(',');
+                        const mainAddress = addressParts?.[0];
+                        const secondaryAddress = addressParts?.slice(1).join(',');
+
                         return (
-                            <div key={location.name} className="bg-card rounded-3xl p-8 flex flex-col">
-                                <h3 className="font-display text-display-sm text-foreground mb-6">
+                            <div 
+                                key={location.name} 
+                                className="bg-card rounded-3xl p-6 flex flex-col transition-all duration-300 hover:shadow-lg group"
+                            >
+                                <h3 className="font-display text-2xl font-semibold leading-snug tracking-wide text-foreground mb-4">
                                     {location.category} <span className="text-primary">{location.name}</span>
                                 </h3>
-                                <div className="space-y-3 flex-1">
-                                    {address && (
-                                        <div className="flex items-start gap-3 text-foreground font-body">
-                                            <MapPin size={20} className="text-primary shrink-0 mt-1" />
-                                            <span className="text-base-fluid">{address}</span>
-                                        </div>
-                                    )}
-                                    {phone && (
-                                        <div className="flex items-center gap-3 text-foreground font-body">
-                                            <Phone size={20} className="text-primary shrink-0" />
-                                            <span className="text-base-fluid">{phone}</span>
-                                        </div>
-                                    )}
-                                    {workingHours && (
-                                        <div className="flex items-center gap-3 text-foreground font-body">
-                                            <Clock size={20} className="text-primary shrink-0" />
-                                            <span className="text-base-fluid">{workingHours}</span>
-                                        </div>
-                                    )}
-                                    <div className="flex flex-col sm:flex-row gap-3">
+                                
+                                <div className="flex-1">
+                                    <div className="space-y-3">
+                                        {address && (
+                                            <div className="flex items-start gap-3 font-body">
+                                                <MapPin size={18} className="text-muted-foreground shrink-0 mt-1" />
+                                                <div className="text-base text-foreground leading-relaxed">
+                                                    {mainAddress}
+                                                    {secondaryAddress && (
+                                                        <span className="text-muted-foreground">, {secondaryAddress}</span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        )}
+                                        {phone && (
+                                            <div className="flex items-center gap-3 font-body">
+                                                <Phone size={18} className="text-muted-foreground shrink-0" />
+                                                <span className="text-base text-foreground">{phone}</span>
+                                            </div>
+                                        )}
+                                        {workingHours && (
+                                            <div className="flex items-center gap-3 font-body">
+                                                <Clock size={18} className="text-muted-foreground shrink-0" />
+                                                <span className="text-base text-foreground">{workingHours}</span>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="mt-4 flex flex-col sm:flex-row gap-3">
                                         <Link
-                                            to={`${bookingPath}?location=${location.contact.find((c) => c.id === 'tag')?.value}`}
-                                            className="inline-block w-full md:w-auto px-8 py-3.5 bg-primary text-primary-foreground rounded-full text-button font-body font-semibold text-center hover:shadow-lg hover:shadow-primary/20 transition-all"
+                                            to={`${bookingPath}?location=${bookTag}`}
+                                            className="inline-block w-full md:w-auto px-5 py-2.5 bg-primary text-primary-foreground rounded-xl text-base font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                                         >
                                             {t('common:buttons.book')}
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="mt-6 aspect-video rounded-3xl bg-secondary overflow-hidden">
+
+                                <div className="mt-5 aspect-video rounded-2xl bg-secondary overflow-hidden border border-border">
                                     <iframe
                                         src={location.embed}
                                         width="100%"
@@ -81,6 +101,7 @@ export const ContactsSection = () => {
                                         allowFullScreen
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
+                                        className="grayscale-[0.2] contrast-[1.1] transition-all duration-500 group-hover:grayscale-0"
                                     />
                                 </div>
                             </div>
