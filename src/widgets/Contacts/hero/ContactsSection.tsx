@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
+import { getAdjustedWorkingHours } from '@/shared/lib/utils/time';
 
 interface ContactDetail {
     id: string;
@@ -38,7 +39,7 @@ export const ContactsSection = () => {
                     {locations.map((location) => {
                         const address = location.contact.find((c) => c.id === 'address')?.value;
                         const phone = location.contact.find((c) => c.id === 'phone')?.value;
-                        const workingHours = location.contact.find((c) => c.id === 'working')?.value;
+                        const workingHours = getAdjustedWorkingHours(location.contact.find((c) => c.id === 'working')?.value);
                         const bookTag = location.contact.find((c) => c.id === 'tag')?.value;
 
                         // Split address into main and secondary for better hierarchy

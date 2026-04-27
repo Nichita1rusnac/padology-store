@@ -1,7 +1,9 @@
+import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ServiceItem } from '@/entities/service/model/services';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import cn from 'clsx';
 
 interface ServiceCardItemProps {
@@ -11,6 +13,29 @@ interface ServiceCardItemProps {
 export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
   const { t } = useTranslation(['top_services', 'common']);
   const bookingPath = useBookingPath();
+  const [api, setApi] = React.useState<CarouselApi>();
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [api]);
+
+  const renderImage = (src: string, index?: number) => (
+    <img
+      src={src}
+      alt={`${t(`${service.token}.title`)} - ${index !== undefined ? index + 1 : 'Podiatry service'}`}
+      className={cn(
+        "object-cover w-full h-full group-hover:scale-105",
+        "transition-transform duration-700"
+      )}
+      loading="lazy"
+    />
+  );
 
   return (
     <div className={cn(
@@ -22,15 +47,19 @@ export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
         "relative overflow-hidden"
       )}>
         <div className="relative w-full h-full overflow-hidden">
-          <img
-            src={service.image}
-            alt={`${t(`${service.token}.title`)} - Podiatry service at Podiatric Studios`}
-            className={cn(
-              "object-contain w-full h-full group-hover:scale-105",
-              "transition-transform duration-700"
-            )}
-            loading="lazy"
-          />
+          {service.images ? (
+            <Carousel setApi={setApi} opts={{ loop: true }} className="w-full h-full">
+              <CarouselContent className="h-full -ml-0">
+                {service.images.map((img, idx) => (
+                  <CarouselItem key={idx} className="h-full pl-0">
+                    {renderImage(img, idx)}
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          ) : (
+            service.image && renderImage(service.image)
+          )}
         </div>
       </div>
       <div className="px-6 py-8 flex-grow flex flex-col">

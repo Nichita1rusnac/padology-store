@@ -3,7 +3,8 @@ import PlaceholderImage from '@/shared/assets/images/placeholder.svg';
 export interface ServiceItem {
   id: string;
   token: string;
-  image: string;
+  image?: string;
+  images?: string[];
   results: string[];
 }
 
@@ -13,7 +14,7 @@ export const TOP_SERVICES: ServiceItem[] = [
   {
     id: 'service_1',
     token: 'service_1',
-    image: 'images/top-services/IMG_7095.webp',
+    images: ['images/top-services/IMG_7095.webp', 'images/top-services/IMG_2121.webp', 'images/top-services/IMG_2122.webp', 'images/top-services/IMG_2123.webp'],
     results: DEFAULT_RESULTS
   },
   {

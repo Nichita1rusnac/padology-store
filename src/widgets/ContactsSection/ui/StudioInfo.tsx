@@ -3,6 +3,7 @@ import { MapPin, Phone, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { ContactLocation, GalleryType } from '../model/types';
 import { galleryData } from '../model/gallery-data';
+import { getAdjustedWorkingHours } from '@/shared/lib/utils/time';
 
 interface StudioInfoProps {
   loc: ContactLocation;
@@ -16,7 +17,7 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
 
   const address = loc.contact.find((c) => c.id === 'address')?.value;
   const phone = loc.contact.find((c) => c.id === 'phone')?.value;
-  const workingHours = loc.contact.find((c) => c.id === 'working')?.value;
+  const workingHours = getAdjustedWorkingHours(loc.contact.find((c) => c.id === 'working')?.value);
   const addressParts = address?.split(',');
   const mainAddress = addressParts?.[0];
   const secondaryAddress = addressParts?.slice(1).join(',');
