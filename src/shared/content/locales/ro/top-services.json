@@ -12,6 +12,18 @@
         }
     },
     "service_2": {
+        "title": "Diagnosticul structurii osoase și al biomecanicii piciorului",
+        "hook": "Durerea de picioare, genunchi sau spate nu este o întâmplare, ci o tulburare a biomecanicii corpului.",
+        "description": "Diagnostic complex cu analiza: structurii osoase, scanarea punctelor de sprijin ale piciorului, poziția articulațiilor genunchiului, șoldului și umărului. Determinăm modul în care se distribuie sarcina în corp și unde apare eșecul.",
+        "results": {
+            "0": "Identificarea exactă a cauzei durerii și a deformațiilor",
+            "1": "Imaginea completă a funcționării sistemului musculo-scheletic",
+            "2": "Baza pentru fabricarea unor branțuri curative individuale anatomice",
+            "3": "Corectarea sarcinii și alinierea corpului",
+            "4": "Prevenirea progresiei problemelor"
+        }
+    },
+    "service_3": {
         "title": "Talonete ortopedice individuale",
         "hook": "Talonetele universale nu tratează, ci maschează problema.",
         "description": "Corecție personalizată în funcție de anatomia și mersul dumneavoastră.",
@@ -21,7 +33,7 @@
             "2": "Îmbunătățirea posturii"
         }
     },
-    "service_3": {
+    "service_4": {
         "title": "Orteze individuale din silicon",
         "hook": "Hallux valgus nu este doar o problemă estetică, ci o afectare a întregului picior.",
         "description": "Corecție blândă a poziției degetelor și protecție împotriva presiunii.",
@@ -31,7 +43,7 @@
             "2": "Confort în timpul mersului"
         }
     },
-    "service_4": {
+    "service_5": {
         "title": "Reducerea presiunii în zonele afectate",
         "hook": "Eliminarea bătăturii nu înseamnă rezolvarea problemei.",
         "description": "Eliminarea cauzei presiunii + tratarea pielii.",
@@ -41,7 +53,7 @@
             "2": "Refacerea pielii sănătoase"
         }
     },
-    "service_5": {
+    "service_6": {
         "title": "Corecția unghiei încarnate",
         "hook": "Unghia incarnată poate fi tratată fără intervenție chirurgicală.",
         "description": "Metode nedureroase de corectare a plăcii unghiale.",
@@ -51,7 +63,7 @@
             "2": "Prevenirea recidivelor"
         }
     },
-    "service_6": {
+    "service_7": {
         "title": "Îngrijire podologică medicală",
         "hook": "Pedichiura este estetică, podologia este sănătate.",
         "description": "Prelucrare medicală adaptată diagnosticului.",
@@ -61,7 +73,7 @@
             "2": "Aspect îngrijit și sănătos"
         }
     },
-    "service_7": {
+    "service_8": {
         "title": "Tratamentul călcâielor crăpate",
         "hook": "Fisurile nu înseamnă uscăciune, ci supraîncărcarea piciorului.",
         "description": "Prelucrare profundă + descărcarea presiunii.",
@@ -71,7 +83,7 @@
             "2": "Prevenirea reapariției"
         }
     },
-    "service_8": {
+    "service_9": {
         "title": "Corecția conservatoare a deformațiilor piciorului",
         "hook": "Chiar și la gradele 3-4, calitatea vieții poate fi îmbunătățită fără operație.",
         "description": "Complex: talonete + orteze + controlul biomecanicii sprijinului.",
@@ -81,7 +93,7 @@
             "2": "Îmbunătățirea mersului"
         }
     },
-    "service_9": {
+    "service_10": {
         "title": "Monitorizare și îngrijire podologică continuă",
         "hook": "O singură procedură nu rezolvă o problemă cronică.",
         "description": "Monitorizare continuă și ajustarea tratamentului.",

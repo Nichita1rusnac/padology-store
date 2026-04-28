@@ -12,6 +12,18 @@
         }
     },
     "service_2": {
+        "title": "Bone Structure and Foot Biomechanics Diagnostics",
+        "hook": "Pain in the feet, knees, or back is not a coincidence, but a disruption of the body's biomechanics.",
+        "description": "Comprehensive diagnostics with analysis of: bone structure, foot pressure point scanning, position of knee, hip, and shoulder joints. We determine how load is distributed across the body and where the breakdown occurs.",
+        "results": {
+            "0": "Accurate identification of the cause of pain and deformations",
+            "1": "A complete picture of the musculoskeletal system's performance",
+            "2": "The basis for manufacturing individual anatomical therapeutic insoles",
+            "3": "Load correction and body alignment",
+            "4": "Preventing the progression of problems"
+        }
+    },
+    "service_3": {
         "title": "Custom Orthopedic Insoles",
         "hook": "Universal insoles don't treat—they mask the problem.",
         "description": "Personal correction tailored to your anatomy and gait.",
@@ -21,7 +33,7 @@
             "2": "Improved posture"
         }
     },
-    "service_3": {
+    "service_4": {
         "title": "Custom Silicone Toe Orthoses",
         "hook": "The \"bunion\" is not just aesthetics; it's a structural foot issue.",
         "description": "Gentle toe position correction and pressure protection.",
@@ -31,7 +43,7 @@
             "2": "Comfort while walking"
         }
     },
-    "service_4": {
+    "service_5": {
         "title": "Pressure Relief for Problem Areas (Corns, Calluses)",
         "hook": "Removing a callus doesn't mean solving the problem.",
         "description": "Eliminating the cause of pressure + skin treatment.",
@@ -41,7 +53,7 @@
             "2": "Restoration of healthy skin"
         }
     },
-    "service_5": {
+    "service_6": {
         "title": "Ingrown Toenail Correction",
         "hook": "Ingrown toenails can be treated without surgery.",
         "description": "Painless nail plate correction methods.",
@@ -51,7 +63,7 @@
             "2": "Recurrence prevention"
         }
     },
-    "service_6": {
+    "service_7": {
         "title": "Medical Podiatric Foot Care",
         "hook": "Pedicure is aesthetics, podiatry is health.",
         "description": "Medical treatment based on the diagnosis.",
@@ -61,7 +73,7 @@
             "2": "Groomed and healthy appearance"
         }
     },
-    "service_7": {
+    "service_8": {
         "title": "Treatment of Cracked Heels",
         "hook": "Cracks are not about dryness; they are about foot overload.",
         "description": "Deep treatment + pressure offloading.",
@@ -71,7 +83,7 @@
             "2": "Prevention of recurrence"
         }
     },
-    "service_8": {
+    "service_9": {
         "title": "Conservative Treatment of Foot Deformities",
         "hook": "Even at grades 3–4, quality of life can be improved without surgery.",
         "description": "Comprehensive approach: insoles + orthoses + load control.",
@@ -81,7 +93,7 @@
             "2": "Improved gait"
         }
     },
-    "service_9": {
+    "service_10": {
         "title": "Ongoing Podiatric Care & Monitoring",
         "hook": "A single procedure doesn't solve a chronic problem.",
         "description": "Dynamic monitoring and treatment adjustment.",
