@@ -28,18 +28,6 @@ export const PRODUCTS: Product[] = [
         type: "shoes",
     },
     {
-        id: '3',
-        token: 'products:items.good_3',
-        image: '/images/products/Retro_off-white_sneakers_in_focus.webp',
-        type: "shoes",
-    },
-    {
-        id: '4',
-        token: 'products:items.good_4',
-        image: '/images/products/Retro_suede_and_leather_sneakers.webp',
-        type: "shoes",
-    },
-    {
         id: '5',
         token: 'products:items.good_5',
         image: '/images/products/Black_leather_ankle_boots_on_cream_background.webp',
@@ -127,12 +115,6 @@ export const PRODUCTS: Product[] = [
         id: '19',
         token: 'products:items.good_19',
         image: '/images/products/green_leather_sneakers.webp',
-        type: "shoes",
-    },
-    {
-        id: '20',
-        token: 'products:items.good_20',
-        image: '/images/products/retro_beige_black_laces_sneakers.webp',
         type: "shoes",
     },
     {

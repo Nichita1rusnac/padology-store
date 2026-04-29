@@ -14,60 +14,60 @@ export const TOP_SERVICES: ServiceItem[] = [
   {
     id: 'service_1',
     token: 'service_1',
-    images: ['images/top-services/IMG_7095.webp', 'images/top-services/IMG_2121.webp', 'images/top-services/IMG_2122.webp', 'images/top-services/IMG_2123.webp', 'images/top-services/IMG_9109.webp', 'images/top-services/IMG_9110.webp'],
+    images: ['images/top-services/IMG_2121.webp', 'images/top-services/IMG_2122.webp', 'images/top-services/IMG_2123.webp', 'images/top-services/IMG_9109.webp', 'images/top-services/IMG_9110.webp'],
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_2',
     token: 'service_2',
-    images: ['images/top-services/IMG_9108.webp', 'images/top-services/IMG_9111.webp'],
+    images: ['images/top-services/IMG_7095.webp', 'images/top-services/IMG_9108.webp', 'images/top-services/IMG_9111.webp'],
     results: [...DEFAULT_RESULTS, '3', '4']
   },
   {
     id: 'service_3',
     token: 'service_3',
-    image: 'images/top-services/IMG_7749.webp',
-    results: DEFAULT_RESULTS
-  },
-  {
-    id: 'service_3',
-    token: 'service_3',
-    image: 'images/top-services/IMG_7751.webp',
+    images: ['images/top-services/IMG_7749.webp', 'images/top-services/IMG_9107.webp'],
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_4',
     token: 'service_4',
-    image: 'images/top-services/IMG_7756.webp',
+    image: 'images/top-services/IMG_7751.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_5',
     token: 'service_5',
-    image: 'images/top-services/IMG_7760.webp',
+    image: 'images/top-services/IMG_7756.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_6',
     token: 'service_6',
-    image: 'images/top-services/IMG_7762.webp',
+    image: 'images/top-services/IMG_7760.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_7',
     token: 'service_7',
-    image: 'images/top-services/IMG_7755.webp',
+    image: 'images/top-services/IMG_7762.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_8',
     token: 'service_8',
-    image: 'images/top-services/IMG_9107.webp',
+    image: 'images/top-services/IMG_7755.webp',
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_9',
     token: 'service_9',
+    image: 'images/top-services/IMG_9112.webp',
+    results: DEFAULT_RESULTS
+  },
+  {
+    id: 'service_10',
+    token: 'service_10',
     image: 'images/top-services/IMG_9106.webp',
     results: DEFAULT_RESULTS
   },
