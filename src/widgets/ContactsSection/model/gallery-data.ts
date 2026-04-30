@@ -14,5 +14,8 @@ export const galleryData = {
     '/images/gallery/buiucani_3.webp',
     '/images/gallery/buiucani_4.webp',
     '/images/gallery/buiucani_5.webp',
+    '/images/gallery/buiucani_6.webp',
+    '/images/gallery/buiucani_7.webp',
+    '/images/gallery/buiucani_8.webp',
   ],
 };
