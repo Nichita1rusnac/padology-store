@@ -10,6 +10,7 @@ interface SpecialistCardProps {
 
 export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) => {
   const { t } = useTranslation(['common', 'contacts', 'specialists']);
+  const isAdministrator = specialist.tags.includes('administrator')
   const bookingPath = useBookingPath();
 
   return (
@@ -53,12 +54,12 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
 
         </div>
 
-        <Link
+        {!isAdministrator && <Link
           to={`${bookingPath}?location=${specialist.location[0]}`}
           className="mt-auto w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 text-base-fluid rounded-full font-semibold transition-colors shadow-sm active:scale-95 duration-200 block text-center"
         >
           {t('specialists:book_cta')}
-        </Link>
+        </Link>}
       </div>
     </article>
   );

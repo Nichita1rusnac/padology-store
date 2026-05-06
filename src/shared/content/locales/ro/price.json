@@ -348,6 +348,18 @@
                     "category": "Pedichiură",
                     "services": [
                         {
+                            "title": "Pedichiură igienică cu acoperire oja-gel",
+                            "price": 850
+                        },
+                        {
+                            "title": "Aplicare oja-gel",
+                            "price": 250
+                        },
+                        {
+                            "title": "Aplicare ojă simplă",
+                            "price": 150
+                        },
+                        {
                             "title": "Curățare medicală a tălpilor",
                             "price": 500
                         },
@@ -446,7 +458,7 @@
                         },
                         {
                             "title": "Pedichiură completă cu acoperire",
-                            "price": 900
+                            "price": 850
                         },
                         {
                             "title": "Pedichiură completă fără acoperire",
@@ -460,6 +472,10 @@
                         {
                             "title": "Consultația podologului",
                             "price": 250
+                        },
+                        {
+                            "title": "Diagnostic platfus",
+                            "price": 500
                         },
                         {
                             "title": "Diagnostic podologic al tălpii și sistemului osos",
@@ -496,23 +512,11 @@
                     ]
                 },
                 {
-                    "category": "Manichiură",
+                    "category": "Manichiură, corecție, extensie",
                     "services": [
-                        {
-                            "title": "Manichiură bărbați",
-                            "price": 400
-                        },
                         {
                             "title": "Manichiură medicală",
                             "price": 450
-                        },
-                        {
-                            "title": "Manichiură japoneză",
-                            "price": 450
-                        },
-                        {
-                            "title": "Manichiură igienică",
-                            "price": 350
                         }
                     ]
                 }

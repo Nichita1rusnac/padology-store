@@ -348,6 +348,18 @@
                     "category": "Pedicure",
                     "services": [
                         {
+                            "title": "Hygienic pedicure with gel polish",
+                            "price": 850
+                        },
+                        {
+                            "title": "Gel polish coating",
+                            "price": 250
+                        },
+                        {
+                            "title": "Regular nail polish coating",
+                            "price": 150
+                        },
+                        {
                             "title": "Medical foot cleaning",
                             "price": 500
                         },
@@ -446,7 +458,7 @@
                         },
                         {
                             "title": "Full pedicure with coating",
-                            "price": 900
+                            "price": 850
                         },
                         {
                             "title": "Full pedicure without coating",
@@ -460,6 +472,10 @@
                         {
                             "title": "Podologist consultation",
                             "price": 250
+                        },
+                        {
+                            "title": "Flat-foot diagnostics",
+                            "price": 500
                         },
                         {
                             "title": "Pododiagnostics of foot and skeletal frame",
@@ -496,23 +512,11 @@
                     ]
                 },
                 {
-                    "category": "Manicure",
+                    "category": "Manicure, correction, extension",
                     "services": [
-                        {
-                            "title": "Men's manicure",
-                            "price": 400
-                        },
                         {
                             "title": "Medical manicure",
                             "price": 450
-                        },
-                        {
-                            "title": "Japanese manicure",
-                            "price": 450
-                        },
-                        {
-                            "title": "Hygienic manicure",
-                            "price": 350
                         }
                     ]
                 }

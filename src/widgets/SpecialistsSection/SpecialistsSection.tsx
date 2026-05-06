@@ -8,9 +8,12 @@ export const SpecialistsSection = () => {
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
 
   return (
-    <section id="specialists" className="py-12 md:py-20 overflow-hidden">
-      <div className="mx-auto max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+    <section
+      id="specialists"
+      className="min-h-[calc(100dvh-var(--header-height,0px))] py-12 md:py-20 px-4 overflow-hidden flex"
+    >
+      <div className="mx-auto max-w-7xl w-full flex flex-col min-h-0">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 shrink-0">
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('specialists.subtitle')}
           </span>
@@ -23,10 +26,12 @@ export const SpecialistsSection = () => {
         </div>
 
         {/* Carousel Widget */}
-        <SpecialistCarousel />
+        <div className="flex-1 min-h-0">
+          <SpecialistCarousel />
+        </div>
 
         {/* Bottom CTA */}
-        <div className="mt-8 md:mt-10 flex justify-center">
+        <div className="mt-8 md:mt-10 flex justify-center shrink-0">
           <Link
             to={`/${currentLang}/specialists`}
             className="group flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full font-medium text-base-fluid hover:bg-foreground/90 transition-all hover:gap-4 shadow-lg hover:shadow-xl"

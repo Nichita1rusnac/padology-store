@@ -2,7 +2,7 @@
     "title": "Produse",
     "items": {
         "good_0": {
-            "title": "Branturi Anatomice Individuale",
+            "title": "Branturi Neuro-Musculare Anatomice Individuale",
             "price": "1 750 lei"
         },
         "good_1": {
@@ -30,7 +30,7 @@
             "price": "2 800 - 3 000 lei"
         },
         "good_7": {
-            "title": "Pantofi Ergonomici din Piele Gri Deschis",
+            "title": "Adidaşi Ergonomici din Piele Gri Deschis",
             "price": "2 800 - 3 000 lei"
         },
         "good_8": {
@@ -38,7 +38,7 @@
             "price": "2 800 - 3 000 lei"
         },
         "good_9": {
-            "title": "Pantofi Ergonomici din Piele Minimaliști",
+            "title": "Adidaşi Ergonomici din Piele Minimaliști",
             "price": "2 800 - 3 000 lei"
         },
         "good_10": {
@@ -46,11 +46,11 @@
             "price": "2 800 - 3 000 lei"
         },
         "good_11": {
-            "title": "Pantofi Ergonomici din Piele Albastru-Gri Deschis",
+            "title": "Adidaşi Ergonomici din Piele Gri Deschis",
             "price": "2 800 - 3 000 lei"
         },
         "good_12": {
-            "title": "Pantofi Ergonomici din Piele Neagră",
+            "title": "Adidaşi Ergonomici din Piele Neagră",
             "price": "2 800 - 3 000 lei"
         },
         "good_13": {
@@ -58,7 +58,7 @@
             "price": "2 800 - 3 000 lei"
         },
         "good_14": {
-            "title": "Pantofi Ergonomici din Piele Neagră",
+            "title": "Adidaşi Ergonomici din Piele Neagră",
             "price": "2 800 - 3 000 lei"
         },
         "good_15": {
@@ -78,27 +78,27 @@
             "price": "2 800 - 3 000 lei"
         },
         "good_19": {
-            "title": "Pantofi Ergonomici din Piele Verde",
+            "title": "Adidaşi Ergonomici din Piele Verde",
             "price": "2 800 - 3 000 lei"
         },
         "good_20": {
-            "title": "Pantofi Sport Ergonomici Retro Bej-Negru",
+            "title": "Adidaşi Sport Ergonomici Retro Bej-Negru",
             "price": "2 800 - 3 000 lei"
         },
         "good_21": {
-            "title": "Pantofi Sport Ergonomici Retro Bej",
+            "title": "Adidaşi Sport Ergonomici Retro Bej",
             "price": "2 800 - 3 000 lei"
         },
         "good_22": {
-            "title": "Pantofi Sport Ergonomici Retro din Piele-Pâslă Albă",
+            "title": "Adidaşi Sport Ergonomici Retro din Piele-Pâslă Albă",
             "price": "2 800 - 3 000 lei"
         },
         "good_23": {
-            "title": "Branturi Anatomice Individuale",
+            "title": "Branturi Anatomice  Individuale Anti-Presiune",
             "price": "1 750 lei"
         },
         "good_24": {
-            "title": "Branturi Anatomice Individuale",
+            "title": "Branturi Anatomice Individuale Anti-Presiune pentru Copii",
             "price": "1 750 lei"
         },
         "good_25": {
@@ -109,5 +109,14 @@
             "title": "Branturi Anatomice Individuale",
             "price": "1 750 lei"
         }
+    },
+    "filters": {
+        "all": "Toate",
+        "spring": "Primăvara",
+        "summer": "Vara",
+        "autumn": "Toamna",
+        "winter": "Iarna",
+        "insoles": "Branturi",
+        "shoes": "Încălțăminte"
     }
 }

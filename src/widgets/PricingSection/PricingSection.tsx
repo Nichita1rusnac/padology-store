@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { FilterTabs } from '@/shared/ui/FilterTabs';
 
 interface Service {
   title: string;
@@ -34,6 +35,11 @@ export const PricingSection = () => {
     if (!salonData || !salonData.categories) return null;
 
     const firstCategory = salonData.categories[0]?.category;
+    const filterOptions = salonData.categories.map((cat) => ({
+      label: cat.category,
+      value: cat.category,
+      disabled: !cat.services || cat.services.length === 0,
+    }));
 
     return (
       <Tabs
@@ -41,19 +47,7 @@ export const PricingSection = () => {
         defaultValue={firstCategory}
         className="w-full"
       >
-        <div className="flex overflow-x-auto mb-10 -mx-4 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          <TabsList className="bg-transparent p-0 h-auto flex gap-3 min-w-max flex-nowrap">
-            {salonData.categories.map((cat, idx) => (
-              <TabsTrigger
-                key={idx}
-                value={cat.category}
-                className="px-6 py-2.5 rounded-full text-sm-fluid font-medium transition-all border border-primary/10 data-[state=inactive]:bg-secondary/30 data-[state=inactive]:text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-primary data-[state=active]:shadow-md flex-shrink-0"
-              >
-                {cat.category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </div>
+        <FilterTabs options={filterOptions} />
 
         {salonData.categories.map((cat, catIdx) => (
           <TabsContent
@@ -92,23 +86,23 @@ export const PricingSection = () => {
   return (
     <section id="pricing" className="py-12">
       <div className="mx-auto max-w-9xl">
-        <Tabs defaultValue="center" className="w-full">
+        <Tabs defaultValue="buiucani" className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
             <h2 className="font-display text-display-md font-light text-foreground">
               {t('common:titles.pricing')}
             </h2>
             <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full">
               <TabsTrigger
-                value="center"
-                className="px-8 py-2.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
-              >
-                {t('common:salon.center')}
-              </TabsTrigger>
-              <TabsTrigger
                 value="buiucani"
                 className="px-8 py-2.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
               >
                 {t('common:salon.buiucani')}
+              </TabsTrigger>
+              <TabsTrigger
+                value="center"
+                className="px-8 py-2.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+              >
+                {t('common:salon.center')}
               </TabsTrigger>
             </TabsList>
           </div>

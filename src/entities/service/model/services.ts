@@ -14,19 +14,19 @@ export const TOP_SERVICES: ServiceItem[] = [
   {
     id: 'service_1',
     token: 'service_1',
-    images: ['images/top-services/IMG_2121.webp', 'images/top-services/IMG_2122.webp', 'images/top-services/IMG_2123.webp', 'images/top-services/IMG_9109.webp', 'images/top-services/IMG_9110.webp'],
+    images: ['images/top-services/IMG_9109.webp', 'images/top-services/IMG_2121.webp', 'images/top-services/IMG_2122.webp', 'images/top-services/IMG_2123.webp'],
     results: DEFAULT_RESULTS
   },
   {
     id: 'service_2',
     token: 'service_2',
-    images: ['images/top-services/IMG_7095.webp', 'images/top-services/IMG_9108.webp', 'images/top-services/IMG_9111.webp'],
+    images: ['images/top-services/IMG_7095.webp', 'images/top-services/IMG_9111.webp'],
     results: [...DEFAULT_RESULTS, '3', '4']
   },
   {
     id: 'service_3',
     token: 'service_3',
-    images: ['images/top-services/IMG_7749.webp', 'images/top-services/IMG_9107.webp'],
+    image: 'images/top-services/IMG_7749.webp',
     results: DEFAULT_RESULTS
   },
   {
@@ -62,7 +62,7 @@ export const TOP_SERVICES: ServiceItem[] = [
   {
     id: 'service_9',
     token: 'service_9',
-    image: 'images/top-services/IMG_9112.webp',
+    images: ['images/top-services/IMG_9112.webp', 'images/top-services/IMG_9107.webp'],
     results: DEFAULT_RESULTS
   },
   {

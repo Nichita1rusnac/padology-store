@@ -2,7 +2,7 @@
     "title": "Products",
     "items": {
         "good_0": {
-            "title": "Individual Anatomical Insoles",
+            "title": "Individual Neuro-Muscular Anatomical Insoles",
             "price": "1 750 MDL"
         },
         "good_1": {
@@ -30,7 +30,7 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_7": {
-            "title": "Light Gray Leather Ergonomic Shoes",
+            "title": "Light Gray Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_8": {
@@ -38,7 +38,7 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_9": {
-            "title": "Minimalist Leather Ergonomic Shoes",
+            "title": "Minimalist Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_10": {
@@ -46,11 +46,11 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_11": {
-            "title": "Light Blue-Gray Leather Ergonomic Shoes",
+            "title": "Light Blue-Gray Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_12": {
-            "title": "Black Leather Ergonomic Shoes",
+            "title": "Black Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_13": {
@@ -58,7 +58,7 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_14": {
-            "title": "Black Leather Ergonomic Shoes",
+            "title": "Black Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_15": {
@@ -78,7 +78,7 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_19": {
-            "title": "Green Leather Ergonomic Shoes",
+            "title": "Green Leather Ergonomic Sneakers",
             "price": "2 800 - 3 000 MDL"
         },
         "good_20": {
@@ -94,11 +94,11 @@
             "price": "2 800 - 3 000 MDL"
         },
         "good_23": {
-            "title": "Individual Anatomical Insoles",
+            "title": "Individual Pressure-Relieving Anatomical Insoles",
             "price": "1 750 MDL"
         },
         "good_24": {
-            "title": "Individual Anatomical Insoles",
+            "title": "Children's Individual Pressure-Relieving Anatomical Insoles",
             "price": "1 750 MDL"
         },
         "good_25": {
@@ -109,5 +109,14 @@
             "title": "Individual Anatomical Insoles",
             "price": "1 750 MDL"
         }
+    },
+    "filters": {
+        "all": "All",
+        "spring": "Spring",
+        "summer": "Summer",
+        "autumn": "Autumn",
+        "winter": "Winter",
+        "insoles": "Insoles",
+        "shoes": "Shoes"
     }
 }

@@ -43,10 +43,7 @@ export const SpecialistCarousel = () => {
         <CarouselContent className="py-4 -ml-2 md:-ml-4">
           {[...SPECIALISTS_LIST]
             .filter((specialist) => {
-              const tags = t(`${specialist.token}.tags`, {
-                returnObjects: true,
-              });
-              return Array.isArray(tags) && tags.includes('master');
+              return specialist.tags.includes("specialist")
             })
             .map((specialist, i) => {
               const uniqueKey = `${specialist.id}-${i}`;
