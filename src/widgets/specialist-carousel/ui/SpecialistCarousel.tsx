@@ -31,7 +31,7 @@ export const SpecialistCarousel = () => {
   }, [api]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 md:px-16 max-h-dvh">
+    <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 md:px-16">
       <Carousel
         setApi={setApi}
         opts={{
@@ -40,7 +40,7 @@ export const SpecialistCarousel = () => {
         }}
         className="w-full"
       >
-        <CarouselContent className="py-4 -ml-2 md:-ml-4">
+        <CarouselContent className="py-2 md:py-4 -ml-2 md:-ml-4">
           {[...SPECIALISTS_LIST]
             .filter((specialist) => {
               return specialist.tags.includes("specialist")
@@ -56,7 +56,7 @@ export const SpecialistCarousel = () => {
                 >
                   <div
                     className={cn(
-                      'transition-all duration-500 ease-out h-full py-4',
+                      'transition-all duration-500 ease-out h-full py-2 md:py-4',
                       isActive
                         ? 'scale-100 opacity-100 z-20 relative'
                         : 'scale-[0.9] opacity-60 z-10 blur-[2px] sm:blur-[1px]',
@@ -72,7 +72,7 @@ export const SpecialistCarousel = () => {
           <CarouselPrevious className="w-14 h-14 border-2 bg-background/90 hover:bg-background -left-4 md:-left-12 transition-all xl:-left-16" />
           <CarouselNext className="w-14 h-14 border-2 bg-background/90 hover:bg-background -right-4 md:-right-12 transition-all xl:-right-16" />
         </div>
-        <CarouselDots className="mt-4 md:mt-8" />
+        <CarouselDots className="mt-2 md:mt-8" />
       </Carousel>
     </div>
   );
