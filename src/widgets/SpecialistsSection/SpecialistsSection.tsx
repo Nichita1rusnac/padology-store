@@ -10,10 +10,10 @@ export const SpecialistsSection = () => {
   return (
     <section
       id="specialists"
-      className="min-h-[calc(100dvh-var(--header-height,0px))] py-12 md:py-20 px-4 overflow-hidden flex"
+      className="min-h-[calc(100dvh-var(--header-height,0px))] py-12 md:py-20 overflow-hidden flex"
     >
       <div className="mx-auto max-w-7xl w-full flex flex-col min-h-0">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 shrink-0">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 shrink-0 px-4">
           <span className="font-display text-lg-fluid text-primary font-medium tracking-wide uppercase mb-4 block">
             {t('specialists.subtitle')}
           </span>

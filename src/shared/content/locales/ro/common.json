@@ -20,7 +20,8 @@
     },
     "buttons": {
         "book": "Programare",
-        "more": "Mai mult"
+        "more": "Mai mult",
+        "phone": "Telefon"
     },
     "seo": {
         "home": {

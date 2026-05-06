@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Phone, Send, Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { cn } from '@/lib/utils';
 
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 
@@ -24,9 +25,19 @@ export const Header = () => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [telegramOpen, setTelegramOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const phoneRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
   const telegramRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -75,8 +86,20 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto max-w-9xl px-4 sm:px-[clamp(1rem,5vw,2rem)] py-3 flex items-center justify-between">
+      <header
+        className={cn(
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          isScrolled || mobileOpen
+            ? 'bg-nav border-b border-primary/10 py-1'
+            : 'bg-transparent py-3'
+        )}
+      >
+        <div
+          className={cn(
+            'mx-auto max-w-9xl px-4 sm:px-[clamp(1rem,5vw,2rem)] flex items-center justify-between transition-all duration-300',
+            isScrolled ? 'py-2' : 'py-3'
+          )}
+        >
           {/* Logo + Nav */}
           <div className="flex items-center gap-0 bg-nav rounded-full px-[1px] py-[1px] lg:px-2 lg:py-2">
             {/* Logo placeholder */}
@@ -133,7 +156,7 @@ export const Header = () => {
 
           {/* Right actions */}
           <div className="flex items-center gap-2">
-            <div className="relative" ref={phoneRef}>
+            <div className="hidden lg:block relative" ref={phoneRef}>
               <a
                 onClick={handleDropDownOpen}
                 className="flex w-10 h-10 rounded-full bg-card border border-border items-center justify-center text-foreground hover:bg-secondary transition-colors"
@@ -176,7 +199,7 @@ export const Header = () => {
                 </div>
               )}
             </div>
-            <div className="relative" ref={telegramRef}>
+            <div className="hidden lg:block relative" ref={telegramRef}>
               <a
                 onClick={() => setTelegramOpen(!telegramOpen)}
                 className="flex w-10 h-10 rounded-full bg-card border border-border items-center justify-center text-foreground hover:bg-secondary transition-colors"
@@ -249,6 +272,57 @@ export const Header = () => {
                 </Link>
               ))}
             </nav>
+
+            <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-primary/20">
+              <div className="flex flex-col gap-1">
+                <button
+                  onClick={() => setDropDownOpen(!dropDownOpen)}
+                  className="flex items-center gap-3 px-4 py-3 text-nav-foreground text-sm font-body rounded-xl hover:bg-primary/20 transition-colors w-full text-left"
+                >
+                  <Phone size={18} />
+                  <span>{t('buttons.phone')}</span>
+                </button>
+                {dropDownOpen && (
+                  <div className="flex flex-col gap-1 pl-11 mb-2">
+                    <a href="tel:+37369947949" className="text-sm py-1 text-primary">
+                      {t('salon.center')}: +373 69 947 949
+                    </a>
+                    <a href="tel:+37369639898" className="text-sm py-1 text-primary">
+                      {t('salon.buiucani')}: +373 69 639 898
+                    </a>
+                  </div>
+                )}
+
+                <button
+                  onClick={() => setTelegramOpen(!telegramOpen)}
+                  className="flex items-center gap-3 px-4 py-3 text-nav-foreground text-sm font-body rounded-xl hover:bg-primary/20 transition-colors w-full text-left"
+                >
+                  <Send size={18} />
+                  <span>Telegram</span>
+                </button>
+                {telegramOpen && (
+                  <div className="flex flex-col gap-1 pl-11 mb-2">
+                    <a
+                      href="https://t.me/Evpodolux"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm py-1 text-primary"
+                    >
+                      {t('salon.center')}
+                    </a>
+                    <a
+                      href="https://t.me/PoleacovaNailStudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm py-1 text-primary"
+                    >
+                      {t('salon.buiucani')}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+
             <div className="flex gap-2 mt-3 pt-3 border-t border-primary/20">
               {languages.map((lang) => (
                 <button

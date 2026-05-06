@@ -10,7 +10,7 @@ interface SpecialistsStatProps {
 
 export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsStatProps) => {
   return (
-    <div className="bg-card rounded-3xl p-5 md:p-7 flex flex-col justify-between gap-6 border border-border/50 w-full">
+    <div className="bg-card rounded-3xl p-7 flex flex-col justify-between gap-6 border border-border/50 w-full">
       {/* Text Section */}
       <div className="flex flex-col">
         <div className="flex items-center gap-1 leading-none">

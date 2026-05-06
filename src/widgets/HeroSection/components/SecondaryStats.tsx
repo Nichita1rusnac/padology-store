@@ -13,14 +13,14 @@ interface SecondaryStatsProps {
 
 export const SecondaryStats = ({ locations, rating }: SecondaryStatsProps) => {
   return (
-    <div className="flex flex-col sm:flex-row md:flex-col gap-4 font-light text-foreground h-full">
+    <div className="flex flex-row md:flex-col gap-4 font-light text-foreground h-full">
       {/* Locations */}
-      <div className="bg-card rounded-3xl p-5 md:p-7 flex-1 border border-border/50">
+      <div className="bg-card rounded-3xl p-7 flex-1 border border-border/50">
         <div className="flex gap-1.5 items-center leading-none">
-          <p className="font-display text-4xl sm:text-5xl font-semibold">
+          <p className="font-display text-5xl font-semibold">
             {locations.value}
           </p>
-          <span className="text-primary text-xl sm:text-2xl font-semibold">
+          <span className="text-primary text-2xl font-semibold">
             {locations.label}
           </span>
         </div>
@@ -30,11 +30,11 @@ export const SecondaryStats = ({ locations, rating }: SecondaryStatsProps) => {
       </div>
 
       {/* Rating */}
-      <div className="bg-card rounded-3xl p-5 md:p-7 flex-1 border border-border/50">
+      <div className="bg-card rounded-3xl p-7 flex-1 border border-border/50">
         <div className="flex items-center gap-1.5 leading-none">
-          <p className="font-display text-4xl sm:text-5xl font-semibold">{rating.value}</p>
+          <p className="font-display text-5xl font-semibold">{rating.value}</p>
           <span className="text-primary">
-            <Star className="w-5 h-5 sm:w-6 sm:h-6 fill-primary" />
+            <Star className="w-6 h-6 fill-primary" />
           </span>
         </div>
         <p className="text-muted-foreground font-body text-sm mt-1">

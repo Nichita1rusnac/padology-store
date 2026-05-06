@@ -58,18 +58,18 @@ export const Footer = () => {
                   <div
                     key={location.id || location.name}
                     className={cn("flex flex-col gap-5",
-                      "border border-border rounded-2xl p-7 w-full",
+                      "border border-border rounded-2xl p-5 sm:p-7 w-full",
                       "shadow-sm hover:shadow-md hover:border-primary/20",
                       "transition-all duration-300 group")}
                   >
-                    <div className="flex flex-row items-center justify-start gap-4">
+                    <div className="flex flex-row items-center justify-start gap-3 sm:gap-4">
                       <img
-                        className="w-14 h-14 shrink-0 rounded-full object-cover opacity-80"
+                        className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full object-cover opacity-80"
                         src={location.logo}
                         alt={`Logo of ${location.name} Podiatry Clinic`}
                         loading="lazy"
                       />
-                      <h3 className="text-xl font-semibold font-display text-primary uppercase tracking-wide">
+                      <h3 className="text-base sm:text-xl font-semibold font-display text-primary uppercase tracking-wide">
                         {location.name}
                       </h3>
                     </div>

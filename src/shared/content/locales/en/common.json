@@ -20,7 +20,8 @@
     },
     "buttons": {
         "book": "Book Now",
-        "more": "More"
+        "more": "More",
+        "phone": "Phone"
     },
     "seo": {
         "home": {
