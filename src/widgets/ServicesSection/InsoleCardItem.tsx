@@ -66,7 +66,7 @@ export const InsoleCardItem = ({ service }: InsoleCardItemProps) => {
         </Carousel>
       </div>
 
-      <div className="flex-1 flex flex-col p-3 pt-4">
+      <div className="flex-1 flex flex-col p-[clamp(0.75rem,2vw,1rem)]">
         {/* Thumbnails row */}
         {images.length > 1 && (
           <div className="flex gap-1.5 mb-3 overflow-x-auto no-scrollbar">
@@ -75,7 +75,7 @@ export const InsoleCardItem = ({ service }: InsoleCardItemProps) => {
                 key={index}
                 onClick={(e) => handleThumbnailClick(e, index)}
                 className={cn(
-                  "w-8 h-8 rounded-md overflow-hidden border transition-all flex-shrink-0 bg-white/50",
+                  "size-[clamp(2rem,7vw,2.25rem)] rounded-md overflow-hidden border transition-all flex-shrink-0 bg-white/50",
                   current === index ? "border-primary opacity-100 ring-1 ring-primary/30" : "border-transparent opacity-50 hover:opacity-100"
                 )}
               >
@@ -86,12 +86,12 @@ export const InsoleCardItem = ({ service }: InsoleCardItemProps) => {
         )}
 
         <div className="mb-2 text-left">
-          <h3 className="font-sans text-[18px] font-semibold text-foreground tracking-[0.3px] leading-tight">
+          <h3 className="font-sans text-lg-fluid font-semibold text-foreground leading-tight">
             {t(`${service.token}.price`).replace('-', '–')}
           </h3>
         </div>
 
-        <p className="font-sans text-[#666666] font-normal text-[15px] leading-relaxed tracking-[0.1px] text-left">
+        <p className="font-sans text-[#666666] font-normal text-sm-fluid leading-relaxed text-left">
           {t(`${service.token}.title`)}
         </p>
       </div>

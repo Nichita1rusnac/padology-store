@@ -47,11 +47,11 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
       {/* Drawer */}
       <div className="absolute right-0 top-0 bottom-0 w-full max-w-lg bg-background shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border">
-          <div className="flex gap-2">
+        <div className="flex items-center justify-between gap-3 p-[clamp(1rem,4vw,1.5rem)] border-b border-border">
+          <div className="flex min-w-0 flex-wrap gap-2">
             <button
               onClick={() => handleSalonChange('buiucani')}
-              className={`px-4 py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'buiucani'
+              className={`px-[clamp(0.875rem,3vw,1rem)] py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'buiucani'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-secondary text-foreground hover:bg-muted'
                 }`}
@@ -60,7 +60,7 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
             </button>
             <button
               onClick={() => handleSalonChange('center')}
-              className={`px-4 py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'center'
+              className={`px-[clamp(0.875rem,3vw,1rem)] py-2 rounded-full text-sm-fluid font-body font-medium transition-colors ${selectedSalon === 'center'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-secondary text-foreground hover:bg-muted'
                 }`}
@@ -70,9 +70,9 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
           </div>
           <button
             onClick={onClose}
-            className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-muted transition-colors"
+            className="size-10 shrink-0 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-muted transition-colors"
           >
-            <X size={20} />
+            <X className="size-5" />
           </button>
         </div>
 
@@ -81,7 +81,7 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
           <div className="relative w-full h-full rounded-2xl bg-card border-border overflow-hidden">
             {isLoading && (
               <div className="absolute inset-0 flex items-center justify-center bg-card z-10">
-                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+                <Loader2 className="size-8 animate-spin text-primary" />
               </div>
             )}
             <iframe

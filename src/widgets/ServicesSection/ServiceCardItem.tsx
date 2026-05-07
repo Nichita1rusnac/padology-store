@@ -62,8 +62,8 @@ export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
           )}
         </div>
       </div>
-      <div className="px-6 py-8 flex-grow flex flex-col">
-        <div className="mt-4">
+      <div className="p-[clamp(1rem,3vw,2rem)] flex-grow flex flex-col min-w-0">
+        <div>
           <h3 className={cn(
             "font-display text-2xl-fluid font-semibold text-foreground group-hover:text-primary",
             "sm:text-primary transition-colors duration-300 tracking-wide leading-snug"
@@ -80,7 +80,7 @@ export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
         </p>
 
         <ul className={cn(
-          "text-muted-foreground font-body text-sm-fluid space-y-2 mt-3 mb-8"
+          "text-muted-foreground font-body text-sm-fluid space-y-2 mt-3 mb-[clamp(1.25rem,4vw,2rem)]"
         )}>
           {service.results.map((index) => (
             <li key={index} className="flex items-start gap-2">
@@ -93,7 +93,7 @@ export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
         <Link
           to={bookingPath}
           className={cn(
-            'mt-auto w-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground py-4 rounded-2xl font-semibold transition-all duration-300 text-center uppercase tracking-widest text-xs',
+            'mt-auto w-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground py-[clamp(0.75rem,2.5vw,1rem)] px-3 rounded-2xl font-semibold transition-all duration-300 text-center uppercase tracking-wide text-xs-fluid',
             'sm:bg-primary sm:text-primary-foreground sm:border-transparent sm:hover:bg-primary/90'
           )}
         >

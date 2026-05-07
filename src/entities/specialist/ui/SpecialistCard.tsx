@@ -14,8 +14,8 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
   const bookingPath = useBookingPath();
 
   return (
-    <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow">
-      <div className="bg-secondary w-full h-[360px] relative overflow-hidden group">
+    <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow min-w-0">
+      <div className="bg-secondary w-full aspect-[4/5] sm:aspect-auto sm:h-[clamp(18rem,34vw,22.5rem)] relative overflow-hidden group">
         <img
           src={specialist.image}
           alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}
@@ -23,9 +23,9 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
           loading="lazy"
         />
       </div>
-      <div className="p-4 md:p-6 flex flex-col flex-grow">
+      <div className="p-[clamp(1rem,3vw,1.5rem)] flex flex-col flex-grow min-w-0">
 
-        <div className="flex flex-wrap whitespace-wrap gap-1 text-lg-fluid font-bold">
+        <div className="flex flex-wrap gap-x-1 gap-y-0.5 text-lg-fluid font-bold">
           <h3 className="font-display text-foreground">
             {t(`${specialist.token}.first_name`)}
           </h3>
@@ -56,7 +56,7 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
 
         {!isAdministrator && <Link
           to={`${bookingPath}?location=${specialist.location[0]}`}
-          className="mt-auto w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 text-base-fluid rounded-full font-semibold transition-colors shadow-sm active:scale-95 duration-200 block text-center"
+          className="mt-auto w-full bg-primary text-primary-foreground hover:bg-primary/90 py-[clamp(0.75rem,2.5vw,0.875rem)] px-3 text-base-fluid rounded-full font-semibold transition-colors shadow-sm active:scale-95 duration-200 block text-center"
         >
           {t('specialists:book_cta')}
         </Link>}

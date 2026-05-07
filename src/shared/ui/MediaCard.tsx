@@ -35,9 +35,9 @@ export const MediaCard = ({
           loading="lazy"
         />
       </div>
-      <div className="flex-1 flex flex-col p-3 pt-4">
+      <div className="flex-1 flex flex-col p-[clamp(0.75rem,2vw,1rem)]">
         {children && <div className="mb-2">{children}</div>}
-        <p className="font-sans text-[#666666] font-normal text-[15px] leading-relaxed tracking-[0.1px]">
+        <p className="font-sans text-[#666666] font-normal text-sm-fluid leading-relaxed">
           {title}
         </p>
       </div>

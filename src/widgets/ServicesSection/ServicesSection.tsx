@@ -7,9 +7,9 @@ export const ServicesSection = () => {
   const { t } = useTranslation(['top_services', 'common']);
 
   return (
-    <section id="services" className="py-24">
+    <section id="services" className="section-y">
       <div className="mx-auto max-w-9xl">
-        <div className="text-center max-w-3xl mx-auto mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-[clamp(2.5rem,8vw,6rem)]">
           <h2 className="font-display text-display-lg font-medium tracking-tight text-foreground mb-6">
             {t('title')}
           </h2>

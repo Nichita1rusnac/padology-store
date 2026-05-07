@@ -28,9 +28,9 @@ export const ContactsSection = () => {
     const bookingPath = useBookingPath();
 
     return (
-        <section id="contacts" className="py-16">
+        <section id="contacts" className="py-[clamp(3rem,7vw,5rem)]">
             <div className="mx-auto max-w-9xl">
-                <div className="text-center max-w-3xl mx-auto mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-[clamp(2.5rem,7vw,5rem)]">
                     <h2 className="font-display text-display-lg font-light gradient-text mb-6">
                         {t('common:titles.contacts')}
                     </h2>
@@ -48,11 +48,11 @@ export const ContactsSection = () => {
                         const secondaryAddress = addressParts?.slice(1).join(',');
 
                         return (
-                            <div 
+                            <div
                                 key={location.name} 
-                                className="bg-card rounded-3xl p-6 flex flex-col transition-all duration-300 hover:shadow-lg group"
+                                className="bg-card rounded-3xl p-[clamp(1.25rem,3vw,1.5rem)] flex flex-col transition-all duration-300 hover:shadow-lg group min-w-0"
                             >
-                                <h3 className="font-display text-2xl font-semibold leading-snug tracking-wide text-foreground mb-4">
+                                <h3 className="font-display text-2xl-fluid font-semibold leading-snug tracking-wide text-foreground mb-4">
                                     {location.category} <span className="text-primary">{location.name}</span>
                                 </h3>
                                 
@@ -60,8 +60,8 @@ export const ContactsSection = () => {
                                     <div className="space-y-3">
                                         {address && (
                                             <div className="flex items-start gap-3 font-body">
-                                                <MapPin size={18} className="text-muted-foreground shrink-0 mt-1" />
-                                                <div className="text-base text-foreground leading-relaxed">
+                                                <MapPin className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0 mt-1" />
+                                                <div className="text-base-fluid text-foreground leading-relaxed">
                                                     {mainAddress}
                                                     {secondaryAddress && (
                                                         <span className="text-muted-foreground">, {secondaryAddress}</span>
@@ -71,14 +71,14 @@ export const ContactsSection = () => {
                                         )}
                                         {phone && (
                                             <div className="flex items-center gap-3 font-body">
-                                                <Phone size={18} className="text-muted-foreground shrink-0" />
-                                                <span className="text-base text-foreground">{phone}</span>
+                                                <Phone className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0" />
+                                                <span className="text-base-fluid text-foreground">{phone}</span>
                                             </div>
                                         )}
                                         {workingHours && (
                                             <div className="flex items-center gap-3 font-body">
-                                                <Clock size={18} className="text-muted-foreground shrink-0" />
-                                                <span className="text-base text-foreground">{workingHours}</span>
+                                                <Clock className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0" />
+                                                <span className="text-base-fluid text-foreground">{workingHours}</span>
                                             </div>
                                         )}
                                     </div>
@@ -86,7 +86,7 @@ export const ContactsSection = () => {
                                     <div className="mt-4 flex flex-col sm:flex-row gap-3">
                                         <Link
                                             to={`${bookingPath}?location=${bookTag}`}
-                                            className="inline-block w-full md:w-auto px-5 py-2.5 bg-primary text-primary-foreground rounded-xl text-base font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                                            className="inline-block w-full md:w-auto px-[clamp(1rem,3vw,1.25rem)] py-2.5 bg-primary text-primary-foreground rounded-xl text-base-fluid font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
                                         >
                                             {t('common:buttons.book')}
                                         </Link>

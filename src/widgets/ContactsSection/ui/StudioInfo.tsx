@@ -24,17 +24,17 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
   const bookTag = loc.contact.find((c) => c.id === 'tag')?.value;
 
   return (
-    <div className="space-y-12">
-      <div className="bg-card rounded-3xl lg:h-[50vh] p-6 flex flex-col md:flex-row justify-between gap-8 border shadow-sm transition-all duration-300 hover:shadow-lg group">
-        <div className="flex-1">
-          <h3 className="font-display text-2xl font-semibold leading-snug tracking-wide text-foreground mb-4">
+    <div className="space-y-[clamp(2rem,5vw,3rem)]">
+      <div className="bg-card rounded-3xl lg:min-h-[24rem] p-[clamp(1.25rem,3vw,1.5rem)] flex flex-col md:flex-row justify-between gap-[clamp(1.25rem,4vw,2rem)] border shadow-sm transition-all duration-300 hover:shadow-lg group">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-display text-2xl-fluid font-semibold leading-snug tracking-wide text-foreground mb-4">
             {loc.category} <span className="text-primary">{loc.name}</span>
           </h3>
           <div className="space-y-3 mb-8">
             {address && (
               <div className="flex items-start gap-3 text-foreground font-body">
-                <MapPin size={18} className="text-muted-foreground shrink-0 mt-1" />
-                <div className="text-base leading-relaxed">
+                <MapPin className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0 mt-1" />
+                <div className="text-base-fluid leading-relaxed">
                   {mainAddress}
                   {secondaryAddress && (
                     <span className="text-muted-foreground">, {secondaryAddress}</span>
@@ -44,25 +44,25 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
             )}
             {phone && (
               <div className="flex items-center gap-3 text-foreground font-body">
-                <Phone size={18} className="text-muted-foreground shrink-0" />
-                <span className="text-base">{phone}</span>
+                <Phone className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0" />
+                <span className="text-base-fluid">{phone}</span>
               </div>
             )}
             {workingHours && (
               <div className="flex items-center gap-3 text-foreground font-body">
-                <Clock size={18} className="text-muted-foreground shrink-0" />
-                <span className="text-base">{workingHours}</span>
+                <Clock className="size-[clamp(1rem,4vw,1.125rem)] text-muted-foreground shrink-0" />
+                <span className="text-base-fluid">{workingHours}</span>
               </div>
             )}
           </div>
           <Link
             to={`${bookingPath}?location=${bookTag}`}
-            className="inline-block w-full md:w-auto px-5 py-2.5 bg-primary text-primary-foreground rounded-xl text-base font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+            className="inline-block w-full md:w-auto px-[clamp(1rem,3vw,1.25rem)] py-2.5 bg-primary text-primary-foreground rounded-xl text-base-fluid font-medium text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
           >
             {t('common:buttons.book')}
           </Link>
         </div>
-        <div className="aspect-video md:aspect-auto md:w-1/2 rounded-2xl bg-secondary overflow-hidden shadow-sm border border-border">
+        <div className="aspect-video md:aspect-auto md:w-1/2 md:min-h-[18rem] rounded-2xl bg-secondary overflow-hidden shadow-sm border border-border">
           <iframe
             src={loc.embed}
             width="100%"
@@ -78,10 +78,10 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
 
       {/* Gallery Section */}
       <div className="space-y-6">
-        <h3 className="font-display text-xl font-medium tracking-wide text-foreground">
+        <h3 className="font-display text-xl-fluid font-medium tracking-wide text-foreground">
           {t('hero.gallery')}
         </h3>
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-[clamp(0.5rem,2vw,0.75rem)]">
           {galleryData[type].map((img, idx) => (
             <div
               key={idx}

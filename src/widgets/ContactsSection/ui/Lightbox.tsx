@@ -23,7 +23,7 @@ export const Lightbox = ({
 }: LightboxProps) => {
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 transition-opacity animate-in fade-in duration-300"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-[clamp(0.75rem,3vw,1rem)] transition-opacity animate-in fade-in duration-300"
       onTouchStart={(e) => onTouchStart(e.targetTouches[0].clientX)}
       onTouchMove={(e) => onTouchMove(e.targetTouches[0].clientX)}
       onTouchEnd={onTouchEnd}
@@ -36,10 +36,10 @@ export const Lightbox = ({
 
       {/* Close Button */}
       <button
-        className="absolute top-6 right-6 md:top-8 md:right-8 text-white/50 hover:text-white transition-colors z-[110]"
+        className="absolute top-4 right-4 md:top-8 md:right-8 text-white/50 hover:text-white transition-colors z-[110] p-2"
         onClick={onClose}
       >
-        <X size={32} />
+        <X className="size-[clamp(1.5rem,7vw,2rem)]" />
       </button>
 
       {/* Navigation Arrows (Desktop) */}
@@ -47,13 +47,13 @@ export const Lightbox = ({
         className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-colors p-4 focus:outline-none z-[110]"
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
       >
-        <ChevronLeft size={48} />
+        <ChevronLeft className="size-12" />
       </button>
       <button
         className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 text-white/30 hover:text-white transition-colors p-4 focus:outline-none z-[110]"
         onClick={(e) => { e.stopPropagation(); onNext(); }}
       >
-        <ChevronRight size={48} />
+        <ChevronRight className="size-12" />
       </button>
 
       {/* Navigation Buttons (Mobile) */}
@@ -62,13 +62,13 @@ export const Lightbox = ({
           onClick={(e) => { e.stopPropagation(); onPrev(); }} 
           className="p-4 active:scale-95 transition-transform"
         >
-          <ChevronLeft size={32} />
+          <ChevronLeft className="size-8" />
         </button>
         <button 
           onClick={(e) => { e.stopPropagation(); onNext(); }} 
           className="p-4 active:scale-95 transition-transform"
         >
-          <ChevronRight size={32} />
+          <ChevronRight className="size-8" />
         </button>
       </div>
 

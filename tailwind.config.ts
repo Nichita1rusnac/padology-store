@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
+import animate from 'tailwindcss-animate';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   darkMode: ['class'],
@@ -24,19 +27,19 @@ export default {
     extend: {
       fontSize: {
         // Fluid typography: scales from min → max across viewports
-        'xs-fluid': ['clamp(0.75rem, 1.5vw, 0.8125rem)', { lineHeight: '1.4' }],
-        'sm-fluid': ['clamp(0.8125rem, 2vw, 0.875rem)', { lineHeight: '1.5' }],
-        'base-fluid': ['clamp(1rem, 2.5vw, 1.125rem)', { lineHeight: '1.6' }],
-        'lg-fluid': ['clamp(1.125rem, 3vw, 1.25rem)', { lineHeight: '1.6' }],
-        'xl-fluid': ['clamp(1.25rem, 4vw, 1.5rem)', { lineHeight: '1.5' }],
-        '2xl-fluid': ['clamp(1.5rem, 5vw, 1.75rem)', { lineHeight: '1.4' }],
-        '3xl-fluid': ['clamp(1.75rem, 6vw, 2.25rem)', { lineHeight: '1.3' }],
-        '4xl-fluid': ['clamp(2.25rem, 7vw, 3rem)', { lineHeight: '1.2' }],
+        'xs-fluid': ['clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem)', { lineHeight: '1.45' }],
+        'sm-fluid': ['clamp(0.8125rem, 0.78rem + 0.18vw, 0.9375rem)', { lineHeight: '1.5' }],
+        'base-fluid': ['clamp(0.9375rem, 0.9rem + 0.25vw, 1.0625rem)', { lineHeight: '1.6' }],
+        'lg-fluid': ['clamp(1.0625rem, 1rem + 0.35vw, 1.25rem)', { lineHeight: '1.58' }],
+        'xl-fluid': ['clamp(1.1875rem, 1.08rem + 0.55vw, 1.5rem)', { lineHeight: '1.45' }],
+        '2xl-fluid': ['clamp(1.375rem, 1.2rem + 0.85vw, 1.75rem)', { lineHeight: '1.35' }],
+        '3xl-fluid': ['clamp(1.625rem, 1.35rem + 1.35vw, 2.25rem)', { lineHeight: '1.25' }],
+        '4xl-fluid': ['clamp(2rem, 1.55rem + 2.2vw, 3rem)', { lineHeight: '1.15' }],
 
         // Marketing/Display scales
-        'display-sm': ['clamp(1.5rem, 5vw, 2rem)', { lineHeight: '1.2' }],
-        'display-md': ['clamp(2rem, 6vw, 2.5rem)', { lineHeight: '1.2' }],
-        'display-lg': ['clamp(2.5rem, 8vw, 3.5rem)', { lineHeight: '1.1' }],
+        'display-sm': ['clamp(1.5rem, 1.28rem + 1.1vw, 2rem)', { lineHeight: '1.18' }],
+        'display-md': ['clamp(1.875rem, 1.6rem + 1.35vw, 2.5rem)', { lineHeight: '1.15' }],
+        'display-lg': ['clamp(2.125rem, 1.52rem + 2.65vw, 3.5rem)', { lineHeight: '1.08' }],
 
         // Accessibility-First Sizing Scale
         'caption': ['0.75rem', { lineHeight: '1.4', fontWeight: '400' }],
@@ -66,6 +69,9 @@ export default {
       },
       backgroundImage: {
         'instagram': 'var(--instagram)',
+      },
+      maxWidth: {
+        '9xl': '96rem',
       },
       colors: {
         nav: {
@@ -152,10 +158,10 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/typography'),
+    animate,
+    typography,
     // Implementation of the proposed custom plugins
-    function({ addVariant, addUtilities, theme }) {
+    plugin(({ addVariant, addUtilities, theme }) => {
       // Dynamic Type / Responsive Text Variants
       addVariant('supports-large-text', '@supports (font-size: clamp(1px, 1vw, 2px))');
       
@@ -174,7 +180,6 @@ export default {
           color: theme('colors.muted.foreground'),
         },
       });
-    },
+    }),
   ],
 } satisfies Config;
-

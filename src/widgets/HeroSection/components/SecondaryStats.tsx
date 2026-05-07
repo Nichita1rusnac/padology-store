@@ -13,31 +13,31 @@ interface SecondaryStatsProps {
 
 export const SecondaryStats = ({ locations, rating }: SecondaryStatsProps) => {
   return (
-    <div className="flex flex-row md:flex-col gap-4 font-light text-foreground h-full">
+    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-1 gap-[clamp(0.75rem,2vw,1rem)] font-light text-foreground h-full">
       {/* Locations */}
-      <div className="bg-card rounded-3xl p-7 flex-1 border border-border/50">
+      <div className="bg-card rounded-3xl p-[clamp(1.25rem,3vw,1.75rem)] flex-1 border border-border/50 min-w-0">
         <div className="flex gap-1.5 items-center leading-none">
-          <p className="font-display text-5xl font-semibold">
+          <p className="font-display text-[clamp(2.25rem,8vw,3rem)] font-semibold">
             {locations.value}
           </p>
-          <span className="text-primary text-2xl font-semibold">
+          <span className="text-primary text-2xl-fluid font-semibold">
             {locations.label}
           </span>
         </div>
-        <p className="text-muted-foreground font-body text-sm mt-1">
+        <p className="text-muted-foreground font-body text-sm-fluid mt-1">
           {locations.description}
         </p>
       </div>
 
       {/* Rating */}
-      <div className="bg-card rounded-3xl p-7 flex-1 border border-border/50">
+      <div className="bg-card rounded-3xl p-[clamp(1.25rem,3vw,1.75rem)] flex-1 border border-border/50 min-w-0">
         <div className="flex items-center gap-1.5 leading-none">
-          <p className="font-display text-5xl font-semibold">{rating.value}</p>
+          <p className="font-display text-[clamp(2.25rem,8vw,3rem)] font-semibold">{rating.value}</p>
           <span className="text-primary">
-            <Star className="w-6 h-6 fill-primary" />
+            <Star className="size-[clamp(1.25rem,5vw,1.5rem)] fill-primary" />
           </span>
         </div>
-        <p className="text-muted-foreground font-body text-sm mt-1">
+        <p className="text-muted-foreground font-body text-sm-fluid mt-1">
           {rating.description}
         </p>
       </div>

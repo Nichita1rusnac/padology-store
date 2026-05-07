@@ -10,14 +10,14 @@ interface SpecialistsStatProps {
 
 export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsStatProps) => {
   return (
-    <div className="bg-card rounded-3xl p-7 flex flex-col justify-between gap-6 border border-border/50 w-full">
+    <div className="bg-card rounded-3xl p-[clamp(1.25rem,3vw,1.75rem)] flex flex-col justify-between gap-[clamp(1.25rem,3vw,1.5rem)] border border-border/50 w-full min-w-0">
       {/* Text Section */}
       <div className="flex flex-col">
         <div className="flex items-center gap-1 leading-none">
-          <p className="font-display text-foreground text-5xl font-semibold">10</p>
-          <span className="text-primary text-3xl font-semibold ml-0.5">+</span>
+          <p className="font-display text-foreground text-[clamp(2.25rem,8vw,3rem)] font-semibold">10</p>
+          <span className="text-primary text-3xl-fluid font-semibold ml-0.5">+</span>
         </div>
-        <p className="text-muted-foreground font-body text-sm mt-1">
+        <p className="text-muted-foreground font-body text-sm-fluid mt-1">
           {title}
         </p>
       </div>
@@ -31,7 +31,7 @@ export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsSt
             rounded-full object-cover shadow
             -ml-8 first:ml-0 sm:-ml-5
             aspect-square
-            w-[min(7rem,calc((100%+3.75rem)/4))]
+            w-[min(6.5rem,calc((100%+3.75rem)/4))]
             sm:w-[min(7rem,calc((100%+3.75rem)/4))]
           "
               src={SPECIALISTS_LIST[index]?.image}
@@ -46,7 +46,7 @@ export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsSt
           rounded-full bg-secondary flex items-center justify-center shadow z-10
           -ml-8 sm:-ml-5
           aspect-square
-          w-[min(7rem,calc((100%+3.75rem)/4))]
+          w-[min(6.5rem,calc((100%+3.75rem)/4))]
           sm:w-[min(7rem,calc((100%+3.75rem)/4))]
         "
           >

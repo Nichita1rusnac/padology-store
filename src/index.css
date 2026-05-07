@@ -60,11 +60,59 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-background text-foreground text-body;
     font-family: var(--font-body);
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    height: auto;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  a,
+  button {
+    min-width: 0;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  li {
+    overflow-wrap: anywhere;
   }
 
   h1 { @apply text-h1 font-bold; font-family: var(--font-display); }
@@ -76,6 +124,23 @@
 }
 
 @layer utilities {
+  .safe-container {
+    @apply mx-auto w-full max-w-9xl px-4 sm:px-[clamp(1rem,4vw,2rem)];
+  }
+
+  .section-y {
+    @apply py-[clamp(3rem,7vw,6rem)];
+  }
+
+  .card-pad {
+    @apply p-[clamp(1rem,3vw,2rem)];
+  }
+
+  .icon-fluid {
+    width: clamp(1rem, 0.85rem + 0.55vw, 1.5rem);
+    height: clamp(1rem, 0.85rem + 0.55vw, 1.5rem);
+  }
+
   .gradient-text {
     background-image: linear-gradient(15deg,
         hsl(27deg 20% 18%) 11%,

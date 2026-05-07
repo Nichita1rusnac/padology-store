@@ -31,7 +31,7 @@ export const SpecialistCarousel = () => {
   }, [api]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-0 sm:px-12 md:px-16 max-h-dvh">
+    <div className="w-full max-w-7xl mx-auto px-0 sm:px-[clamp(2rem,8vw,4rem)] max-h-dvh">
       <Carousel
         setApi={setApi}
         opts={{
@@ -52,7 +52,7 @@ export const SpecialistCarousel = () => {
               return (
                 <CarouselItem
                   key={uniqueKey}
-                  className="pl-2 md:pl-4 basis-[75%] sm:basis-[60%] md:basis-[45%] lg:basis-[33.333%]"
+                  className="pl-2 md:pl-4 basis-[min(85%,21rem)] sm:basis-[60%] md:basis-[45%] lg:basis-[33.333%]"
                 >
                   <div
                     className={cn(
@@ -69,8 +69,8 @@ export const SpecialistCarousel = () => {
             })}
         </CarouselContent>
         <div className="hidden sm:block">
-          <CarouselPrevious className="w-14 h-14 border-2 bg-background/90 hover:bg-background -left-4 md:-left-12 transition-all xl:-left-16" />
-          <CarouselNext className="w-14 h-14 border-2 bg-background/90 hover:bg-background -right-4 md:-right-12 transition-all xl:-right-16" />
+          <CarouselPrevious className="size-[clamp(2.5rem,5vw,3.5rem)] border-2 bg-background/90 hover:bg-background -left-4 md:-left-12 transition-all xl:-left-16" />
+          <CarouselNext className="size-[clamp(2.5rem,5vw,3.5rem)] border-2 bg-background/90 hover:bg-background -right-4 md:-right-12 transition-all xl:-right-16" />
         </div>
         <CarouselDots className="mt-4 md:mt-8" />
       </Carousel>

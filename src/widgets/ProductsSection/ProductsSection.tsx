@@ -23,9 +23,9 @@ export const ProductsSection = () => {
     }));
 
     return (
-        <section id="products" className="py-12">
+        <section id="products" className="py-[clamp(3rem,7vw,5rem)]">
             <div className="mx-auto max-w-9xl">
-                <div className="mb-12">
+                <div className="mb-[clamp(2rem,5vw,3rem)]">
                     <h2 className="font-display text-display-md font-light text-foreground">{t('title')}</h2>
                 </div>
 
@@ -55,14 +55,14 @@ export const ProductsSection = () => {
                                                         .map(tag => (
                                                             <span 
                                                                 key={tag} 
-                                                                className="text-[10px] uppercase tracking-wider font-bold text-primary/80 bg-primary/5 px-2 py-0.5 rounded-full border border-primary/10"
+                                                                className="text-[clamp(0.625rem,1.8vw,0.6875rem)] uppercase tracking-wide font-bold text-primary/80 bg-primary/5 px-2 py-0.5 rounded-full border border-primary/10"
                                                             >
                                                                 {t(`filters.${tag}`)}
                                                             </span>
                                                         ))
                                                     }
                                                 </div>
-                                                <h3 className="font-sans text-[18px] font-semibold text-foreground tracking-[0.3px] leading-tight">
+                                                <h3 className="font-sans text-lg-fluid font-semibold text-foreground leading-tight">
                                                     {t(`${product.token}.price`).replace('-', '–')}
                                                 </h3>
                                             </div>

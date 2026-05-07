@@ -59,9 +59,9 @@ export const PricingSection = () => {
               {cat.services.map((service, sIdx) => (
                 <div
                   key={sIdx}
-                  className="flex items-center justify-between px-6 md:px-8 py-5 font-body bg-card rounded-2xl border border-transparent hover:border-primary/20 transition-all cursor-default group"
+                  className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between px-[clamp(1rem,4vw,2rem)] py-[clamp(1rem,3vw,1.25rem)] font-body bg-card rounded-2xl border border-transparent hover:border-primary/20 transition-all cursor-default group"
                 >
-                  <div className="flex flex-col gap-1">
+                  <div className="flex min-w-0 flex-col gap-1">
                     <span className="text-foreground text-base-fluid group-hover:text-primary transition-colors">
                       {service.title}
                     </span>
@@ -71,7 +71,7 @@ export const PricingSection = () => {
                       </span>
                     )}
                   </div>
-                  <span className="font-sans font-semibold text-primary text-base-fluid whitespace-nowrap ml-4">
+                  <span className="font-sans font-semibold text-primary text-base-fluid whitespace-nowrap sm:ml-4">
                     {getPriceDisplay(service, salonData.currency)}
                   </span>
                 </div>
@@ -84,23 +84,23 @@ export const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-12">
+    <section id="pricing" className="py-[clamp(3rem,7vw,5rem)]">
       <div className="mx-auto max-w-9xl">
         <Tabs defaultValue="buiucani" className="w-full">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-[clamp(2rem,5vw,3rem)]">
             <h2 className="font-display text-display-md font-light text-foreground">
               {t('common:titles.pricing')}
             </h2>
-            <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full">
+            <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full max-w-full overflow-x-auto">
               <TabsTrigger
                 value="buiucani"
-                className="px-8 py-2.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                className="px-[clamp(1rem,4vw,2rem)] py-2.5 text-sm-fluid rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
               >
                 {t('common:salon.buiucani')}
               </TabsTrigger>
               <TabsTrigger
                 value="center"
-                className="px-8 py-2.5 rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                className="px-[clamp(1rem,4vw,2rem)] py-2.5 text-sm-fluid rounded-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
               >
                 {t('common:salon.center')}
               </TabsTrigger>
