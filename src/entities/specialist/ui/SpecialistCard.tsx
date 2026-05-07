@@ -15,7 +15,7 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
 
   return (
     <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow min-w-0">
-      <div className="bg-secondary w-full aspect-[4/5] sm:aspect-auto sm:h-[clamp(18rem,34vw,22.5rem)] relative overflow-hidden group">
+      <div className="bg-secondary w-full sm:aspect-auto sm:h-[clamp(18rem,34vw,22.5rem)] relative overflow-hidden group">
         <img
           src={specialist.image}
           alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}

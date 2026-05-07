@@ -31,7 +31,7 @@ export const SpecialistCarousel = () => {
   }, [api]);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-0 sm:px-[clamp(2rem,8vw,4rem)] max-h-dvh">
+    <div className="w-full max-w-7xl mx-auto px-0 sm:px-[clamp(2rem,8vw,4rem)]">
       <Carousel
         setApi={setApi}
         opts={{
