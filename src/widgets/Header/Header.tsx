@@ -29,6 +29,7 @@ export const Header = () => {
   const phoneRef = useRef<HTMLDivElement>(null);
   const langRef = useRef<HTMLDivElement>(null);
   const telegramRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,23 +41,27 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        phoneRef.current &&
-        !phoneRef.current.contains(event.target as Node)
-      ) {
-        setDropDownOpen(false);
-      }
-      if (langRef.current && !langRef.current.contains(event.target as Node)) {
-        setLangOpen(false);
-      }
-      if (
-        telegramRef.current &&
-        !telegramRef.current.contains(event.target as Node)
-      ) {
-        setTelegramOpen(false);
-      }
-    };
+      const handleClickOutside = (event: MouseEvent) => {
+        const target = event.target as Node;
+        
+        if (
+          phoneRef.current &&
+          !phoneRef.current.contains(target) &&
+          (!mobileMenuRef.current || !mobileMenuRef.current.contains(target))
+        ) {
+          setDropDownOpen(false);
+        }
+        if (langRef.current && !langRef.current.contains(target)) {
+          setLangOpen(false);
+        }
+        if (
+          telegramRef.current &&
+          !telegramRef.current.contains(target) &&
+          (!mobileMenuRef.current || !mobileMenuRef.current.contains(target))
+        ) {
+          setTelegramOpen(false);
+        }
+      };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -164,7 +169,7 @@ export const Header = () => {
                 <Phone className="size-[clamp(1rem,1.1vw,1.125rem)]" />
               </button>
               {dropDownOpen && (
-                <div className="absolute top-full mt-1 right-0 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[min(22rem,calc(100vw-2rem))]">
+                <div className="absolute top-full mt-1 right-0 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[min(22rem,calc(100vw-2rem))] z-50">
                   <a
                     href="tel:+37369947949"
                     className="grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 w-full text-left px-4 sm:px-5 py-3.5 transition-colors hover:bg-secondary group"
@@ -205,7 +210,7 @@ export const Header = () => {
                 <Send className="size-[clamp(1rem,1.1vw,1.125rem)]" />
               </button>
               {telegramOpen && (
-                <div className="absolute top-full mt-1 right-0 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[min(18rem,calc(100vw-2rem))]">
+                <div className="absolute top-full mt-1 right-0 bg-card rounded-xl shadow-lg border border-border overflow-hidden w-[min(18rem,calc(100vw-2rem))] z-50">
                   <a
                     href="https://t.me/Evpodolux"
                     target="_blank"
@@ -255,7 +260,7 @@ export const Header = () => {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-nav mx-4 rounded-2xl p-4 mt-1 max-h-[calc(100svh-6rem)] overflow-y-auto">
+          <div ref={mobileMenuRef} className="lg:hidden bg-nav mx-4 rounded-2xl p-4 mt-1 max-h-[calc(100svh-6rem)] overflow-y-auto">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link
