@@ -69,7 +69,7 @@ export const InsoleCardItem = ({ service }: InsoleCardItemProps) => {
       <div className="flex-1 flex flex-col p-[clamp(0.75rem,2vw,1rem)]">
         {/* Thumbnails row */}
         {images.length > 1 && (
-          <div className="flex gap-1.5 mb-3 overflow-x-auto no-scrollbar">
+          <div className="flex gap-1.5 mb-3 overflow-x-auto">
             {images.map((img, index) => (
               <div
                 key={index}

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Specialist } from '../model/specialists';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
+import { ResponsiveImage } from '@/shared/ui/ResponsiveImage';
 
 interface SpecialistCardProps {
   specialist: Specialist;
@@ -16,11 +17,11 @@ export const SpecialistCard = ({ specialist, isActive }: SpecialistCardProps) =>
   return (
     <article className="bg-card rounded-3xl overflow-hidden shadow-sm flex flex-col h-full border border-border/50 hover:shadow-md transition-shadow min-w-0">
       <div className="bg-secondary w-full sm:aspect-auto sm:h-[clamp(18rem,34vw,22.5rem)] relative overflow-hidden group">
-        <img
+        <ResponsiveImage
+          profile="team-card"
           src={specialist.image}
           alt={`${t(`${specialist.token}.first_name`)} ${t(`${specialist.token}.last_name`)} - Podologist at Podiatric Studios`}
           className="w-full h-full object-cover"
-          loading="lazy"
         />
       </div>
       <div className="p-[clamp(1rem,3vw,1.5rem)] flex flex-col flex-grow min-w-0">

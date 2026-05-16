@@ -93,7 +93,7 @@ export const Header = () => {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-[clamp(1rem,4vw,2rem)]',
           isScrolled || mobileOpen
             ? 'bg-nav border-b border-primary/10 py-1'
             : 'bg-transparent py-3'
@@ -101,7 +101,7 @@ export const Header = () => {
       >
         <div
           className={cn(
-            'mx-auto max-w-9xl px-4 sm:px-[clamp(1rem,4vw,2rem)] flex items-center justify-between gap-2 transition-all duration-300',
+            'mx-auto max-w-9xl flex items-center justify-between gap-2 transition-all duration-300',
             isScrolled ? 'py-2' : 'py-3'
           )}
         >
@@ -251,9 +251,12 @@ export const Header = () => {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle mobile menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
               className="lg:hidden w-10 h-10 rounded-full bg-nav flex items-center justify-center text-nav-foreground"
             >
-              {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              {mobileOpen ? <X className="size-5" /> : <Menu className="size-5"/>}
             </button>
           </div>
         </div>
@@ -285,10 +288,10 @@ export const Header = () => {
                 </button>
                 {dropDownOpen && (
                   <div className="flex flex-col gap-1 pl-11 mb-2">
-                    <a href="tel:+37369947949" className="text-sm-fluid py-1 text-primary">
+                    <a href="tel:+37369947949" aria-label={`${t('salon.center')} Phone`} className="text-sm-fluid py-1 text-primary">
                       {t('salon.center')}: +373 69 947 949
                     </a>
-                    <a href="tel:+37369639898" className="text-sm-fluid py-1 text-primary">
+                    <a href="tel:+37369639898" aria-label={`${t('salon.buiucani')} Phone`} className="text-sm-fluid py-1 text-primary">
                       {t('salon.buiucani')}: +373 69 639 898
                     </a>
                   </div>
@@ -307,6 +310,7 @@ export const Header = () => {
                       href="https://t.me/Evpodolux"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${t('salon.center')} Telegram`}
                       className="text-sm-fluid py-1 text-primary"
                     >
                       {t('salon.center')}
@@ -315,6 +319,7 @@ export const Header = () => {
                       href="https://t.me/PoleacovaNailStudio"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${t('salon.buiucani')} Telegram`}
                       className="text-sm-fluid py-1 text-primary"
                     >
                       {t('salon.buiucani')}

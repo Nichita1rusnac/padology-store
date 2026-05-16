@@ -96,6 +96,7 @@ export const ContactsSection = () => {
                                 <div className="mt-5 aspect-video rounded-2xl bg-secondary overflow-hidden border border-border">
                                     <iframe
                                         src={location.embed}
+                                        title={address}
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}

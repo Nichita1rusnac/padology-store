@@ -26,10 +26,6 @@ import top_services_en from "../content/locales/en/top-services.json";
 import top_services_ro from "../content/locales/ro/top-services.json";
 import top_services_ru from "../content/locales/ru/top-services.json";
 
-import faq_en from "../content/locales/en/faq.json";
-import faq_ro from "../content/locales/ro/faq.json";
-import faq_ru from "../content/locales/ru/faq.json";
-
 
 export const resources = {
     en: {
@@ -40,7 +36,6 @@ export const resources = {
         price: price_en,
         specialists: specialists_en,
         top_services: top_services_en,
-        faq: faq_en,
     },
     ro: {
         common: common_ro,
@@ -50,7 +45,6 @@ export const resources = {
         price: price_ro,
         specialists: specialists_ro,
         top_services: top_services_ro,
-        faq: faq_ro,
     },
     ru: {
         common: common_ru,
@@ -60,6 +54,5 @@ export const resources = {
         price: price_ru,
         specialists: specialists_ru,
         top_services: top_services_ru,
-        faq: faq_ru,
     },
 };

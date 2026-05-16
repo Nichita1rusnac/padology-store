@@ -18,13 +18,14 @@ interface SEOProps {
     geo?: { lat: string; lng: string };
   };
   specialistsData?: any[];
+  siteName?: string;
 }
 
 export const SEO = ({
   title,
   description,
   path = '',
-  image = '/logo.webp',
+  image = '/og-image.jpg',
   type = 'website',
   noIndex = false,
   schemaType = 'None',
@@ -32,21 +33,24 @@ export const SEO = ({
   serviceDescription,
   locationData,
   specialistsData,
+  siteName,
 }: SEOProps) => {
   const { i18n, t } = useTranslation('common');
   const lang = i18n.resolvedLanguage || i18n.language || 'ro';
-
-  const siteName = 'Podiatric Studios';
-  const defaultTitle = `${siteName} | Chișinău`;
-  const fullTitle = title ? `${title} | ${siteName} | Chișinău` : defaultTitle;
-
+  const defaultTitle = siteName ?? 'Podiatric Studios';
+  const fullTitle = title ? `${title} | ${defaultTitle}` : defaultTitle;
+  const metaDescription =
+    description ||
+    'Expert podiatry clinic in Chisinau. Medical pedicure, custom orthotics, and professional foot care at Podiatric Studios.';
   // Base domain
-  const baseDomain = 'https://podiatricstudios.md';
+  const baseDomain = 'https://www.eugeniapodology.md';
 
   // Formatting path
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   const canonicalUrl = `${baseDomain}${cleanPath}`;
-
+  const imageUrl = image.startsWith('http') ? image : `${baseDomain}${image}`;
+  const imageType = image.endsWith('.webp') ? 'image/webp' : 'image/jpeg';
+  const isDefaultShareImage = image === '/og-image.jpg';
   // Locale mapping for OG
   const localeMap: Record<string, string> = {
     en: 'en_US',
@@ -100,10 +104,9 @@ export const SEO = ({
       "description": description,
       "url": canonicalUrl,
       "telephone": locationData?.phone[0] || "+373 699 47 949",
-      "email": "contact@podiatricstudios.md",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": locationData?.address || "Mihai Eminescu Street 70",
+        "streetAddress": locationData?.address || "Mihai Eminescu 70",
         "addressLocality": "Chișinău",
         "addressRegion": "Chișinău Municipality",
         "postalCode": "MD-2012",
@@ -111,22 +114,16 @@ export const SEO = ({
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": locationData?.geo?.lat || "47.0245",
-        "longitude": locationData?.geo?.lng || "28.8322"
+        "latitude": locationData?.geo?.lat || "47.02403",
+        "longitude": locationData?.geo?.lng || "28.84037"
       },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
           "opens": "09:00",
           "closes": "19:00"
         },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "10:00",
-          "closes": "15:00"
-        }
       ],
       "priceRange": "$$",
       "currenciesAccepted": "MDL",
@@ -135,10 +132,9 @@ export const SEO = ({
         "@type": "City",
         "name": "Chișinău"
       },
-      "hasMap": `https://maps.google.com/?q=${encodeURIComponent(locationData?.name || siteName)}+Chisinau`,
       "sameAs": [
-        "https://www.facebook.com/podiatricstudios",
-        "https://www.instagram.com/podiatricstudios"
+        "https://www.instagram.com/evgeniapoleakova/",
+        "https://www.instagram.com/evpodolux/"
       ]
     });
   }
@@ -166,7 +162,7 @@ export const SEO = ({
         "@context": "https://schema.org",
         "@type": "Physician",
         "name": `${specialist.first_name} ${specialist.last_name}`,
-        "medicalSpecialty": "Podiatric",
+        "medicalSpecialty": "Podology",
         "memberOf": {
           "@type": "MedicalOrganization",
           "name": siteName
@@ -201,17 +197,28 @@ export const SEO = ({
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>{fullTitle.substring(0, 70)}</title>
-      {description && <meta name="description" content={description.substring(0, 160)} />}
+      <meta name="description" content={metaDescription.substring(0, 160)} />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={`${baseDomain}${image}`} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:secure_url" content={imageUrl} />
+      <meta property="og:image:type" content={imageType} />
+      {isDefaultShareImage && <meta property="og:image:width" content="1200" />}
+      {isDefaultShareImage && <meta property="og:image:height" content="630" />}
+      <meta property="og:image:alt" content={`${defaultTitle}`} />
       <meta property="og:locale" content={currentLocale} />
       <meta property="og:site_name" content={siteName} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:image:alt" content={`${defaultTitle}`} />
 
       <link rel="alternate" hrefLang="en" href={getHreflangPath('en')} />
       <link rel="alternate" hrefLang="ro" href={getHreflangPath('ro')} />

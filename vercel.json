@@ -1,7 +1,14 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/ro",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!images/|assets/|logo|logo_2|hero_image|doctor-image|placeholder|sitemap\\.xml|favicon\\.ico|robots\\.txt).*)",
       "destination": "/index.html"
     }
   ]

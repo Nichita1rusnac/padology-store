@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -47,12 +47,10 @@
 
     --nav-background: 25 20% 18%;
     --nav-foreground: 30 33% 96%;
-    --hero-accent: 28 35% 60%;
 
     --font-display: 'Noto Serif Japanese', 'Noto Serif JP', serif;
     --font-body: 'Source Sans 3', sans-serif;
 
-    --c-line: hsl(var(--card));
     --instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
   }
 }
@@ -124,21 +122,8 @@
 }
 
 @layer utilities {
-  .safe-container {
-    @apply mx-auto w-full max-w-9xl px-4 sm:px-[clamp(1rem,4vw,2rem)];
-  }
-
   .section-y {
     @apply py-[clamp(3rem,7vw,6rem)];
-  }
-
-  .card-pad {
-    @apply p-[clamp(1rem,3vw,2rem)];
-  }
-
-  .icon-fluid {
-    width: clamp(1rem, 0.85rem + 0.55vw, 1.5rem);
-    height: clamp(1rem, 0.85rem + 0.55vw, 1.5rem);
   }
 
   .gradient-text {

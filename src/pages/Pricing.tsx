@@ -21,6 +21,7 @@ const Pricing = () => {
         title={t('seo.pricing.title')}
         description={t('seo.pricing.description')}
         path={`/${lang}/pricing`}
+        siteName={t('seo.siteName')}
       />
       <section className="pt-4">
         <div className="mx-auto max-w-9xl">

@@ -31,6 +31,7 @@ const Specialists = () => {
         path={`/${lang}/specialists`}
         schemaType="Physicians"
         specialistsData={SPECIALISTS_LIST}
+        siteName={t('seo.siteName')}
       />
       <section className="pt-4">
         <div className="mx-auto max-w-9xl">

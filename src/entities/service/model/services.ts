@@ -1,5 +1,3 @@
-import PlaceholderImage from '@/shared/assets/images/placeholder.svg';
-
 export interface ServiceItem {
   id: string;
   token: string;

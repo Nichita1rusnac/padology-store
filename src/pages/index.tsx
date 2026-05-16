@@ -17,6 +17,7 @@ const Index = () => {
         description={t('seo.home.description')}
         path={`/${lang}`}
         schemaType="MedicalOrganization"
+        siteName={t('seo.siteName')}
       />
       <HeroSection />
       <AboutSection />

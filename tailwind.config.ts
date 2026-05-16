@@ -4,7 +4,6 @@ import animate from 'tailwindcss-animate';
 import plugin from 'tailwindcss/plugin';
 
 export default {
-  darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -13,13 +12,6 @@ export default {
   ],
   prefix: '',
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     fontFamily: {
       display: ['Noto Serif Japanese', 'roboto'],
       body: ['Source Sans 3', 'sans-serif'],
@@ -34,7 +26,6 @@ export default {
         'xl-fluid': ['clamp(1.1875rem, 1.08rem + 0.55vw, 1.5rem)', { lineHeight: '1.45' }],
         '2xl-fluid': ['clamp(1.375rem, 1.2rem + 0.85vw, 1.75rem)', { lineHeight: '1.35' }],
         '3xl-fluid': ['clamp(1.625rem, 1.35rem + 1.35vw, 2.25rem)', { lineHeight: '1.25' }],
-        '4xl-fluid': ['clamp(2rem, 1.55rem + 2.2vw, 3rem)', { lineHeight: '1.15' }],
 
         // Marketing/Display scales
         'display-sm': ['clamp(1.5rem, 1.28rem + 1.1vw, 2rem)', { lineHeight: '1.18' }],
@@ -58,14 +49,6 @@ export default {
         // Labels & UI
         'label': ['0.8125rem', { lineHeight: '1.4', fontWeight: '500' }],
         'button': ['0.875rem', { lineHeight: '1.5', fontWeight: '600' }],
-
-        // Platform-inspired presets
-        'ios-body': ['16px', { lineHeight: '1.6' }],
-        'ios-headline': ['17px', { lineHeight: '1.2', fontWeight: '600' }],
-        'ios-title': ['28px', { lineHeight: '1.15', fontWeight: '700' }],
-        'material-body': ['14px', { lineHeight: '1.5' }],
-        'material-label-small': ['11px', { lineHeight: '1.4' }],
-        'material-headline-small': ['20px', { lineHeight: '1.3' }],
       },
       backgroundImage: {
         'instagram': 'var(--instagram)',
@@ -112,74 +95,21 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
-        'caret-blink': {
-          '0%,70%,100%': { opacity: '1' },
-          '20%,50%': { opacity: '0' },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'caret-blink': 'caret-blink 1.25s ease-out infinite',
-      },
     },
   },
   plugins: [
     animate,
-    typography,
     // Implementation of the proposed custom plugins
-    plugin(({ addVariant, addUtilities, theme }) => {
+    plugin(({ addVariant }) => {
       // Dynamic Type / Responsive Text Variants
-      addVariant('supports-large-text', '@supports (font-size: clamp(1px, 1vw, 2px))');
+      addVariant('supports-clamp', '@supports (font-size: clamp(1px, 1vw, 2px))');
       
-      // Contrast & Readability Utilities
-      // These map to standard high-contrast accessible colors
-      addUtilities({
-        '.text-contrast-high': {
-          color: theme('colors.foreground'),
-          filter: 'contrast(1.2)',
-        },
-        '.text-contrast-normal': {
-          color: theme('colors.foreground'),
-          opacity: '0.9',
-        },
-        '.text-contrast-low': {
-          color: theme('colors.muted.foreground'),
-        },
-      });
     }),
   ],
 } satisfies Config;

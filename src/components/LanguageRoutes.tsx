@@ -8,9 +8,22 @@ export const LanguageLayout = () => {
   const supportedLanguages = ['ru', 'ro', 'en'];
 
   useEffect(() => {
-    if (lang && supportedLanguages.includes(lang) && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
+    if (!lang || !supportedLanguages.includes(lang)) {
+      document.documentElement.removeAttribute('data-i18n-ready');
+      return;
     }
+
+    const markReady = () => {
+      document.documentElement.lang = lang;
+      document.documentElement.dataset.i18nReady = 'true';
+    };
+
+    if (i18n.isInitialized && i18n.language === lang) {
+      markReady();
+      return;
+    }
+
+    void i18n.changeLanguage(lang).then(markReady);
   }, [lang, i18n]);
 
   if (!lang || !supportedLanguages.includes(lang)) {

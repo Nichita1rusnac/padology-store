@@ -8,7 +8,7 @@ export const HeroSection = () => {
   const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
 
   return (
-    <section className="pt-[clamp(6.5rem,12vw,8rem)] pb-[clamp(3rem,7vw,4rem)] flex gap-[clamp(1rem,4vw,2rem)]">
+    <section className="pt-[clamp(6.5rem,12vw,8rem)] pb-[clamp(3rem,7vw,4rem)] flex gap-[clamp(1rem,4vw,2rem)] max-w-9xl mx-auto">
       <div className="min-[1141px]:w-1/2 max-[1140px]:w-full">
         <div className="mx-auto max-w-7xl">
           <HeroTitleCard

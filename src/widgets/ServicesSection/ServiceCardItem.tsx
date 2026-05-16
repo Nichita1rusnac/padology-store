@@ -5,6 +5,7 @@ import { ServiceItem } from '@/entities/service/model/services';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import cn from 'clsx';
+import { ResponsiveImage } from '@/shared/ui/ResponsiveImage';
 
 interface ServiceCardItemProps {
   service: ServiceItem;
@@ -26,14 +27,13 @@ export const ServiceCardItem = ({ service }: ServiceCardItemProps) => {
   }, [api]);
 
   const renderImage = (src: string, index?: number) => (
-    <img
+    <ResponsiveImage
       src={src}
       alt={`${t(`${service.token}.title`)} - ${index !== undefined ? index + 1 : 'Podiatry service'}`}
       className={cn(
         "object-cover w-full h-full group-hover:scale-105",
         "transition-transform duration-700"
       )}
-      loading="lazy"
     />
   );
 

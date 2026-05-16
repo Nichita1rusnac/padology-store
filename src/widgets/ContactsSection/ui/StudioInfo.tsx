@@ -65,6 +65,7 @@ export const StudioInfo = ({ loc, type, bookingPath, onImageClick }: StudioInfoP
         <div className="aspect-video md:aspect-auto md:w-1/2 md:min-h-[18rem] rounded-2xl bg-secondary overflow-hidden shadow-sm border border-border">
           <iframe
             src={loc.embed}
+            title={address}
             width="100%"
             height="100%"
             style={{ border: 0 }}

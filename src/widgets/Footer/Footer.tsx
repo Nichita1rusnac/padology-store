@@ -80,6 +80,7 @@ export const Footer = () => {
                           <a
                             href={location.location}
                             target="_blank"
+                            aria-label={`${location.name} Address`}
                             rel="noopener noreferrer"
                             className={cn("font-body text-sm-fluid text-muted-foreground leading-tight hover:text-primary transition-colors flex items-start gap-2.5")}
                           >
@@ -91,6 +92,7 @@ export const Footer = () => {
                         {phone && (
                           <a
                             href={`tel:${formatPhoneLink(phone)}`}
+                            aria-label={`${location.name} Phone`}
                             className={cn(
                               "font-body text-base-fluid text-foreground font-medium leading-tight",
                               "hover:text-primary transition-colors flex items-center gap-2.5"
@@ -106,6 +108,7 @@ export const Footer = () => {
                         {phone && (
                           <a
                             href={`tel:${formatPhoneLink(phone)}`}
+                            aria-label={`${location.name} Phone`}
                             className={cn(
                               "flex size-[clamp(2.5rem,8vw,2.75rem)] rounded-full bg-secondary items-center justify-center",
                               "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
@@ -120,6 +123,7 @@ export const Footer = () => {
                             href={telegram}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${location.name} Telegram`}
                             className={cn(
                               "flex size-[clamp(2.5rem,8vw,2.75rem)] rounded-full bg-secondary items-center justify-center",
                               "text-muted-foreground hover:-translate-y-0.5 hover:bg-[#2AABEE]",
@@ -134,6 +138,7 @@ export const Footer = () => {
                             href={instagram}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`${location.name} Instagram`}
                             className={cn(
                               "flex size-[clamp(2.5rem,8vw,2.75rem)] rounded-full bg-secondary items-center justify-center",
                               "text-muted-foreground hover:bg-accent hover:text-accent-foreground",

@@ -21,6 +21,7 @@ const Contacts = () => {
         title={t('seo.contacts.title')}
         description={t('seo.contacts.description')}
         path={`/${lang}/contacts`}
+        siteName={t('seo.siteName')}
       />
       <section className="pt-4">
         <div className="mx-auto max-w-9xl">

@@ -1,5 +1,3 @@
-import SpecialistPlaceholder from '@/shared/assets/images/placeholder.svg';
-
 export type LOCATIONS = 'center' | 'buiucani';
 
 export interface Specialist {

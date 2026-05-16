@@ -92,6 +92,7 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
               frameBorder="0"
               id="ms_booking_iframe"
               src={bookingUrls[selectedSalon]}
+              title={t('salon.select')}
               onLoad={() => setIsLoading(false)}
             ></iframe>
           </div>
