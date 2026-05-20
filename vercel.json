@@ -1,4 +1,5 @@
 {
+  "installCommand": "bash scripts/install-vercel-system-deps.sh && npm install",
   "redirects": [
     {
       "source": "/",
