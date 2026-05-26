@@ -1,10 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { buildCanonicalSeoPath, parseSeoRoute } from '@/shared/lib/routing/seoPaths';
+import { isSupportedLanguage } from '@/shared/lib/routing/studio';
 
 interface SEOProps {
   title?: string;
   description?: string;
+  /** Canonical URL path (indexed route, no studio prefix). */
   path?: string;
+  /** og:url path; defaults to path. Use share path for campaign URLs. */
+  sharePath?: string;
   image?: string;
   type?: string;
   noIndex?: boolean;
@@ -17,7 +22,7 @@ interface SEOProps {
     phone: string[];
     geo?: { lat: string; lng: string };
   };
-  specialistsData?: any[];
+  specialistsData?: Array<{ first_name?: string; last_name?: string }>;
   siteName?: string;
 }
 
@@ -25,6 +30,7 @@ export const SEO = ({
   title,
   description,
   path = '',
+  sharePath,
   image = '/og-image.jpg',
   type = 'website',
   noIndex = false,
@@ -42,16 +48,26 @@ export const SEO = ({
   const metaDescription =
     description ||
     'Expert podiatry clinic in Chisinau. Medical pedicure, custom orthotics, and professional foot care at Podiatric Studios.';
-  // Base domain
+  const metaKeywords = t('seo.keywords');
   const baseDomain = 'https://www.eugeniapodology.md';
 
-  // Formatting path
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  const canonicalUrl = `${baseDomain}${cleanPath}`;
+  const canonicalPath = path.startsWith('/') ? path : `/${path}`;
+  const shareUrlPath = sharePath
+    ? sharePath.startsWith('/')
+      ? sharePath
+      : `/${sharePath}`
+    : canonicalPath;
+
+  const canonicalUrl = `${baseDomain}${canonicalPath}`;
+  const shareUrl = `${baseDomain}${shareUrlPath}`;
+  const parsedCanonical = parseSeoRoute(canonicalPath);
+  const isCampaignRoute = noIndex || parsedCanonical.isCampaignRoute;
+  const includeStructuredData = !isCampaignRoute;
+
   const imageUrl = image.startsWith('http') ? image : `${baseDomain}${image}`;
   const imageType = image.endsWith('.webp') ? 'image/webp' : 'image/jpeg';
   const isDefaultShareImage = image === '/og-image.jpg';
-  // Locale mapping for OG
+
   const localeMap: Record<string, string> = {
     en: 'en_US',
     ro: 'ro_RO',
@@ -59,136 +75,131 @@ export const SEO = ({
   };
   const currentLocale = localeMap[lang] || 'ro_RO';
 
-  // Hreflang mappings
   const getHreflangPath = (targetLang: string) => {
-    const pathParts = cleanPath.split('/').filter(Boolean);
-    if (pathParts.length > 0 && ['en', 'ro', 'ru'].includes(pathParts[0])) {
-      pathParts[0] = targetLang;
-    } else {
-      pathParts.unshift(targetLang);
-    }
-    return `${baseDomain}/${pathParts.join('/')}/`;
+    const hrefPath = buildCanonicalSeoPath(
+      isSupportedLanguage(targetLang) ? targetLang : 'ro',
+      { page: parsedCanonical.page },
+    );
+    return `${baseDomain}${hrefPath}`;
   };
 
-  // Schema Markup (JSON-LD)
-  const schemaData: any[] = [];
+  const schemaData: Record<string, unknown>[] = [];
 
-  // Breadcrumb Schema
-  if (cleanPath !== `/${lang}` && cleanPath !== `/${lang}/`) {
+  const isLocaleHome =
+    !parsedCanonical.page &&
+    (canonicalPath === `/${lang}` || canonicalPath === `/${lang}/`);
+
+  if (includeStructuredData && !isLocaleHome) {
     schemaData.push({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": t('nav.main'),
-          "item": `${baseDomain}/${lang}/`
+          '@type': 'ListItem',
+          position: 1,
+          name: t('nav.main'),
+          item: `${baseDomain}/${lang}/`,
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": title || "Page",
-          "item": canonicalUrl
-        }
-      ]
-    });
-  }
-
-  // LocalBusiness Schema
-  if (schemaType === 'LocalBusiness') {
-    schemaData.push({
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": locationData?.name || siteName,
-      "description": description,
-      "url": canonicalUrl,
-      "telephone": locationData?.phone[0] || "+373 699 47 949",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": locationData?.address || "Mihai Eminescu 70",
-        "addressLocality": "Chișinău",
-        "addressRegion": "Chișinău Municipality",
-        "postalCode": "MD-2012",
-        "addressCountry": "MD"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": locationData?.geo?.lat || "47.02403",
-        "longitude": locationData?.geo?.lng || "28.84037"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "19:00"
+          '@type': 'ListItem',
+          position: 2,
+          name: title || 'Page',
+          item: canonicalUrl,
         },
       ],
-      "priceRange": "$$",
-      "currenciesAccepted": "MDL",
-      "paymentAccepted": "Cash, Credit Card",
-      "areaServed": {
-        "@type": "City",
-        "name": "Chișinău"
-      },
-      "sameAs": [
-        "https://www.instagram.com/evgeniapoleakova/",
-        "https://www.instagram.com/evpodolux/"
-      ]
     });
   }
 
-  // MedicalOrganization Schema
-  if (schemaType === 'MedicalOrganization') {
+  if (includeStructuredData && schemaType === 'LocalBusiness') {
     schemaData.push({
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": siteName,
-      "url": baseDomain,
-      "logo": `${baseDomain}/logo.webp`,
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+373 699 47 949",
-        "contactType": "customer service"
-      }
+      '@context': 'https://schema.org',
+      '@type': 'MedicalBusiness',
+      name: locationData?.name || siteName,
+      description: description,
+      url: canonicalUrl,
+      telephone: locationData?.phone[0] || '+373 699 47 949',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: locationData?.address || 'Mihai Eminescu 70',
+        addressLocality: 'Chișinău',
+        addressRegion: 'Chișinău Municipality',
+        postalCode: 'MD-2012',
+        addressCountry: 'MD',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: locationData?.geo?.lat || '47.02403',
+        longitude: locationData?.geo?.lng || '28.84037',
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          opens: '09:00',
+          closes: '19:00',
+        },
+      ],
+      priceRange: '$$',
+      currenciesAccepted: 'MDL',
+      paymentAccepted: 'Cash, Credit Card',
+      areaServed: {
+        '@type': 'City',
+        name: 'Chișinău',
+      },
+      sameAs: [
+        'https://www.instagram.com/evgeniapoleakova/',
+        'https://www.instagram.com/evpodolux/',
+      ],
     });
   }
 
-  // MD Physicians Schema
-  if (schemaType === 'Physicians' && specialistsData) {
-    specialistsData.forEach(specialist => {
+  if (includeStructuredData && schemaType === 'MedicalOrganization') {
+    schemaData.push({
+      '@context': 'https://schema.org',
+      '@type': 'MedicalOrganization',
+      name: siteName,
+      url: baseDomain,
+      logo: `${baseDomain}/logo.webp`,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+373 699 47 949',
+        contactType: 'customer service',
+      },
+    });
+  }
+
+  if (includeStructuredData && schemaType === 'Physicians' && specialistsData) {
+    specialistsData.forEach((specialist) => {
       schemaData.push({
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "name": `${specialist.first_name} ${specialist.last_name}`,
-        "medicalSpecialty": "Podology",
-        "memberOf": {
-          "@type": "MedicalOrganization",
-          "name": siteName
+        '@context': 'https://schema.org',
+        '@type': 'Physician',
+        name: `${specialist.first_name} ${specialist.last_name}`,
+        medicalSpecialty: 'Podology',
+        memberOf: {
+          '@type': 'MedicalOrganization',
+          name: siteName,
         },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Chișinău",
-          "addressCountry": "MD"
-        }
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Chișinău',
+          addressCountry: 'MD',
+        },
       });
     });
   }
 
-  // Service Schema
-  if (schemaType === 'Service' && serviceName) {
+  if (includeStructuredData && schemaType === 'Service' && serviceName) {
     schemaData.push({
-      "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
-      "name": serviceName,
-      "description": serviceDescription || description,
-      "procedureType": "https://schema.org/TherapeuticProcedure",
-      "provider": {
-        "@type": "MedicalBusiness",
-        "name": siteName,
-        "url": baseDomain
-      }
+      '@context': 'https://schema.org',
+      '@type': 'MedicalProcedure',
+      name: serviceName,
+      description: serviceDescription || description,
+      procedureType: 'https://schema.org/TherapeuticProcedure',
+      provider: {
+        '@type': 'MedicalBusiness',
+        name: siteName,
+        url: baseDomain,
+      },
     });
   }
 
@@ -198,13 +209,17 @@ export const SEO = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>{fullTitle.substring(0, 70)}</title>
       <meta name="description" content={metaDescription.substring(0, 160)} />
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="keywords" content={metaKeywords} />
+      <meta
+        name="robots"
+        content={isCampaignRoute ? 'noindex, follow' : 'index, follow'}
+      />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:url" content={shareUrl} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:secure_url" content={imageUrl} />
       <meta property="og:image:type" content={imageType} />
@@ -220,10 +235,14 @@ export const SEO = ({
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:image:alt" content={`${defaultTitle}`} />
 
-      <link rel="alternate" hrefLang="en" href={getHreflangPath('en')} />
-      <link rel="alternate" hrefLang="ro" href={getHreflangPath('ro')} />
-      <link rel="alternate" hrefLang="ru" href={getHreflangPath('ru')} />
-      <link rel="alternate" hrefLang="x-default" href={getHreflangPath('ro')} />
+      {!isCampaignRoute && (
+        <>
+          <link rel="alternate" hrefLang="en" href={getHreflangPath('en')} />
+          <link rel="alternate" hrefLang="ro" href={getHreflangPath('ro')} />
+          <link rel="alternate" hrefLang="ru" href={getHreflangPath('ru')} />
+          <link rel="alternate" hrefLang="x-default" href={getHreflangPath('ro')} />
+        </>
+      )}
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -237,4 +256,3 @@ export const SEO = ({
     </Helmet>
   );
 };
-

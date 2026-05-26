@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
+import { useDefaultStudio } from '@/shared/lib/hooks/useDefaultStudio';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLightbox } from '../lib/useLightbox';
 import { StudioInfo } from './StudioInfo';
@@ -9,6 +10,7 @@ import { ContactLocation } from '../model/types';
 export const ContactsSection = () => {
   const { t } = useTranslation(['contacts', 'common']);
   const bookingPath = useBookingPath();
+  const defaultStudio = useDefaultStudio();
   const {
     selectedIndex,
     images,
@@ -29,9 +31,9 @@ export const ContactsSection = () => {
   const centerStudio = locations.find(loc => loc.name === 'EvPodolux');
 
   return (
-    <section id="contacts" className="py-[clamp(3rem,7vw,5rem)]">
+    <section id="contacts" className="pb-[clamp(3rem,7vw,5rem)]">
       <div className="mx-auto max-w-9xl">
-        <Tabs defaultValue="buiucani" className="w-full">
+        <Tabs defaultValue={defaultStudio} key={defaultStudio} className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-[clamp(2rem,5vw,3rem)]">
             <h2 className="font-display text-display-md font-light text-foreground">{t('hero.title')}</h2>
             <TabsList className="bg-secondary/50 p-1 h-auto self-start md:self-auto rounded-full max-w-full overflow-x-auto">

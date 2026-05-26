@@ -5,17 +5,20 @@ import { ServicesSection } from '@/widgets/ServicesSection/ServicesSection';
 import { SpecialistsSection } from '@/widgets/SpecialistsSection/SpecialistsSection';
 import { ContactsSection } from '@/widgets/Contacts/hero/ContactsSection';
 import { SEO } from '@/components/SEO';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
 
 const Index = () => {
-  const { t, i18n } = useTranslation('common');
-  const lang = i18n.resolvedLanguage || i18n.language || 'ro';
+  const { t } = useTranslation('common');
+  const { canonicalSeoPath, shareSeoPath, isCampaignRoute } = useLocalizedRoute();
 
   return (
     <>
       <SEO 
         title={t('seo.home.title')}
         description={t('seo.home.description')}
-        path={`/${lang}`}
+        path={canonicalSeoPath()}
+        sharePath={shareSeoPath()}
+        noIndex={isCampaignRoute}
         schemaType="MedicalOrganization"
         siteName={t('seo.siteName')}
       />

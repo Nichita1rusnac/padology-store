@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 import { MapPin, Phone, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { ContactLocation, GalleryType } from '../model/types';

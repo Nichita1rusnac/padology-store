@@ -23,7 +23,7 @@ export const ProductsSection = () => {
     }));
 
     return (
-        <section id="products" className="py-[clamp(3rem,7vw,5rem)]">
+        <section id="products" className="pb-[clamp(3rem,7vw,5rem)]">
             <div className="mx-auto max-w-9xl">
                 <div className="mb-[clamp(2rem,5vw,3rem)]">
                     <h2 className="font-display text-display-md font-light text-foreground">{t('title')}</h2>

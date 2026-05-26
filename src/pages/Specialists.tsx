@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
+import { useDefaultStudio } from '@/shared/lib/hooks/useDefaultStudio';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,11 +17,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SPECIALISTS_LIST } from '@/entities/specialist/model/specialists';
 import { SpecialistCard } from '@/entities/specialist/ui/SpecialistCard';
 import { SEO } from '@/components/SEO';
+import { PageBreadcrumbBar } from '@/widgets/Layout/PageBreadcrumbBar';
 
 const Specialists = () => {
-  const { t, i18n } = useTranslation('common');
-  const lang = i18n.resolvedLanguage || i18n.language || 'ro';
-
+  const { t } = useTranslation('common');
+  const defaultStudio = useDefaultStudio();
+  const { homePath, canonicalSeoPath, shareSeoPath, isCampaignRoute } = useLocalizedRoute();
 
   const centerSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('center'));
   const buiucaniSpecialists = SPECIALISTS_LIST.filter(s => s.location.includes('buiucani'));
@@ -28,32 +31,32 @@ const Specialists = () => {
       <SEO
         title={t('seo.specialists.title')}
         description={t('seo.specialists.description')}
-        path={`/${lang}/specialists`}
+        path={canonicalSeoPath({ page: 'specialists' })}
+        sharePath={shareSeoPath({ page: 'specialists' })}
+        noIndex={isCampaignRoute}
         schemaType="Physicians"
         specialistsData={SPECIALISTS_LIST}
         siteName={t('seo.siteName')}
       />
-      <section className="pt-4">
-        <div className="mx-auto max-w-9xl">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/">{t('nav.main')}</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{t('nav.specialists')}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </section>
+      <PageBreadcrumbBar>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to={homePath()}>{t('nav.main')}</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{t('nav.specialists')}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </PageBreadcrumbBar>
 
-      <section className="py-12">
+      <section className="pb-12">
         <div className="mx-auto max-w-9xl">
-          <Tabs defaultValue="buiucani" className="w-full">
+          <Tabs defaultValue={defaultStudio} key={defaultStudio} className="w-full">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
               <h2 className="font-display text-display-md font-light text-foreground">
                 {t('titles.specialists')}

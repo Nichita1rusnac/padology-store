@@ -4,8 +4,7 @@ import { SpecialistsStat } from './components/SpecialistsStat';
 import { SecondaryStats } from './components/SecondaryStats';
 
 export const HeroSection = () => {
-  const { t, i18n } = useTranslation(['common', 'main']);
-  const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
+  const { t } = useTranslation(['common', 'main']);
 
   return (
     <section className="pt-[clamp(6.5rem,12vw,8rem)] pb-[clamp(3rem,7vw,4rem)] flex gap-[clamp(1rem,4vw,2rem)] max-w-9xl mx-auto">
@@ -18,7 +17,6 @@ export const HeroSection = () => {
 
           <div className="grid grid-cols-1 min-[900px]:grid-cols-2 gap-[clamp(0.75rem,2vw,1rem)]">
             <SpecialistsStat
-              currentLang={currentLang}
               moreLabel={t('common:buttons.more')}
               title={t('main:hero.employes.description')}
             />

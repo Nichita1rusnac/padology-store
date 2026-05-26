@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 import { ServiceItem } from '@/entities/service/model/services';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';

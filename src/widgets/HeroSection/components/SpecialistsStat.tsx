@@ -1,16 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
 import { useTranslation } from 'react-i18next';
 import { SPECIALISTS_LIST } from '@/entities/specialist/model/specialists';
 import { ResponsiveImage } from '@/shared/ui/ResponsiveImage';
 
 interface SpecialistsStatProps {
-  currentLang: string;
   moreLabel: string;
   title: string;
 }
 
-export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsStatProps) => {
+export const SpecialistsStat = ({ moreLabel, title }: SpecialistsStatProps) => {
   const { t } = useTranslation('specialists');
+  const { localizedPath } = useLocalizedRoute();
 
   return (
     <div className="bg-card rounded-3xl p-[clamp(1.25rem,3vw,1.75rem)] flex flex-col justify-between gap-[clamp(1.25rem,3vw,1.5rem)] border border-border/50 w-full min-w-0">
@@ -60,7 +61,7 @@ export const SpecialistsStat = ({ currentLang, moreLabel, title }: SpecialistsSt
               className="w-full h-full flex items-center justify-center text-primary
                 min-[1141px]:text-[clamp(0.8125rem,2vw,0.875rem)]
                 max-[1140px]:text-[clamp(0.75rem,3vw,0.875rem)]"
-              to={`/${currentLang}/specialists`}
+              to={localizedPath({ page: 'specialists' })}
             >
               {moreLabel}
             </Link>

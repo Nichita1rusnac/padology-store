@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Campaign-only location entry points (also noindex in HTML)
+Disallow: /center/
+Disallow: /buiucani/
+
 Sitemap: https://www.eugeniapodology.md/sitemap.xml

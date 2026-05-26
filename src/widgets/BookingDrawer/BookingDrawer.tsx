@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { X, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useRouterState } from '@tanstack/react-router';
+import { useDefaultStudio } from '@/shared/lib/hooks/useDefaultStudio';
+import type { StudioSlug } from '@/shared/lib/routing/constants';
 
 interface BookingDrawerProps {
   open: boolean;
@@ -10,9 +12,16 @@ interface BookingDrawerProps {
 
 export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
   const { t } = useTranslation('common');
-  const [searchParams, setSearchParams] = useSearchParams();
-  const locationParam = searchParams.get('location');
-  const selectedSalon = locationParam === 'center' ? 'center' : 'buiucani';
+  const navigate = useNavigate();
+  const defaultStudio = useDefaultStudio();
+  const locationParam = useRouterState({
+    select: (state) => {
+      const value = state.location.search.location;
+      return typeof value === 'string' ? value : undefined;
+    },
+  });
+  const selectedSalon: StudioSlug =
+    locationParam === 'center' ? 'center' : locationParam === 'buiucani' ? 'buiucani' : defaultStudio;
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,12 +34,13 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
     center: 'https://n1382034.alteg.io',
   };
 
-  const handleSalonChange = (salon: 'buiucani' | 'center') => {
+  const handleSalonChange = (salon: StudioSlug) => {
     if (salon !== selectedSalon) {
       setIsLoading(true);
-      const newParams = new URLSearchParams(searchParams);
-      newParams.set('location', salon);
-      setSearchParams(newParams, { replace: true });
+      navigate({
+        search: (prev) => ({ ...prev, location: salon }),
+        replace: true,
+      });
     }
   };
 
@@ -38,15 +48,12 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
 
   return (
     <div className="fixed inset-0 z-[100]">
-      {/* Overlay */}
       <div
         className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      {/* Drawer */}
       <div className="absolute right-0 top-0 bottom-0 w-full max-w-lg bg-background shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
-        {/* Header */}
         <div className="flex items-center justify-between gap-3 p-[clamp(1rem,4vw,1.5rem)] border-b border-border">
           <div className="flex min-w-0 flex-wrap gap-2">
             <button
@@ -76,26 +83,19 @@ export const BookingDrawer = ({ open, onClose }: BookingDrawerProps) => {
           </button>
         </div>
 
-        {/* Placeholder for iframe */}
         <div className="flex-1">
-          <div className="relative w-full h-full rounded-2xl bg-card border-border overflow-hidden">
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-card z-10">
-                <Loader2 className="size-8 animate-spin text-primary" />
-              </div>
-            )}
-            <iframe
-              key={selectedSalon}
-              width="100%"
-              height="100%"
-              scrolling="no"
-              frameBorder="0"
-              id="ms_booking_iframe"
-              src={bookingUrls[selectedSalon]}
-              title={t('salon.select')}
-              onLoad={() => setIsLoading(false)}
-            ></iframe>
-          </div>
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-10">
+              <Loader2 className="size-8 animate-spin text-primary" />
+            </div>
+          )}
+          <iframe
+            key={selectedSalon}
+            src={bookingUrls[selectedSalon]}
+            className="w-full h-full border-0"
+            title={t('buttons.book')}
+            onLoad={() => setIsLoading(false)}
+          />
         </div>
       </div>
     </div>

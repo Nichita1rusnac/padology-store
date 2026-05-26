@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FilterTabs } from '@/shared/ui/FilterTabs';
+import { useDefaultStudio } from '@/shared/lib/hooks/useDefaultStudio';
 
 interface Service {
   title: string;
@@ -21,6 +22,7 @@ interface SalonData {
 
 export const PricingSection = () => {
   const { t, i18n } = useTranslation(['price', 'common']);
+  const defaultStudio = useDefaultStudio();
 
   const getPriceDisplay = (service: Service, currency: string) => {
     if (service.price_range) {
@@ -84,9 +86,9 @@ export const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-[clamp(3rem,7vw,5rem)]">
+    <section id="pricing" className="pb-[clamp(3rem,7vw,5rem)]">
       <div className="mx-auto max-w-9xl">
-        <Tabs defaultValue="buiucani" className="w-full">
+        <Tabs defaultValue={defaultStudio} key={defaultStudio} className="w-full">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-[clamp(2rem,5vw,3rem)]">
             <h2 className="font-display text-display-md font-light text-foreground">
               {t('common:titles.pricing')}

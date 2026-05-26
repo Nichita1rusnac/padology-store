@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
@@ -28,7 +28,7 @@ export const ContactsSection = () => {
     const bookingPath = useBookingPath();
 
     return (
-        <section id="contacts" className="py-[clamp(3rem,7vw,5rem)]">
+        <section id="contacts" className="pt-[clamp(1rem,4vw,2.5rem)] pb-[clamp(3rem,7vw,5rem)]">
             <div className="mx-auto max-w-9xl">
                 <div className="text-center max-w-3xl mx-auto mb-[clamp(2.5rem,7vw,5rem)]">
                     <h2 className="font-display text-display-lg font-light gradient-text mb-6">

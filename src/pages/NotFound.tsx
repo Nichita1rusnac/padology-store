@@ -1,15 +1,17 @@
-import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Link, useRouterState } from '@tanstack/react-router';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
 
 const NotFound = () => {
-  const location = useLocation();
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const { homePath } = useLocalizedRoute();
 
   useEffect(() => {
     console.error(
       '404 Error: User attempted to access non-existent route:',
-      location.pathname,
+      pathname,
     );
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <div className="flex flex-col items-center justify-center py-20">
@@ -18,9 +20,9 @@ const NotFound = () => {
         <p className="mb-4 text-xl-fluid text-muted-foreground">
           Oops! Page not found
         </p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
+        <Link to={homePath()} className="text-primary underline hover:text-primary/90">
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

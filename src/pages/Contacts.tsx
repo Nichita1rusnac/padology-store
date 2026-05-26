@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,36 +11,38 @@ import {
 import { useTranslation } from 'react-i18next';
 import { ContactsSection } from '@/widgets/ContactsSection';
 import { SEO } from '@/components/SEO';
+import { PageBreadcrumbBar } from '@/widgets/Layout/PageBreadcrumbBar';
 
 const Contacts = () => {
-  const { t, i18n } = useTranslation('common');
-  const lang = i18n.resolvedLanguage || i18n.language || 'ro';
+  const { t } = useTranslation('common');
+  const { homePath, canonicalSeoPath, shareSeoPath, isCampaignRoute } = useLocalizedRoute();
 
   return (
     <main className="pt-20">
       <SEO
         title={t('seo.contacts.title')}
         description={t('seo.contacts.description')}
-        path={`/${lang}/contacts`}
+        path={canonicalSeoPath({ page: 'contacts' })}
+        sharePath={shareSeoPath({ page: 'contacts' })}
+        noIndex={isCampaignRoute}
         siteName={t('seo.siteName')}
       />
-      <section className="pt-4">
-        <div className="mx-auto max-w-9xl">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/">{t('nav.main')}</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{t('nav.contacts')}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </section>
+      <PageBreadcrumbBar>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link to={homePath()}>{t('nav.main')}</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{t('nav.contacts')}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </PageBreadcrumbBar>
+
       <ContactsSection />
     </main>
   );

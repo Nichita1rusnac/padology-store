@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from '@tanstack/react-router';
 import { Phone, Send, Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
-
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
+import { useLocalizedRoute } from '@/shared/lib/hooks/useLocalizedRoute';
+import { SUPPORTED_LANGUAGES } from '@/shared/lib/routing/constants';
 
-const languages = ['ru', 'ro', 'en'];
+const languages = [...SUPPORTED_LANGUAGES];
 const langLabels: Record<string, string> = {
   ru: 'Русский',
   ro: 'Română',
@@ -15,9 +16,8 @@ const langLabels: Record<string, string> = {
 
 export const Header = () => {
   const { t, i18n } = useTranslation('common');
-  const location = useLocation();
   const navigate = useNavigate();
-  const currentLang = i18n.resolvedLanguage || i18n.language || 'ru';
+  const { lang: currentLang, studio, localizedPath, homePath } = useLocalizedRoute();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const bookingPath = useBookingPath();
@@ -72,22 +72,29 @@ export const Header = () => {
   };
 
   const navItems = [
-    { label: t('nav.specialists'), path: `/${currentLang}/specialists` },
-    { label: t('nav.price'), path: `/${currentLang}/pricing` },
-    { label: t('nav.products'), path: `/${currentLang}/products` },
-    { label: t('nav.contacts'), path: `/${currentLang}/contacts` },
+    { label: t('nav.specialists'), path: localizedPath({ page: 'specialists' }) },
+    { label: t('nav.price'), path: localizedPath({ page: 'pricing' }) },
+    { label: t('nav.products'), path: localizedPath({ page: 'products' }) },
+    { label: t('nav.contacts'), path: localizedPath({ page: 'contacts' }) },
   ];
 
   const handleLanguageChange = (lang: string) => {
     if (lang === currentLang) return;
-    const pathParts = location.pathname.split('/');
-    if (pathParts.length > 1 && languages.includes(pathParts[1])) {
-      pathParts[1] = lang;
-      navigate(pathParts.join('/') + location.search + location.hash);
+
+    if (studio) {
+      navigate({
+        to: '/$studio/$lang',
+        params: { lang, studio },
+      });
     } else {
-      navigate(`/${lang}`);
+      navigate({
+        to: '/$lang',
+        params: { lang },
+      });
     }
   };
+
+  const resolvedLang = i18n.resolvedLanguage || i18n.language || currentLang;
 
   return (
     <>
@@ -105,11 +112,9 @@ export const Header = () => {
             isScrolled ? 'py-2' : 'py-3'
           )}
         >
-          {/* Logo + Nav */}
           <div className="flex min-w-0 items-center gap-0 bg-nav rounded-full px-[1px] py-[1px] lg:px-2 lg:py-2">
-            {/* Logo placeholder */}
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-lg font-bold shrink-0 cursor-pointer">
-              <Link className="w-full h-full" to={`/${currentLang}`}>
+              <Link className="w-full h-full" to={homePath()}>
                 <img
                   className="w-full h-full object-cover rounded-full"
                   src="/logo.webp"
@@ -118,7 +123,6 @@ export const Header = () => {
               </Link>
             </div>
 
-            {/* Desktop Nav */}
             <nav className="hidden lg:flex min-w-0 items-center gap-1 ml-2">
               {navItems.map((item) => (
                 <Link
@@ -130,13 +134,12 @@ export const Header = () => {
                 </Link>
               ))}
 
-              {/* Language dropdown */}
               <div className="relative ml-1" ref={langRef}>
                 <button
                   onClick={() => setLangOpen(!langOpen)}
                   className="flex items-center gap-1 px-[clamp(0.75rem,1.2vw,1rem)] py-2 text-nav-foreground text-sm-fluid font-body rounded-full hover:bg-primary/20 transition-colors whitespace-nowrap"
                 >
-                  {langLabels[currentLang]}
+                  {langLabels[resolvedLang] ?? langLabels[currentLang]}
                   <ChevronDown className="size-3.5" />
                 </button>
                 {langOpen && (
@@ -159,7 +162,6 @@ export const Header = () => {
             </nav>
           </div>
 
-          {/* Right actions */}
           <div className="flex min-w-0 items-center gap-2">
             <div className="hidden lg:block relative" ref={phoneRef}>
               <button
@@ -248,7 +250,6 @@ export const Header = () => {
               {t('buttons.book')}
             </Link>
 
-            {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle mobile menu"
@@ -261,7 +262,6 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {mobileOpen && (
           <div ref={mobileMenuRef} className="lg:hidden bg-nav mx-4 rounded-2xl p-4 mt-1 max-h-[calc(100svh-6rem)] overflow-y-auto">
             <nav className="flex flex-col gap-1">

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link } from '@tanstack/react-router';
 import { Specialist } from '../model/specialists';
 import { useBookingPath } from '@/shared/lib/hooks/useBookingPath';
 import { ResponsiveImage } from '@/shared/ui/ResponsiveImage';

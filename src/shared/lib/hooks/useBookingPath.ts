@@ -1,16 +1,15 @@
-import { useLocation } from 'react-router-dom';
+import { useRouterState } from '@tanstack/react-router';
 
 /**
- * Custom hook to generate the correct booking path relative to the current location.
- * If the current path already ends with '/book', it returns the current path.
- * Otherwise, it appends '/book' to the current path.
+ * Booking path relative to the current location.
+ * Appends `/book` unless the path already ends with `/book`.
  */
 export const useBookingPath = () => {
-  const location = useLocation();
-  
-  const bookingPath = location.pathname.endsWith('/book') || location.pathname.endsWith('/book/') 
-    ? location.pathname 
-    : `${location.pathname.replace(/\/$/, '')}/book`;
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
 
-  return bookingPath;
+  if (pathname.endsWith('/book') || pathname.endsWith('/book/')) {
+    return pathname;
+  }
+
+  return `${pathname.replace(/\/$/, '')}/book`;
 };
